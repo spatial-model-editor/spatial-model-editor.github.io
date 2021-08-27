@@ -1,73 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Spatial Model Editor</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/svg+xml" href="assets/sme.svg" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-lg-5">
-                <a class="navbar-brand" href="index.html">Spatial Model Editor</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="screenshots.html">Screenshots</a></li>
-                    </ul>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Spatial Model Editor</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/svg+xml" href="assets/sme.svg" />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container px-lg-5">
+        <a class="navbar-brand" href="index.html">Spatial Model Editor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="screenshots.html">Screenshots</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5">
+      <div class="container px-lg-5">
+        <img src="assets/sme.svg" class="float-start w-25" />
+        <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+          <div class="m-4 m-lg-5">
+            <h1 class="display-5 fw-bold">Spatial Model Editor</h1>
+            <p class="fs-4">
+              A user friendly GUI editor to create and edit two-dimensional
+              spatial SBML models of bio-chemical reactions and simulate them
+              using the dune-copasi solver for reaction-diffusion systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Page Content-->
+    <section class="pt-4">
+      <div class="container px-lg-5">
+        <!-- Page Features-->
+        <div class="row gx-lg-5">
+          <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                <div
+                  class="
+                    feature
+                    bg-primary bg-gradient
+                    text-white
+                    rounded-3
+                    mb-4
+                    mt-n4
+                  "
+                >
+                  <i class="bi bi-book"></i>
                 </div>
+                <h2 class="fs-4 fw-bold">Documentation</h2>
+                <p class="mb-0">
+                  <a href="https://spatial-model-editor.readthedocs.io/"
+                    >spatial-model-editor.readthedocs.io</a
+                  >,
+                  <a href="https://sme-contrib.readthedocs.io/">sme-contrib</a>
+                </p>
+              </div>
             </div>
-        </nav>
-        <!-- Header-->
-        <header class="py-5">
-            <div class="container px-lg-5">
-                <img src="assets/sme.svg" class="float-start w-25"/>
-                <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
-                    <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">Spatial Model Editor</h1>
-                        <p class="fs-4">A user friendly GUI editor to create and edit two-dimensional spatial SBML models of bio-chemical reactions and simulate them using the dune-copasi solver for reaction-diffusion systems.</p>
-                    </div>
+          </div>
+          <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                <div
+                  class="
+                    feature
+                    bg-primary bg-gradient
+                    text-white
+                    rounded-3
+                    mb-4
+                    mt-n4
+                  "
+                >
+                  <i class="bi bi-download"></i>
                 </div>
-            </div>
-        </header>
-        <!-- Page Content-->
-        <section class="pt-4">
-            <div class="container px-lg-5">
-                <!-- Page Features-->
-                <div class="row gx-lg-5">
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-book"></i></div>
-                                <h2 class="fs-4 fw-bold">Documentation</h2>
-                                <p class="mb-0"><a href="https://spatial-model-editor.readthedocs.io/">spatial-model-editor.readthedocs.io</a>, <a href="https://sme-contrib.readthedocs.io/">sme-contrib</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-download"></i></div>
-                                <h2 class="fs-4 fw-bold">GUI Download</h2>
-<div class="row align-items-center ">
-  <div class="col-lg-4">
-
-                                <a href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor">
-                                <div class="card bg-light border-0 h-100 text-nowrap shadow p-1">
-<!-- CC0 licensed from https://www.svgrepo.com/svg/3968/linux -->
-                                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="card-img-top"
-     viewBox="0 0 304.998 304.998">
-<g id="XMLID_91_">
-    <path id="XMLID_92_" d="M274.659,244.888c-8.944-3.663-12.77-8.524-12.4-15.777c0.381-8.466-4.422-14.667-6.703-17.117
+                <h2 class="fs-4 fw-bold">GUI Download</h2>
+                <div class="row align-items-center">
+                  <div class="col-lg-4">
+                    <a
+                      href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor"
+                    >
+                      <div
+                        class="
+                          card
+                          bg-light
+                          border-0
+                          h-100
+                          text-nowrap
+                          shadow
+                          p-1
+                        "
+                      >
+                        <!-- CC0 licensed from https://www.svgrepo.com/svg/3968/linux -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          class="card-img-top"
+                          viewBox="0 0 304.998 304.998"
+                        >
+                          <g id="XMLID_91_">
+                            <path
+                              id="XMLID_92_"
+                              d="M274.659,244.888c-8.944-3.663-12.77-8.524-12.4-15.777c0.381-8.466-4.422-14.667-6.703-17.117
         c1.378-5.264,5.405-23.474,0.004-39.291c-5.804-16.93-23.524-42.787-41.808-68.204c-7.485-10.438-7.839-21.784-8.248-34.922
         c-0.392-12.531-0.834-26.735-7.822-42.525C190.084,9.859,174.838,0,155.851,0c-11.295,0-22.889,3.53-31.811,9.684
         c-18.27,12.609-15.855,40.1-14.257,58.291c0.219,2.491,0.425,4.844,0.545,6.853c1.064,17.816,0.096,27.206-1.17,30.06
@@ -108,159 +178,235 @@
         c2.827,0,8.759,5.943,12.177,11.262c0.867,1.341,2.473,4.028,4.331,7.139c5.557,9.298,13.166,22.033,17.14,26.301
         c3.581,3.837,9.378,11.214,7.952,17.541c-1.044,4.909-6.602,8.901-7.913,9.784c-0.476,0.108-1.065,0.163-1.758,0.163
         c-7.606,0-22.662-6.328-30.751-9.728l-1.197-0.503c-4.517-1.894-11.891-3.087-19.022-4.241c-5.674-0.919-13.444-2.176-14.732-3.312
-        c-1.044-1.171,0.167-4.978,1.235-8.337c0.769-2.414,1.563-4.91,1.998-7.523C41.225,251.596,40.499,248.203,39.917,245.477z"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-                                    <p class="mb-0">Linux</p>
-                                </div>
-                                </a>
-
-</div>
-<div class="col-lg-4">
-                                <a href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.dmg">
-                                <div class="card bg-light border-0 h-100 text-nowrap shadow p-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-apple card-img-top" viewBox="0 0 16 16">
-                                  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
-                                  <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"/>
-                                </svg>
-                                    MacOS
-                                </div>
-                                </a>
-
-</div>
-<div class="col-lg-4">
-
-                                <a href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.exe">
-                                <div class="card bg-light border-0 h-100 text-nowrap shadow p-1">
-<!-- CC0 licensed from https://www.svgrepo.com/svg/54206/windows -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305 305" fill="currentColor" class="card-img-top">
-<g id="XMLID_108_">
-    <path id="XMLID_109_" d="M139.999,25.775v116.724c0,1.381,1.119,2.5,2.5,2.5H302.46c1.381,0,2.5-1.119,2.5-2.5V2.5
+        c-1.044-1.171,0.167-4.978,1.235-8.337c0.769-2.414,1.563-4.91,1.998-7.523C41.225,251.596,40.499,248.203,39.917,245.477z"
+                            />
+                          </g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                        </svg>
+                        <p class="mb-0">Linux</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-lg-4">
+                    <a
+                      href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.dmg"
+                    >
+                      <div
+                        class="
+                          card
+                          bg-light
+                          border-0
+                          h-100
+                          text-nowrap
+                          shadow
+                          p-1
+                        "
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          class="bi bi-apple card-img-top"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"
+                          />
+                          <path
+                            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z"
+                          />
+                        </svg>
+                        MacOS
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-lg-4">
+                    <a
+                      href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.exe"
+                    >
+                      <div
+                        class="
+                          card
+                          bg-light
+                          border-0
+                          h-100
+                          text-nowrap
+                          shadow
+                          p-1
+                        "
+                      >
+                        <!-- CC0 licensed from https://www.svgrepo.com/svg/54206/windows -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 305 305"
+                          fill="currentColor"
+                          class="card-img-top"
+                        >
+                          <g id="XMLID_108_">
+                            <path
+                              id="XMLID_109_"
+                              d="M139.999,25.775v116.724c0,1.381,1.119,2.5,2.5,2.5H302.46c1.381,0,2.5-1.119,2.5-2.5V2.5
         c0-0.726-0.315-1.416-0.864-1.891c-0.548-0.475-1.275-0.687-1.996-0.583L142.139,23.301
-        C140.91,23.48,139.999,24.534,139.999,25.775z"/>
-    <path id="XMLID_110_" d="M122.501,279.948c0.601,0,1.186-0.216,1.644-0.616c0.544-0.475,0.856-1.162,0.856-1.884V162.5
+        C140.91,23.48,139.999,24.534,139.999,25.775z"
+                            />
+                            <path
+                              id="XMLID_110_"
+                              d="M122.501,279.948c0.601,0,1.186-0.216,1.644-0.616c0.544-0.475,0.856-1.162,0.856-1.884V162.5
         c0-1.381-1.119-2.5-2.5-2.5H2.592c-0.663,0-1.299,0.263-1.768,0.732c-0.469,0.469-0.732,1.105-0.732,1.768l0.006,98.515
-        c0,1.25,0.923,2.307,2.16,2.477l119.903,16.434C122.274,279.94,122.388,279.948,122.501,279.948z"/>
-    <path id="XMLID_138_" d="M2.609,144.999h119.892c1.381,0,2.5-1.119,2.5-2.5V28.681c0-0.722-0.312-1.408-0.855-1.883
+        c0,1.25,0.923,2.307,2.16,2.477l119.903,16.434C122.274,279.94,122.388,279.948,122.501,279.948z"
+                            />
+                            <path
+                              id="XMLID_138_"
+                              d="M2.609,144.999h119.892c1.381,0,2.5-1.119,2.5-2.5V28.681c0-0.722-0.312-1.408-0.855-1.883
         c-0.543-0.475-1.261-0.693-1.981-0.594L2.164,42.5C0.923,42.669-0.001,43.728,0,44.98l0.109,97.521
-        C0.111,143.881,1.23,144.999,2.609,144.999z"/>
-    <path id="XMLID_169_" d="M302.46,305c0.599,0,1.182-0.215,1.64-0.613c0.546-0.475,0.86-1.163,0.86-1.887l0.04-140
+        C0.111,143.881,1.23,144.999,2.609,144.999z"
+                            />
+                            <path
+                              id="XMLID_169_"
+                              d="M302.46,305c0.599,0,1.182-0.215,1.64-0.613c0.546-0.475,0.86-1.163,0.86-1.887l0.04-140
         c0-0.663-0.263-1.299-0.732-1.768c-0.469-0.469-1.105-0.732-1.768-0.732H142.499c-1.381,0-2.5,1.119-2.5,2.5v117.496
-        c0,1.246,0.918,2.302,2.151,2.476l159.961,22.504C302.228,304.992,302.344,305,302.46,305z"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-                                    <p class="mb-0">Windows</p>
-                                </div>
-                                </a>
-
-</div>
-</div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-braces"></i></div>
-                                <h2 class="fs-4 fw-bold">Python interface</h2>
-                                <p class="mb-0"><a href="https://pypi.org/project/sme/">sme</a>, <a href="https://pypi.org/project/sme-contrib/">sme-contrib</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection-play"></i></div>
-                                <h2 class="fs-4 fw-bold">Examples</h2>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cpu"></i></div>
-                                <h2 class="fs-4 fw-bold">dune-copasi</h2>
-                                <p class="mb-0"><a href="https://dune-copasi.netlify.app/">dune-copasi</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-github"></i></div>
-                                <h2 class="fs-4 fw-bold">Source Code</h2>
-                                <p class="mb-0"><a href="https://github.com/spatial-model-editor/spatial-model-editor">github</a>, <a href="https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE">MIT license</a></p>
-                            </div>
-                        </div>
-                    </div>                    
+        c0,1.246,0.918,2.302,2.151,2.476l159.961,22.504C302.228,304.992,302.344,305,302.46,305z"
+                            />
+                          </g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                          <g></g>
+                        </svg>
+                        <p class="mb-0">Windows</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+          </div>
+          <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                <div
+                  class="
+                    feature
+                    bg-primary bg-gradient
+                    text-white
+                    rounded-3
+                    mb-4
+                    mt-n4
+                  "
+                >
+                  <i class="bi bi-braces"></i>
+                </div>
+                <h2 class="fs-4 fw-bold">Python interface</h2>
+                <p class="mb-0">
+                  <a href="https://pypi.org/project/sme/">sme</a>,
+                  <a href="https://pypi.org/project/sme-contrib/"
+                    >sme-contrib</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                <div
+                  class="
+                    feature
+                    bg-primary bg-gradient
+                    text-white
+                    rounded-3
+                    mb-4
+                    mt-n4
+                  "
+                >
+                  <i class="bi bi-collection-play"></i>
+                </div>
+                <h2 class="fs-4 fw-bold">Examples</h2>
+                <p class="mb-0"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                <div
+                  class="
+                    feature
+                    bg-primary bg-gradient
+                    text-white
+                    rounded-3
+                    mb-4
+                    mt-n4
+                  "
+                >
+                  <i class="bi bi-cpu"></i>
+                </div>
+                <h2 class="fs-4 fw-bold">dune-copasi</h2>
+                <p class="mb-0">
+                  <a href="https://dune-copasi.netlify.app/">dune-copasi</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xxl-4 mb-5">
+            <div class="card bg-light border-0 h-100">
+              <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                <div
+                  class="
+                    feature
+                    bg-primary bg-gradient
+                    text-white
+                    rounded-3
+                    mb-4
+                    mt-n4
+                  "
+                >
+                  <i class="bi bi-github"></i>
+                </div>
+                <h2 class="fs-4 fw-bold">Source Code</h2>
+                <p class="mb-0">
+                  <a
+                    href="https://github.com/spatial-model-editor/spatial-model-editor"
+                    >github</a
+                  >,
+                  <a
+                    href="https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE"
+                    >MIT license</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
