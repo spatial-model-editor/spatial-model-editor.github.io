@@ -3,6 +3,7 @@ const fs = require("fs");
 const upath = require("upath");
 const pug = require("pug");
 const sh = require("shelljs");
+const minify = require("minify");
 
 module.exports = function renderPug(filePath) {
   const destPath = filePath
@@ -23,4 +24,6 @@ module.exports = function renderPug(filePath) {
   }
 
   fs.writeFileSync(destPath, html);
+
+  minify(destPath);
 };

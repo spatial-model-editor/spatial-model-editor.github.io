@@ -26,6 +26,7 @@
     "browser-sync": "2.27.5",
     "chokidar": "3.5.2",
     "concurrently": "6.2.0",
+    "minify": "7.0.2",
     "postcss": "8.3.6",
     "pug": "3.0.2",
     "sass": "1.37.5",
