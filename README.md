@@ -1,12 +1,23 @@
-# [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
+# [spatial-model-editor.github.io](https://spatial-model-editor.github.io/) [![Build and deploy to gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml)
 
 ## How it works
 
-- `master` branch contains the source code for generating [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
-- `gh-pages` branch contains the generated html/css that is deployed by github pages
-- [src/pug](/src/pug) contains a [pug](https://pugjs.org/) template for each page
+- [https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master](master) branch contains the source code
+- [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated html/css/js/image files
+- uses [npm](https://www.npmjs.com/), [Boostrap](https://getbootstrap.com/), and [pug](https://pugjs.org/)
+
+## Structure
+
+- [src/pug](/src/pug) contains a [pug](https://pugjs.org/) template for each html page
 - [src/assets](/src/assets) contains the image files
-- on each commit to master the website is built & deployed to the gh-pages branch
+- [src/scss/styles.scss](/src/scss/styles.scss) import and customize [Bootstrap css](https://getbootstrap.com/docs/5.0/customize/sass/)
+
+## Deployment
+
+On every commit to the master branch:
+
+- [deploy.yml](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml) action builds website & deploys to [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages)
+- github pages hosts these files at [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
 
 ## How to edit locally
 
@@ -16,8 +27,10 @@
 - (optional) install pre-commit to auto-format code
   - `pip install pre-commit`
   - `pre-commit install`
-- install node dependencies
-  - (first install node, e.g. `sudo apt install npm` on ubuntu)
+- install node 16
+  - https://nodejs.org/en/download/package-manager
+  - ubuntu specific: https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+- install website node dependencies
   - `npm install`
 - start a live in-browser local preview of the website
   - `npm start`
