@@ -1,5 +1,14 @@
-mixin feature(title, icon, links)
-  .card.bg-light.border-0.h-100
+// links for each feature card:
+- doc_links = { 'Spatial Model Editor': 'https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html', 'sme (Python interface)': 'https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html', 'sme-contrib (Python extras)': 'https://sme-contrib.readthedocs.io' };
+- python_links = { sme: 'https://pypi.org/project/sme', 'sme-contrib': 'https://pypi.org/project/sme-contrib', 'Try it online': 'https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/getting_started.ipynb' };
+- example_links = {};
+- pde_links = { 'dune-copasi': 'https://dune-copasi.netlify.app', Pixel: 'https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html' };
+- code_links = { 'Spatial Model Editor': 'https://github.com/spatial-model-editor/spatial-model-editor', 'sme-contrib': 'https://github.com/spatial-model-editor/sme-contrib', 'MIT License': 'https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE' };
+
+// mixin to construct a feature card given title, icon name and a dict of links
+mixin feature_card(title, icon, links)
+  .col-lg-6.col-xxl-4.mb-5
+    .card.bg-light.border-0.h-100
     .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
       .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
         i.bi(class=icon)
@@ -76,9 +85,7 @@ html(lang="en")
       .container.px-lg-5
         // Page Features
         .row.gx-lg-5
-          .col-lg-6.col-xxl-4.mb-5
-            - links = { 'Spatial Model Editor': 'https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html', 'sme (Python interface)': 'https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html', 'sme-contrib (Python extras)': 'https://sme-contrib.readthedocs.io' };
-            +feature("Documentation", "bi-book", links)
+          +feature_card("Documentation", "bi-book", doc_links)
           .col-lg-6.col-xxl-4.mb-5
             .card.bg-light.border-0.h-100
               .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
@@ -140,57 +147,10 @@ html(lang="en")
                             d="M302.46,305c0.599,0,1.182-0.215,1.64-0.613c0.546-0.475,0.86-1.163,0.86-1.887l0.04-140 c0-0.663-0.263-1.299-0.732-1.768c-0.469-0.469-1.105-0.732-1.768-0.732H142.499c-1.381,0-2.5,1.119-2.5,2.5v117.496 c0,1.246,0.918,2.302,2.151,2.476l159.961,22.504C302.228,304.992,302.344,305,302.46,305z"
                           )
                         p.mb-0 Windows
-          .col-lg-6.col-xxl-4.mb-5
-            .card.bg-light.border-0.h-100
-              .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
-                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
-                  i.bi.bi-braces
-                h2.fs-4.fw-bold Python interface
-                .list-group.list-group-flush
-                  a.list-group-item.list-group-item-action(
-                    href="https://pypi.org/project/sme"
-                  ) sme
-                  a.list-group-item.list-group-item-action(
-                    href="https://pypi.org/project/sme-contrib"
-                  ) sme-contrib
-                  a.list-group-item.list-group-item-action(
-                    href="https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/getting_started.ipynb"
-                  ) Try it online
-          .col-lg-6.col-xxl-4.mb-5
-            .card.bg-light.border-0.h-100
-              .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
-                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
-                  i.bi.bi-collection-play
-                h2.fs-4.fw-bold Examples
-          .col-lg-6.col-xxl-4.mb-5
-            .card.bg-light.border-0.h-100
-              .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
-                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
-                  i.bi.bi-cpu
-                h2.fs-4.fw-bold PDE Solvers
-                .list-group.list-group-flush
-                  a.list-group-item.list-group-item-action(
-                    href="https://dune-copasi.netlify.app"
-                  ) dune-copasi
-                  a.list-group-item.list-group-item-action(
-                    href="https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html"
-                  ) Pixel
-          .col-lg-6.col-xxl-4.mb-5
-            .card.bg-light.border-0.h-100
-              .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
-                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
-                  i.bi.bi-github
-                h2.fs-4.fw-bold Source Code
-                .list-group.list-group-flush
-                  a.list-group-item.list-group-item-action(
-                    href="https://github.com/spatial-model-editor/spatial-model-editor"
-                  ) Spatial Model Editor
-                  a.list-group-item.list-group-item-action(
-                    href="https://github.com/spatial-model-editor/sme-contrib"
-                  ) sme-contrib
-                  a.list-group-item.list-group-item-action(
-                    href="https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE"
-                  ) MIT License
+          +feature_card("Python interface", "bi-braces", python_links)
+          +feature_card("Examples", "bi-collection-play", example_links)
+          +feature_card("PDE Solvers", "bi-cpu", pde_links)
+          +feature_card("Source Code", "bi-github", code_links)
     // Bootstrap core JS
     script(
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
