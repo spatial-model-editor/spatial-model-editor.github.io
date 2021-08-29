@@ -4,6 +4,7 @@ repos:
     hooks:
       - id: prettier
         additional_dependencies:
+          - prettier@2.3.2
           - "@prettier/plugin-pug@1.16.5"
 
   - repo: https://github.com/pre-commit/pre-commit-hooks

@@ -2,6 +2,8 @@
 
 ## How it works
 
+- src/pug contains pug templates for each page
+
 ## How to edit
 
 ## Acknowledgements
