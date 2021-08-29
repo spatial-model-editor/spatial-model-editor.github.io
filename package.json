@@ -16,6 +16,8 @@
     "type": "git",
     "url": "https://github.com/spatial-model-editor/spatial-model-editor.github.io.git"
   },
+  "license": "MIT",
+  "author": "Liam Keegan",
   "dependencies": {
     "bootstrap": "5.1.0"
   },
