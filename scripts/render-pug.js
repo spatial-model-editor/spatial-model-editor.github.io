@@ -3,7 +3,7 @@ const fs = require("fs");
 const upath = require("upath");
 const pug = require("pug");
 const sh = require("shelljs");
-const minify = require("minify");
+const minify = require("html-minifier").minify;
 
 module.exports = function renderPug(filePath) {
   const destPath = filePath
@@ -18,12 +18,12 @@ module.exports = function renderPug(filePath) {
     basedir: srcPath,
   });
 
+  const mini = minify(html);
+
   const destPathDirname = upath.dirname(destPath);
   if (!sh.test("-e", destPathDirname)) {
     sh.mkdir("-p", destPathDirname);
   }
 
-  fs.writeFileSync(destPath, html);
-
-  minify(destPath);
+  fs.writeFileSync(destPath, mini);
 };

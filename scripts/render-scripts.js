@@ -3,7 +3,6 @@ const fs = require("fs");
 const packageJSON = require("../package.json");
 const upath = require("upath");
 const sh = require("shelljs");
-const minify = require("minify");
 
 module.exports = function renderScripts() {
   const sourcePath = upath.resolve(upath.dirname(__filename), "../src/js");
@@ -23,6 +22,4 @@ module.exports = function renderScripts() {
   const scriptsJS = fs.readFileSync(sourcePathScriptsJS);
 
   fs.writeFileSync(destPathScriptsJS, scriptsJS);
-
-  minify(destPathScriptsJS);
 };
