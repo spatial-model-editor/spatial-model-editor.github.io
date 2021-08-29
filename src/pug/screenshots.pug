@@ -1,3 +1,6 @@
+// list of screenshot image files to display
+- screenshots = ['geometry0.png', 'geometry1.png', 'geometry2.png', 'species0.png', 'species1.png', 'species2.png', 'reactions.png', 'simulation.png'];
+
 doctype html
 html(lang="en")
   head
@@ -59,72 +62,23 @@ html(lang="en")
           data-bs-ride="carousel"
         )
           .carousel-indicators
-            button.active(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="0",
-              aria-current="true",
-              aria-label="Slide 1"
-            )
-            button(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="1",
-              aria-label="Slide 2"
-            )
-            button(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="2",
-              aria-label="Slide 3"
-            )
-            button(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="3",
-              aria-label="Slide 4"
-            )
-            button(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="4",
-              aria-label="Slide 5"
-            )
-            button(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="5",
-              aria-label="Slide 6"
-            )
-            button(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="6",
-              aria-label="Slide 7"
-            )
-            button(
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to="7",
-              aria-label="Slide 8"
-            )
+            each screenshot, index in screenshots
+              button(
+                class=index == 0 ? 'active' : null,
+                type="button",
+                data-bs-target="#carouselScreenshots",
+                data-bs-slide-to=index,
+                aria-current="true",
+                aria-label=screenshot
+              )
           .carousel-inner.img
-            .carousel-item.active
-              img.d-block.mx-auto.w-75(src="assets/geometry0.png")
-            .carousel-item
-              img.d-block.mx-auto.w-75(src="assets/geometry1.png")
-            .carousel-item
-              img.d-block.mx-auto.w-75(src="assets/geometry2.png")
-            .carousel-item
-              img.d-block.mx-auto.w-75(src="assets/species0.png")
-            .carousel-item
-              img.d-block.mx-auto.w-75(src="assets/species1.png")
-            .carousel-item
-              img.d-block.mx-auto.w-75(src="assets/species2.png")
-            .carousel-item
-              img.d-block.mx-auto.w-75(src="assets/reactions.png")
-            .carousel-item
-              img.d-block.mx-auto.w-75(src="assets/simulation.png")
+            each screenshot, index in screenshots
+              .carousel-item(class=index == 0 ? 'active' : null)
+                img.d-block.mx-auto.w-75(
+                  src='assets/' + screenshot,
+                  alt=screenshot
+                )
+
           button.carousel-control-prev(
             type="button",
             data-bs-target="#carouselScreenshots",
