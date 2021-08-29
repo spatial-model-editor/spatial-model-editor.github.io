@@ -28,6 +28,7 @@
     "concurrently": "6.2.0",
     "minify": "7.0.2",
     "postcss": "8.3.6",
+    "postcss-minify": "1.1.0",
     "pug": "3.0.2",
     "sass": "1.37.5",
     "shelljs": "0.8.4",

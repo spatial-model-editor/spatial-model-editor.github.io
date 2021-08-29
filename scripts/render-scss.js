@@ -1,12 +1,12 @@
 "use strict";
 const autoprefixer = require("autoprefixer");
+const postcssminify = require("postcss-minify");
 const fs = require("fs");
 const packageJSON = require("../package.json");
 const upath = require("upath");
 const postcss = require("postcss");
 const sass = require("sass");
 const sh = require("shelljs");
-const minify = require("minify");
 
 const stylesPath = "../src/scss/styles.scss";
 const destPath = upath.resolve(
@@ -25,14 +25,13 @@ module.exports = function renderSCSS() {
     sh.mkdir("-p", destPathDirname);
   }
 
-  postcss([autoprefixer])
+  postcss([autoprefixer, postcssminify])
     .process(results.css, { from: "styles.css", to: "styles.css" })
     .then((result) => {
       result.warnings().forEach((warn) => {
         console.warn(warn.toString());
       });
       fs.writeFileSync(destPath, result.css.toString());
-      minify(destPath);
     });
 };
 
