@@ -6,6 +6,7 @@ const upath = require("upath");
 const postcss = require("postcss");
 const sass = require("sass");
 const sh = require("shelljs");
+const minify = require("minify");
 
 const stylesPath = "../src/scss/styles.scss";
 const destPath = upath.resolve(
@@ -31,17 +32,10 @@ module.exports = function renderSCSS() {
         console.warn(warn.toString());
       });
       fs.writeFileSync(destPath, result.css.toString());
+      minify(destPath);
     });
 };
 
-const entryPoint = `/*!
-* Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${
-  packageJSON.homepage
-})
-* Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${
-  packageJSON.name
-}/blob/master/LICENSE)
-*/
+const entryPoint = `
 @import "${stylesPath}"
 `;
