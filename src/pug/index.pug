@@ -1,0 +1,107 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Spatial Model Editor is a user friendly GUI editor to create and edit two-dimensional spatial SBML models of bio-chemical reactions and simulate them using the dune-copasi solver for reaction-diffusion systems.')
+        meta(name='author', content='Liam Keegan')
+
+        title Spatial Model Editor
+
+        // Favicon
+        link(rel='icon', type='image/svg+xml', href='assets/sme.svg')
+
+        // Bootstrap icons
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+    body
+
+        // Responsive navbar
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            .container.px-lg-5
+                a.navbar-brand(href='index.html') Spatial Model Editor
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarSupportedContent.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+                        li.nav-item
+                            a.nav-link.active(aria-current='page', href='index.html') Home
+                        li.nav-item
+                            a.nav-link(href='screenshots.html') Screenshots
+        // Header
+        header.py-5
+            .container.px-lg-5
+                .img.float-start.w-25(src="assets/sme.svg" alt="Spatial Model Editor logo")
+                .p-4.p-lg-5.bg-light.rounded-3.text-center
+                    .m-4.m-lg-5
+                        h1.display-5.fw-bold Spatial Model Editor
+                        p.fs-4
+                            | A user friendly GUI editor to create and edit two-dimensional
+                              spatial SBML models of bio-chemical reactions and simulate them
+                              using the dune-copasi solver for reaction-diffusion systems.
+
+        // Page Content
+        section.pt-4
+            .container.px-lg-5
+                // Page Features
+                .row.gx-lg-5
+                    .col-lg-6.col-xxl-4.mb-5
+                        .card.bg-light.border-0.h-100
+                            .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
+                                    i.bi.bi-collection
+                                h2.fs-4.fw-bold Documentation
+                                .list-group.list-group-flush
+                                    a.list-group-item.list-group-item-action(href='https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html') Spatial Model Editor
+                                p.mb-0 With Bootstrap 5, we've created a fresh new layout for this template!
+                    .col-lg-6.col-xxl-4.mb-5
+                        .card.bg-light.border-0.h-100
+                            .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
+                                    i.bi.bi-cloud-download
+                                h2.fs-4.fw-bold Free to download
+                                p.mb-0 As always, Start Bootstrap has a powerful collectin of free templates.
+                    .col-lg-6.col-xxl-4.mb-5
+                        .card.bg-light.border-0.h-100
+                            .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
+                                    i.bi.bi-card-heading
+                                h2.fs-4.fw-bold Jumbotron hero header
+                                p.mb-0 The heroic part of this template is the jumbotron hero header!
+                    .col-lg-6.col-xxl-4.mb-5
+                        .card.bg-light.border-0.h-100
+                            .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
+                                    i.bi.bi-bootstrap
+                                h2.fs-4.fw-bold Feature boxes
+                                p.mb-0 We've created some custom feature boxes using Bootstrap icons!
+                    .col-lg-6.col-xxl-4.mb-5
+                        .card.bg-light.border-0.h-100
+                            .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
+                                    i.bi.bi-code
+                                h2.fs-4.fw-bold Simple clean code
+                                p.mb-0 We keep our dependencies up to date and squash bugs as they come!
+                    .col-lg-6.col-xxl-4.mb-5
+                        .card.bg-light.border-0.h-100
+                            .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
+                                    i.bi.bi-patch-check
+                                h2.fs-4.fw-bold A name you trust
+                                p.mb-0 Start Bootstrap has been the leader in free Bootstrap templates since 2013!
+
+        // Footer
+        footer.py-5.bg-dark
+            .container
+                p.m-0.text-center.text-white Copyright &copy; Your Website 2021
+
+        // Bootstrap core JS
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
