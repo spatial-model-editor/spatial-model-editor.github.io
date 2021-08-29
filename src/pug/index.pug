@@ -1,3 +1,13 @@
+mixin feature(title, icon, links)
+  .card.bg-light.border-0.h-100
+    .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+      .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
+        i.bi(class=icon)
+      h2.fs-4.fw-bold= title
+      .list-group.list-group-flush
+        each url, name in links
+          a.list-group-item.list-group-item-action(href=url)= name
+
 doctype html
 html(lang="en")
   head
@@ -67,21 +77,8 @@ html(lang="en")
         // Page Features
         .row.gx-lg-5
           .col-lg-6.col-xxl-4.mb-5
-            .card.bg-light.border-0.h-100
-              .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
-                .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
-                  i.bi.bi-book
-                h2.fs-4.fw-bold Documentation
-                .list-group.list-group-flush
-                  a.list-group-item.list-group-item-action(
-                    href="https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html"
-                  ) Spatial Model Editor
-                  a.list-group-item.list-group-item-action(
-                    href="https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html"
-                  ) sme (Python interface)
-                  a.list-group-item.list-group-item-action(
-                    href="https://sme-contrib.readthedocs.io"
-                  ) sme-contrib (Python extras)
+            - links = { 'Spatial Model Editor': 'https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html', 'sme (Python interface)': 'https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html', 'sme-contrib (Python extras)': 'https://sme-contrib.readthedocs.io' };
+            +feature("Documentation", "bi-book", links)
           .col-lg-6.col-xxl-4.mb-5
             .card.bg-light.border-0.h-100
               .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
