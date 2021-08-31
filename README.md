@@ -35,13 +35,15 @@ On every commit to the master branch:
 
 - clone this repo
   - `git clone https://github.com/spatial-model-editor/spatial-model-editor.github.io.git`
-  - `cd spatial-model-editor.github.io.git`
+  - `cd spatial-model-editor.github.io`
 - (optional) install pre-commit to auto-format code
   - `pip install pre-commit`
   - `pre-commit install`
 - install node 16
-  - https://nodejs.org/en/download/package-manager
-  - ubuntu specific: https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+  - macOS: `brew install node`
+  - windows: https://nodejs.org/en/
+  - linux/macOS tool to manage multiple node versions: https://github.com/nodenv/nodenv
+  - (many) more options: https://nodejs.org/en/download/package-manager
 - install website node dependencies
   - `npm install`
 - start a live in-browser local preview of the website
