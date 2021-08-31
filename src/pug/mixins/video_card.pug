@@ -1,0 +1,26 @@
+// mixin to construct a card with a video
+mixin video_card(title, video_file, url_code, url_colab)
+  .row.align-items-center.row-cols-1
+    .col-lg-12.col-xxl-12.mb-5
+      .card.border-1.shadow-lg
+        .card-body.text-center.p-4.p-lg-2.pt-2.pt-lg-2
+          .row.justify-content-center.p-2
+            .col.text-start
+              a.btn.btn-outline-secondary.btn-lg(href=url_code, role="button")
+                i.bi.bi-file-earmark-code source code
+            .col
+              h2.fs-4.fw-bold #{ title }
+            .col.text-end
+              a.btn.btn-outline-secondary.btn-lg(href=url_colab, role="button")
+                i.bi.bi-journal-code interactive notebook
+          .row
+            .embed-responsive
+              video.embed-responsive-item(
+                controls,
+                autoplay,
+                loop,
+                muted,
+                width="100%",
+                max-height="100%"
+              )
+                source(src='assets/' + video_file, type="video/mp4")

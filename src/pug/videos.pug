@@ -5,24 +5,7 @@ block vars
   - var page_url = 'videos.html';
 
 block content
+  include mixins/video_card
   section.pt-4
     .container.px-lg-5
-      .row
-        .col
-          .card.border-1
-            .card-body.text-center.p-4.p-lg-2.pt-2.pt-lg-2
-              h2.fs-4.fw-bold Gray-Scott
-              a.btn.btn-primary(
-                href="https://spatial-model-editor--654.org.readthedocs.build/en/654/sme/notebooks/visualization.html#Gray-Scott-Model",
-                role="button"
-              ) See the code
-              .embed-responsive
-                video.embed-responsive-item(
-                  controls,
-                  autoplay,
-                  loop,
-                  muted,
-                  width="100%",
-                  height="100%"
-                )
-                  source(src="assets/gray-scott.mp4", type="video/mp4")
+      +video_card("Gray-Scott", "gray-scott.mp4", "https://spatial-model-editor--654.org.readthedocs.build/en/654/sme/notebooks/visualization.html#Gray-Scott-Model", "https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/simulating.ipynb")
