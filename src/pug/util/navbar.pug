@@ -1,0 +1,26 @@
+// ordered dict of name:url pairs for navbar
+- navbar_pages = { Home: 'index.html', Screenshots: 'screenshots.html' };
+
+// mixin to construct the navbar
+mixin navbar(current_url)
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container.px-lg-5
+      a.navbar-brand(href="index.html") Spatial Model Editor
+      button.navbar-toggler(
+        type="button",
+        data-bs-toggle="collapse",
+        data-bs-target="#navbarSupportedContent",
+        aria-controls="navbarSupportedContent",
+        aria-expanded="false",
+        aria-label="Toggle navigation"
+      )
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+          each url, name in navbar_pages
+            li.nav-item
+              a.nav-link(
+                href=url,
+                class=current_url == url ? 'active' : null,
+                aria-current=current_url == url ? 'page' : null
+              ) #{ name }

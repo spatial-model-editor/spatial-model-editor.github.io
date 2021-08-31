@@ -1,103 +1,55 @@
-// list of screenshot image files to display
-- screenshots = ['geometry0.png', 'geometry1.png', 'geometry2.png', 'species0.png', 'species1.png', 'species2.png', 'reactions.png', 'simulation.png'];
+extends util/layout
 
-doctype html
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    meta(
-      name="viewport",
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    )
-    meta(
-      name="description",
-      content="Spatial Model Editor is a user friendly GUI editor to create and edit two-dimensional spatial SBML models of bio-chemical reactions and simulate them using the dune-copasi solver for reaction-diffusion systems."
-    )
-    meta(name="author", content="Liam Keegan")
+block vars
+  - var page_title = 'Screenshots - Spatial Model Editor';
+  - var page_url = 'screenshots.html';
 
-    title Spatial Model Editor
+block content
+  // list of screenshot image files to display
+  - var screenshots = ['geometry0.png', 'geometry1.png', 'geometry2.png', 'species0.png', 'species1.png', 'species2.png', 'reactions.png', 'simulation.png'];
 
-    // Favicon
-    link(rel="icon", type="image/svg+xml", href="assets/sme.svg")
+  // Header
+  header.py-5
+    .container.px-lg-5
+      .p-4.p-lg-5.bg-light.rounded-3.text-center
+        .m-4.m-lg-2
+          h1.display-5.fw-bold GUI Screenshots
 
-    // Bootstrap icons
-    link(
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css",
-      rel="stylesheet"
-    )
-
-    // Core theme CSS (includes Bootstrap)
-    link(href="css/styles.css", rel="stylesheet")
-
-  body
-    // Responsive navbar
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-      .container.px-lg-5
-        a.navbar-brand(href="index.html") Spatial Model Editor
-        button.navbar-toggler(
-          type="button",
-          data-bs-toggle="collapse",
-          data-bs-target="#navbarSupportedContent",
-          aria-controls="navbarSupportedContent",
-          aria-expanded="false",
-          aria-label="Toggle navigation"
-        )
-          span.navbar-toggler-icon
-        #navbarSupportedContent.collapse.navbar-collapse
-          ul.navbar-nav.ms-auto.mb-2.mb-lg-0
-            li.nav-item
-              a.nav-link(href="index.html") Home
-            li.nav-item
-              a.nav-link.active(aria-current="page", href="screenshots.html") Screenshots
-    // Header
-    header.py-5
-      .container.px-lg-5
-        .p-4.p-lg-5.bg-light.rounded-3.text-center
-          .m-4.m-lg-2
-            h1.display-5.fw-bold GUI Screenshots
-    // Page Content
-    section.pt-4
-      .container.px-lg-5
-        #carouselScreenshots.carousel.carousel-dark.slide(
-          data-bs-ride="carousel"
-        )
-          .carousel-indicators
-            each screenshot, index in screenshots
-              button(
-                class=index == 0 ? 'active' : null,
-                type="button",
-                data-bs-target="#carouselScreenshots",
-                data-bs-slide-to=index,
-                aria-current="true",
-                aria-label=screenshot
+  // Page Content
+  section.pt-4
+    .container.px-lg-5
+      #carouselScreenshots.carousel.carousel-dark.slide(
+        data-bs-ride="carousel"
+      )
+        .carousel-indicators
+          each screenshot, index in screenshots
+            button(
+              class=index == 0 ? 'active' : null,
+              type="button",
+              data-bs-target="#carouselScreenshots",
+              data-bs-slide-to=index,
+              aria-current="true",
+              aria-label=screenshot
+            )
+        .carousel-inner.img
+          each screenshot, index in screenshots
+            .carousel-item(class=index == 0 ? 'active' : null)
+              img.d-block.mx-auto.w-75(
+                src='assets/' + screenshot,
+                alt=screenshot
               )
-          .carousel-inner.img
-            each screenshot, index in screenshots
-              .carousel-item(class=index == 0 ? 'active' : null)
-                img.d-block.mx-auto.w-75(
-                  src='assets/' + screenshot,
-                  alt=screenshot
-                )
 
-          button.carousel-control-prev(
-            type="button",
-            data-bs-target="#carouselScreenshots",
-            data-bs-slide="prev"
-          )
-            span.carousel-control-prev-icon(aria-hidden="true")
-            span.visually-hidden Previous
-          button.carousel-control-next(
-            type="button",
-            data-bs-target="#carouselScreenshots",
-            data-bs-slide="next"
-          )
-            span.carousel-control-next-icon(aria-hidden="true")
-            span.visually-hidden Next
-
-    // Bootstrap core JS
-    script(
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    )
-
-    // Core theme JS
-    script(src="js/scripts.js")
+        button.carousel-control-prev(
+          type="button",
+          data-bs-target="#carouselScreenshots",
+          data-bs-slide="prev"
+        )
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.visually-hidden Previous
+        button.carousel-control-next(
+          type="button",
+          data-bs-target="#carouselScreenshots",
+          data-bs-slide="next"
+        )
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.visually-hidden Next

@@ -1,0 +1,46 @@
+// base layout for all pages
+// example of use in file index.pug:
+//
+// extends layout
+//
+// block vars
+//   - var page_title = 'Home'
+//   - var page_url = 'index.html'
+//
+// block content
+//   p page content goes here
+//
+
+doctype html
+html(lang="en")
+  block vars
+
+  head
+    meta(charset="utf-8")
+    meta(
+      name="viewport",
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    )
+    meta(
+      name="description",
+      content="Spatial Model Editor is a user friendly GUI editor to create and edit two-dimensional spatial SBML models of bio-chemical reactions and simulate them using the dune-copasi solver for reaction-diffusion systems."
+    )
+    meta(name="author", content="Liam Keegan")
+    title #{ page_title }
+    link(rel="icon", type="image/svg+xml", href="assets/sme.svg")
+    link(
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css",
+      rel="stylesheet"
+    )
+    link(href="css/styles.css", rel="stylesheet")
+
+  body
+    include navbar
+    +navbar(page_url)
+
+    block content
+
+    script(
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    )
+    script(src="js/scripts.js")
