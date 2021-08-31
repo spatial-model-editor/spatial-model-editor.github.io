@@ -1,4 +1,8 @@
-# [spatial-model-editor.github.io](https://spatial-model-editor.github.io/) [![Build and deploy to gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml)
+<img align="left" width="64" height="64" src="https://raw.githubusercontent.com/spatial-model-editor/spatial-model-editor/master/src/core/resources/icon.iconset/icon_32x32@2x.png" alt="icon">
+
+# [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
+
+[![Build and deploy to gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml)
 
 ## How it works
 
@@ -8,9 +12,17 @@
 
 ## Structure
 
-- [src/pug](/src/pug) contains a [pug](https://pugjs.org/) template for each html page
-- [src/assets](/src/assets) contains the image files
-- [src/scss/styles.scss](/src/scss/styles.scss) import and customize [Bootstrap css](https://getbootstrap.com/docs/5.0/customize/sass/)
+- [src/pug](/src/pug)
+  - each html page is generated from a [pug](https://pugjs.org/) template
+  - it inherits the base layout from [src/pug/layouts/base.pug](/src/pug/layouts/base.pug)
+  - it can use functions ('mixins') from [src/pug/mixins](/src/pug/mixins)
+  - when adding a new page, it should also be added to the list in [src/pug/mixins/navbar.pug](/src/pug/mixins/navbar.pug)
+- [src/assets](/src/assets)
+  - contains the image and video files
+- [src/scss](/src/scss)
+  - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.0/customize/sass/)
+- [src/js](/src/js)
+  - extra javascript can be added here
 
 ## Deployment
 
