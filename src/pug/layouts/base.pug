@@ -1,7 +1,7 @@
 // base layout for all pages
 // example of use in file index.pug:
 //
-// extends layout
+// extends base
 //
 // block vars
 //   - var page_title = 'Home'
@@ -35,7 +35,7 @@ html(lang="en")
     link(href="css/styles.css", rel="stylesheet")
 
   body
-    include navbar
+    include ../mixins/navbar
     +navbar(page_url)
 
     block content
