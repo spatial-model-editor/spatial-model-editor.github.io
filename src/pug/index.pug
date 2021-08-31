@@ -21,8 +21,6 @@ block header
             | using the dune-copasi solver for reaction-diffusion systems.
 
 block content
-  include mixins/cards
-
   // text:url pairs for each feature card:
   -
     var doc_links = {
@@ -53,6 +51,7 @@ block content
       'MIT License': 'https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE'
     };
 
+  include mixins/feature_card
   section.pt-4
     .container.px-lg-5
       .row.gx-lg-5
