@@ -1,0 +1,39 @@
+extends util/layout
+
+block vars
+  - var page_title = 'Videos - Spatial Model Editor';
+  - var page_url = 'videos.html';
+
+block content
+  // list of videos to display
+  - var screenshots = ['gray-scott.mp4'];
+
+  // Header
+  header.py-5
+    .container.px-lg-5
+      .p-4.p-lg-1.rounded-3.text-center
+        .m-4.m-lg-2
+          h1.display-5.fw-bold Simulation Videos
+
+  // Page Content
+  section.pt-4
+    .container.px-lg-5
+      .row
+        .col
+          .card.border-1
+            .card-body.text-center.p-4.p-lg-2.pt-2.pt-lg-2
+              h2.fs-4.fw-bold Gray-Scott
+              a.btn.btn-primary(
+                href="https://spatial-model-editor--654.org.readthedocs.build/en/654/sme/notebooks/visualization.html#Gray-Scott-Model",
+                role="button"
+              ) See the code
+              .embed-responsive
+                video.embed-responsive-item(
+                  controls,
+                  autoplay,
+                  loop,
+                  muted,
+                  width="100%",
+                  height="100%"
+                )
+                  source(src="assets/gray-scott.mp4", type="video/mp4")
