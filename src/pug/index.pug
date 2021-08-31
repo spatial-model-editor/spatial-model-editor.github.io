@@ -1,8 +1,24 @@
 extends layouts/base
 
 block vars
-  - var page_title = 'Spatial Model Editor';
+  - var page_title = 'Home';
   - var page_url = 'index.html';
+
+block header
+  // custom header block overwrites base layout simple title
+  header.py-5
+    .container.px-lg-5
+      img.float-start.w-25(
+        src="assets/sme.svg",
+        alt="Spatial Model Editor logo"
+      )
+      .p-4.p-lg-5.rounded-3.text-center
+        .m-4.m-lg-2
+          h1.display-5.fw-bold Spatial Model Editor
+          p.fs-4
+            | A user friendly GUI editor to create and edit two-dimensional
+            | spatial SBML models of bio-chemical reactions and simulate them
+            | using the dune-copasi solver for reaction-diffusion systems.
 
 block content
   include mixins/cards
@@ -37,23 +53,8 @@ block content
       'MIT License': 'https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE'
     };
 
-  header.py-5
-    .container.px-lg-5
-      img.float-start.w-25(
-        src="assets/sme.svg",
-        alt="Spatial Model Editor logo"
-      )
-      .p-4.p-lg-5.rounded-3.text-center
-        .m-4.m-lg-2
-          h1.display-5.fw-bold Spatial Model Editor
-          p.fs-4
-            | A user friendly GUI editor to create and edit two-dimensional
-            | spatial SBML models of bio-chemical reactions and simulate them
-            | using the dune-copasi solver for reaction-diffusion systems.
-
   section.pt-4
     .container.px-lg-5
-      // Page Features
       .row.gx-lg-5
         +feature_card("Documentation", "bi-book", doc_links)
         +feature_card_downloads

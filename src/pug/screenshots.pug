@@ -1,7 +1,7 @@
 extends layouts/base
 
 block vars
-  - var page_title = 'Screenshots - Spatial Model Editor';
+  - var page_title = 'GUI Screenshots';
   - var page_url = 'screenshots.html';
 
 block content
@@ -18,14 +18,6 @@ block content
       'simulation.png'
     ];
 
-  // Header
-  header.py-5
-    .container.px-lg-5
-      .p-4.p-lg-1.rounded-3.text-center
-        .m-4.m-lg-2
-          h1.display-5.fw-bold GUI Screenshots
-
-  // Page Content
   section.pt-4
     .container.px-lg-5
       #carouselScreenshots.carousel.carousel-dark.slide(

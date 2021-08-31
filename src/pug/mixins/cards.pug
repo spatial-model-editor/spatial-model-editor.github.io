@@ -1,5 +1,5 @@
 // mixin to construct a card
-mixin card(title, icon)
+mixin feature_card_base(title, icon)
   .col-lg-6.col-xxl-4.mb-5
     .card.bg-light.border-0.h-100
       .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
@@ -8,16 +8,16 @@ mixin card(title, icon)
         h2.fs-4.fw-bold= title
         block
 
-// mixin to construct a feature card given title, icon name and a dict of links
+// mixin to construct a feature card given title, icon name and a dict of name:url
 mixin feature_card(title, icon, links)
-  +card(title, icon)
+  +feature_card_base(title, icon)
     .list-group.list-group-flush
       each url, name in links
         a.list-group-item.list-group-item-action(href=url)= name
 
 // mixin to construct downloads feature card
 mixin feature_card_downloads
-  +card("GUI Download", "bi-cloud-download")
+  +feature_card_base("GUI Download", "bi-cloud-download")
     .row.align-items-center.row-cols-3
       .col
         a(
