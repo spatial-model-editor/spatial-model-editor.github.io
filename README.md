@@ -8,7 +8,7 @@
 
 - [master](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master) branch contains the source code
 - [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated html/css/js/image files
-- uses [npm](https://www.npmjs.com/), the [Boostrap](https://getbootstrap.com/) framework, and the [pug](https://pugjs.org/) HTML templating engine.
+- uses [npm](https://www.npmjs.com/) for package management, the [Bootstrap](https://getbootstrap.com/) CSS framework, and the [pug](https://pugjs.org/) HTML templating engine.
 
 ## Structure
 
