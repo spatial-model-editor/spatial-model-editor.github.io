@@ -18,40 +18,7 @@ block content
       'simulation.png'
     ];
 
+  include mixins/image_carousel
   section.pt-4
     .container.px-lg-5
-      #carouselScreenshots.carousel.carousel-dark.slide(
-        data-bs-ride="carousel"
-      )
-        .carousel-indicators
-          each screenshot, index in screenshots
-            button(
-              class=index == 0 ? 'active' : null,
-              type="button",
-              data-bs-target="#carouselScreenshots",
-              data-bs-slide-to=index,
-              aria-current="true",
-              aria-label=screenshot
-            )
-        .carousel-inner.img
-          each screenshot, index in screenshots
-            .carousel-item(class=index == 0 ? 'active' : null)
-              img.d-block.mx-auto.w-75(
-                src='assets/' + screenshot,
-                alt=screenshot
-              )
-
-        button.carousel-control-prev(
-          type="button",
-          data-bs-target="#carouselScreenshots",
-          data-bs-slide="prev"
-        )
-          span.carousel-control-prev-icon(aria-hidden="true")
-          span.visually-hidden Previous
-        button.carousel-control-next(
-          type="button",
-          data-bs-target="#carouselScreenshots",
-          data-bs-slide="next"
-        )
-          span.carousel-control-next-icon(aria-hidden="true")
-          span.visually-hidden Next
+      +image_carousel(screenshots)

@@ -1,0 +1,32 @@
+// mixin to construct a carousel from a list of images
+mixin image_carousel(images)
+  #imgCarousel.carousel.carousel-dark.slide(data-bs-ride="carousel")
+    .carousel-indicators
+      each image, index in images
+        button(
+          class=index == 0 ? 'active' : null,
+          type="button",
+          data-bs-target="#imgCarousel",
+          data-bs-slide-to=index,
+          aria-current="true",
+          aria-label=image
+        )
+    .carousel-inner.img
+      each image, index in images
+        .carousel-item(class=index == 0 ? 'active' : null)
+          img.d-block.mx-auto.w-75(src='assets/' + image, alt=image)
+
+    button.carousel-control-prev(
+      type="button",
+      data-bs-target="#imgCarousel",
+      data-bs-slide="prev"
+    )
+      span.carousel-control-prev-icon(aria-hidden="true")
+      span.visually-hidden Previous
+    button.carousel-control-next(
+      type="button",
+      data-bs-target="#imgCarousel",
+      data-bs-slide="next"
+    )
+      span.carousel-control-next-icon(aria-hidden="true")
+      span.visually-hidden Next
