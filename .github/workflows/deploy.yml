@@ -3,19 +3,23 @@ name: Build and deploy to gh-pages
 on: push
 
 jobs:
-  deploy:
-    name: Build and deploy to gh-pages
+  build:
+    name: Build using node ${{ matrix.node-version }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12, 14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm install
       - run: npm run build
       - uses: JamesIves/github-pages-deploy-action@4.1.5
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master' && matrix.node-version == 16
+        name: Deploy to gh-pages
         with:
           branch: gh-pages
           folder: dist
