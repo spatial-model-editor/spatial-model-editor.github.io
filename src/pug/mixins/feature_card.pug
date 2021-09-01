@@ -1,7 +1,7 @@
 // mixin to construct a card
 mixin feature_card_base(title, icon)
   .col-lg-6.col-xxl-4.mb-5
-    .card.bg-light.border-0.h-100
+    .card.border-1.h-100.shadow-lg
       .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
         .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
           i.bi(class=icon)
@@ -18,12 +18,12 @@ mixin feature_card(title, icon, links)
 // mixin to construct downloads feature card
 mixin feature_card_downloads
   +feature_card_base("GUI Download", "bi-cloud-download")
-    .row.align-items-center.row-cols-3
+    .row.align-items-center.row-cols-3.pt-1
       .col
         a(
           href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor"
         )
-          .card.bg-light.border-0.h-100.text-nowrap.shadow.p-1
+          .card.border-0.text-nowrap.p-0
             // svg from https://www.svgrepo.com/svg/3968/linux, CC0 license
             svg.card-img-top(
               fill="currentColor",
@@ -37,7 +37,7 @@ mixin feature_card_downloads
         a(
           href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.dmg"
         )
-          .card.bg-light.border-0.h-100.text-nowrap.shadow.p-1
+          .card.border-0.text-nowrap.p-0
             // svg from https://github.com/twbs/icons/blob/main/icons/apple.svg, MIT license
             svg.card-img-top(fill="currentColor", viewBox="0 0 16 16")
               path(
@@ -51,7 +51,7 @@ mixin feature_card_downloads
         a(
           href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.exe"
         )
-          .card.bg-light.border-0.h-100.text-nowrap.shadow.p-1
+          .card.border-0.text-nowrap.p-0
             // svg from https://github.com/twbs/icons/blob/main/icons/microsoft.svg, MIT license
             svg.card-img-top(fill="currentColor", viewBox="0 0 305 305")
               path(
