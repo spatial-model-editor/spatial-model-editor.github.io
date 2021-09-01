@@ -6,19 +6,19 @@ mixin video_card(title, video_file, url_code, url_colab)
         .card-body.text-center.p-4.p-lg-2.pt-2.pt-lg-2
           .row.justify-content-center.p-2
             .col.text-start
-              a.btn.btn-outline-primary.btn-lg(href=url_code, role="button")
+              a.btn.btn-outline-primary(href=url_code, role="button")
                 |
                 i.bi.bi-file-earmark-code
                 |
-                | source code
+                | Source Code
             .col
               h2.fs-4.fw-bold #{ title }
             .col.text-end
-              a.btn.btn-outline-primary.btn-lg(href=url_colab, role="button")
+              a.btn.btn-outline-primary(href=url_colab, role="button")
                 |
                 i.bi.bi-journal-code
                 |
-                | interactive notebook
+                | Interactive Notebook
           .row
             .embed-responsive
               video.embed-responsive-item(
