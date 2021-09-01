@@ -18,7 +18,7 @@ module.exports = function renderPug(filePath) {
     basedir: srcPath,
   });
 
-  const mini = minify(html);
+  const mini = minify(html, { removeComments: true });
 
   const destPathDirname = upath.dirname(destPath);
   if (!sh.test("-e", destPathDirname)) {
