@@ -18,9 +18,9 @@ process.title = "pug-watch";
 process.stdout.write("Loading");
 let allPugFiles = {};
 
-watcher.on("add", (filePath) => _processFile(upath.normalize(filePath), "add"));
+watcher.on("add", (filePath) => _processFile(upath.resolve(filePath), "add"));
 watcher.on("change", (filePath) =>
-  _processFile(upath.normalize(filePath), "change")
+  _processFile(upath.resolve(filePath), "change")
 );
 watcher.on("ready", () => {
   READY = true;
@@ -31,23 +31,19 @@ _handleSCSS();
 
 function _processFile(filePath, watchEvent) {
   if (!READY) {
-    if (filePath.match(/\.pug$/)) {
-      if (
-        !filePath.match(/includes/) &&
-        !filePath.match(/mixins/) &&
-        !filePath.match(/\/pug\/layouts\//)
-      ) {
-        allPugFiles[filePath] = true;
-      }
+    if (filePath.match(/\.pug$/) && renderPug.isPage(filePath)) {
+      allPugFiles[filePath] = true;
     }
     process.stdout.write(".");
     return;
   }
 
-  console.log(`### INFO: File event: ${watchEvent}: ${filePath}`);
-
   if (filePath.match(/\.pug$/)) {
     return _handlePug(filePath, watchEvent);
+  }
+
+  if (filePath.match(/\.json/)) {
+    return _handleJson(filePath, watchEvent);
   }
 
   if (filePath.match(/\.scss$/)) {
@@ -67,29 +63,24 @@ function _processFile(filePath, watchEvent) {
 }
 
 function _handlePug(filePath, watchEvent) {
-  if (watchEvent === "change") {
-    if (
-      filePath.match(/includes/) ||
-      filePath.match(/mixins/) ||
-      filePath.match(/\/pug\/layouts\//)
-    ) {
-      return _renderAllPug();
-    }
-    return renderPug(filePath);
+  if (renderPug.isPage(filePath)) {
+    return renderPug.render(filePath);
   }
-  if (
-    !filePath.match(/includes/) &&
-    !filePath.match(/mixins/) &&
-    !filePath.match(/\/pug\/layouts\//)
-  ) {
-    return renderPug(filePath);
+  if (watchEvent === "change" && !renderPug.isPage(filePath)) {
+    return _renderAllPug();
   }
 }
 
+function _handleJson(filePath, watchEvent) {
+  const pugFilePath = filePath
+    .replace(/\/json\//, "/pug/")
+    .replace(/\.json$/, ".pug");
+  return renderPug.render(pugFilePath);
+}
+
 function _renderAllPug() {
-  console.log("### INFO: Rendering All");
   _.each(allPugFiles, (value, filePath) => {
-    renderPug(filePath);
+    renderPug.render(filePath);
   });
 }
 

@@ -1,0 +1,48 @@
+{
+  "page_title": "Home",
+  "cards": [
+    {
+      "title": "Documentation",
+      "icon": "bi-book",
+      "links": {
+        "Spatial Model Editor": "https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html",
+        "Python interface: sme": "https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html",
+        "Python extras: sme-contrib": "https://sme-contrib.readthedocs.io"
+      }
+    },
+    {
+      "title": "Python interface",
+      "icon": "bi-braces",
+      "links": {
+        "sme": "https://pypi.org/project/sme",
+        "sme-contrib": "https://pypi.org/project/sme-contrib",
+        "Try it online": "https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/getting_started.ipynb"
+      }
+    },
+    {
+      "title": "Examples",
+      "icon": "bi-collection-play",
+      "links": {
+        "Screenshots": "screenshots.html",
+        "Videos": "videos.html"
+      }
+    },
+    {
+      "title": "PDE Solvers",
+      "icon": "bi-cpu",
+      "links": {
+        "dune-copasi": "https://dune-copasi.netlify.app",
+        "Pixel": "https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html"
+      }
+    },
+    {
+      "title": "Source Code",
+      "icon": "bi-github",
+      "links": {
+        "Spatial Model Editor": "https://github.com/spatial-model-editor/spatial-model-editor",
+        "sme-contrib": "https://github.com/spatial-model-editor/sme-contrib",
+        "MIT License": "https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE"
+      }
+    }
+  ]
+}

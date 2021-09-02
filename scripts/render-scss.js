@@ -2,7 +2,6 @@
 const autoprefixer = require("autoprefixer");
 const postcssminify = require("postcss-minify");
 const fs = require("fs");
-const packageJSON = require("../package.json");
 const upath = require("upath");
 const postcss = require("postcss");
 const sass = require("sass");

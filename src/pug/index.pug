@@ -1,9 +1,5 @@
 extends layouts/base
 
-block vars
-  - var page_title = 'Home';
-  - var page_url = 'index.html';
-
 block header
   // custom header block overwrites base layout simple title
   header.py-5
@@ -21,43 +17,11 @@ block header
             | using the dune-copasi solver for reaction-diffusion systems.
 
 block content
-  // text:url pairs for each feature card:
-  -
-    var doc_links = {
-      "Spatial Model Editor": "https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html",
-      "Python interface: sme": "https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html",
-      "Python extras: sme-contrib": "https://sme-contrib.readthedocs.io"
-    };
-  -
-    var python_links = {
-      "sme": "https://pypi.org/project/sme",
-      "sme-contrib": "https://pypi.org/project/sme-contrib",
-      "Try it online": "https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/getting_started.ipynb"
-    };
-  -
-    var example_links = {
-      "Screenshots": "screenshots.html",
-      "Videos": "videos.html"
-    };
-  -
-    var pde_links = {
-      "dune-copasi": "https://dune-copasi.netlify.app",
-      "Pixel": "https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html"
-    };
-  -
-    var code_links = {
-      "Spatial Model Editor": "https://github.com/spatial-model-editor/spatial-model-editor",
-      "sme-contrib": "https://github.com/spatial-model-editor/sme-contrib",
-      "MIT License": "https://github.com/spatial-model-editor/spatial-model-editor/blob/master/LICENSE"
-    };
-
   include mixins/feature_card
   section.pt-4
     .container.px-lg-5
       .row.gx-lg-5
-        +feature_card("Documentation", "bi-book", doc_links)
-        +feature_card_downloads
-        +feature_card("Python interface", "bi-braces", python_links)
-        +feature_card("Examples", "bi-collection-play", example_links)
-        +feature_card("PDE Solvers", "bi-cpu", pde_links)
-        +feature_card("Source Code", "bi-github", code_links)
+        each card, index in json.cards
+          if index == 1
+            +feature_card_downloads
+          +feature_card(card.title, card.icon, card.links)

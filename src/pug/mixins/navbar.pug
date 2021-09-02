@@ -1,13 +1,5 @@
-// ordered dict of name:url pairs for navbar
--
-  navbar_pages = {
-    "Home": "index.html",
-    "Screenshots": "screenshots.html",
-    "Videos": "videos.html"
-  };
-
 // mixin to construct the navbar
-mixin navbar(current_url)
+mixin navbar
   nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
     .container.px-lg-5
       a.navbar-brand(href="index.html") Spatial Model Editor
@@ -22,10 +14,10 @@ mixin navbar(current_url)
         span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.ms-auto.mb-2.mb-lg-0
-          each url, name in navbar_pages
+          each url, name in json.navbar.pages
             li.nav-item
               a.nav-link(
                 href=url,
-                class=current_url == url ? 'active' : null,
-                aria-current=current_url == url ? 'page' : null
+                class=json.navbar.current == url ? 'active' : null,
+                aria-current=json.navbar.current == url ? 'page' : null
               ) #{ name }

@@ -1,11 +1,8 @@
 extends layouts/base
 
-block vars
-  - var page_title = 'Simulation Videos';
-  - var page_url = 'videos.html';
-
 block content
   include mixins/video_card
   section.pt-4
     .container.px-lg-5
-      +video_card("Gray-Scott", "gray-scott.mp4", "https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks/visualization.html#Gray-Scott-Model", "https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/visualization.ipynb")
+      each video in json.videos
+        +video_card(video.title, video.filename, video.code_url, video.colab_url)

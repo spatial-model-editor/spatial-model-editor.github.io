@@ -1,9 +1,5 @@
 extends layouts/base
 
-block vars
-  - var page_title = 'GUI Screenshots';
-  - var page_url = 'screenshots.html';
-
 block content
   - var screenshot_dir = 'screenshots';
   - var screenshot_files = fs.readdirSync(basedir + '/assets/' + screenshot_dir);
