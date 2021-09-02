@@ -42,8 +42,8 @@ function _processFile(filePath, watchEvent) {
     return _handlePug(filePath, watchEvent);
   }
 
-  if (filePath.match(/\.json/)) {
-    return _handleJson(filePath, watchEvent);
+  if (filePath.match(/\.yml/)) {
+    return _handleYaml(filePath, watchEvent);
   }
 
   if (filePath.match(/\.scss$/)) {
@@ -71,10 +71,10 @@ function _handlePug(filePath, watchEvent) {
   }
 }
 
-function _handleJson(filePath, watchEvent) {
+function _handleYaml(filePath, watchEvent) {
   const pugFilePath = filePath
-    .replace(/\/json\//, "/pug/")
-    .replace(/\.json$/, ".pug");
+    .replace(/\/content\//, "/pug/")
+    .replace(/\.yml/, ".pug");
   return renderPug.render(pugFilePath);
 }
 

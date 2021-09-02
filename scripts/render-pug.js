@@ -4,22 +4,23 @@ const upath = require("upath");
 const pug = require("pug");
 const sh = require("shelljs");
 const minify = require("html-minifier").minify;
+const YAML = require("yaml");
 
 function render(filePath) {
   const destPath = filePath
     .replace(/src\/pug\//, "dist/")
     .replace(/\.pug$/, ".html");
   const srcPath = upath.resolve(upath.dirname(__filename), "../src");
-  const jsonPath = filePath
-    .replace(/\/pug\//, "/json/")
-    .replace(/\.pug$/, ".json");
+  const contentPath = filePath
+    .replace(/\/pug\//, "/content/")
+    .replace(/\.pug$/, ".yml");
 
-  console.log(`JSON <-- ${jsonPath}`);
-  var json = JSON.parse(fs.readFileSync(jsonPath));
-  json.navbar = JSON.parse(
-    fs.readFileSync(upath.join(srcPath, "json/navbar.json"))
+  console.log(`yaml <-- ${contentPath}`);
+  var content = YAML.parse(fs.readFileSync(contentPath, "utf8"));
+  content.navbar = YAML.parse(
+    fs.readFileSync(upath.join(srcPath, "content/navbar.yml"), "utf8")
   );
-  json.navbar.current = upath.basename(destPath);
+  content.navbar.current = upath.basename(destPath);
 
   console.log(`Pug  <-- ${filePath}`);
   const html = pug.renderFile(filePath, {
@@ -27,7 +28,7 @@ function render(filePath) {
     filename: filePath,
     basedir: srcPath,
     fs: fs,
-    json: json,
+    content: content,
   });
 
   console.log(`HTML --> ${destPath}`);

@@ -19,7 +19,8 @@
   "license": "MIT",
   "author": "Liam Keegan",
   "dependencies": {
-    "bootstrap": "5.1.0"
+    "bootstrap": "5.1.0",
+    "yaml": "^1.10.2"
   },
   "devDependencies": {
     "autoprefixer": "10.3.3",

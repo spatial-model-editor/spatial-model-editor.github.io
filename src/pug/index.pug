@@ -1,7 +1,7 @@
 extends layouts/base
 
 block header
-  // custom header block overwrites base layout simple title
+  // custom header block overwrites base layout header
   header.py-5
     .container.px-lg-5
       img.float-start.w-25(
@@ -21,7 +21,7 @@ block content
   section.pt-4
     .container.px-lg-5
       .row.gx-lg-5
-        each card, index in json.cards
+        each card, index in content.cards
           if index == 1
             +feature_card_downloads
           +feature_card(card.title, card.icon, card.links)
