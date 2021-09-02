@@ -4,5 +4,5 @@ block content
   include mixins/video_card
   section.pt-4
     .container.px-lg-5
-      each video in json.videos
+      each video in content.videos
         +video_card(video.title, video.filename, video.code_url, video.colab_url)

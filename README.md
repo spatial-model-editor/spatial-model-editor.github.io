@@ -8,14 +8,16 @@
 
 - [master](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master) branch contains the source code
 - [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated html/css/js/image files
-- each page has a [json](/src/json) file of editable content
-- uses the [npm](https://www.npmjs.com/) package manager, the [Bootstrap](https://getbootstrap.com/) CSS framework, and the [pug](https://pugjs.org/) HTML templating engine.
+- the contents of each page are stored in [yaml](https://yaml.org/) format in [/src/content](/src/content)
+- there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [/src/pug](/src/pug)
+- CSS and icons are provided by [Bootstrap](https://getbootstrap.com/)
+- [npm](https://www.npmjs.com/) is used to manage the build and depencies
 
 ## Structure
 
-- [src/json](/src/json)
-  - each page has a json file with the content for that page
-  - this data is made available to the pug template of the same name as `json`
+- [src/content](/src/content)
+  - each page has a yaml file with the content for that page
+  - this data is made available to the pug template of the same name as `content`
 - [src/pug](/src/pug)
   - each page has a [pug](https://pugjs.org/) template
   - the html page is generated from this template
@@ -30,21 +32,21 @@
 
 ## Content
 
-- [index](/src/json/index.json)
-  - title, icon and contents of each feature card can be edited via the json file
-- [screenshots](/src/json/screenshots.json)
+- [index](/src/content/index.yml)
+  - title, icon and contents of each feature card can be edited via the yaml file
+- [screenshots](/src/content/screenshots.yml)
   - displays all images in [src/assets/screenshots](/src/assets/screenshots)
-  - to add an image, just add the image file to this folder, no changes to the json required
-- [videos](/src/json/videos.json)
-  - videos can be edited and added via the json file
+  - to add an image, just add the image file to this folder, no changes to the yaml file required
+- [videos](/src/content/videos.yml)
+  - videos can be edited and added via the yaml file
 
 ## Adding a new page
 
 To add a page `X`:
 
 - create a text file `src/pug/X.pug` with the contents `extends layouts/base`
-- create a text file `src/json/X.pug` with the contents `{"page_title" : "X"}`
-- add an entry for it to the list of pages in [src/json/navbar.json](src/json/navbar.json)
+- create a text file `src/content/X.yml` with the contents `page_title: "X"`
+- add an entry for it to the list of pages in [src/content/navbar.yml](src/content/navbar.yml)
 
 ## Deployment
 

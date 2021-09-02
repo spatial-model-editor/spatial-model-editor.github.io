@@ -1,0 +1,7 @@
+page_title: Simulation Videos
+
+videos:
+  - title: Gray-Scott
+    filename: gray-scott.mp4
+    code_url: https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks/visualization.html#Gray-Scott-Model
+    colab_url: https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/visualization.ipynb
