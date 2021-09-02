@@ -8,22 +8,23 @@
 
 - [master](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master) branch contains the source code
 - [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated html/css/js/image files
-- contents of each page generated from a json text file that can be easily edited
+- each page has a [json](/src/json) file of editable content
 - uses the [npm](https://www.npmjs.com/) package manager, the [Bootstrap](https://getbootstrap.com/) CSS framework, and the [pug](https://pugjs.org/) HTML templating engine.
 
 ## Structure
 
 - [src/json](/src/json)
-  - contains the content for each page
+  - each page has a json file with the content for that page
   - this data is made available to the pug template of the same name as `json`
 - [src/pug](/src/pug)
-  - each html page is generated from a [pug](https://pugjs.org/) template
+  - each page has a [pug](https://pugjs.org/) template
+  - the html page is generated from this template
   - it inherits the base layout from [src/pug/layouts/base.pug](/src/pug/layouts/base.pug)
   - it can use functions ('mixins') from [src/pug/mixins](/src/pug/mixins)
 - [src/assets](/src/assets)
   - contains the image and video files
 - [src/scss](/src/scss)
-  - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.0/customize/sass/)
+  - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.1/customize/sass/)
 - [src/js](/src/js)
   - any extra (client-side) javascript can be added here
 
