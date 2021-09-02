@@ -5,7 +5,7 @@ mixin feature_card_base(title, icon)
       .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
         .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4
           i.bi(class=icon)
-        h2.fs-4.fw-bold= title
+        h2.fs-4.fw-bold #{ title }
         block
 
 // mixin to construct a feature card given title, icon name and a dict of name:url
@@ -13,7 +13,7 @@ mixin feature_card(title, icon, links)
   +feature_card_base(title, icon)
     .list-group.list-group-flush
       each url, name in links
-        a.list-group-item.list-group-item-action(href=url)= name
+        a.list-group-item.list-group-item-action(href=url) #{ name }
 
 // mixin to construct downloads feature card
 mixin feature_card_downloads
