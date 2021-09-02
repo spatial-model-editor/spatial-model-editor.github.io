@@ -8,24 +8,42 @@
 
 - [master](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master) branch contains the source code
 - [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated html/css/js/image files
+- contents of each page generated from a json text file that can be easily edited
 - uses the [npm](https://www.npmjs.com/) package manager, the [Bootstrap](https://getbootstrap.com/) CSS framework, and the [pug](https://pugjs.org/) HTML templating engine.
 
 ## Structure
 
+- [src/json](/src/json)
+  - contains the content for each page
+  - this data is made available to the pug template of the same name as `json`
 - [src/pug](/src/pug)
   - each html page is generated from a [pug](https://pugjs.org/) template
   - it inherits the base layout from [src/pug/layouts/base.pug](/src/pug/layouts/base.pug)
   - it can use functions ('mixins') from [src/pug/mixins](/src/pug/mixins)
-  - when adding a new page, it should also be added to the list in [src/pug/mixins/navbar.pug](/src/pug/mixins/navbar.pug)
-  - [src/pug/screenshots.pug](/src/pug/screenshots.pug)
-    - displays all images in [src/assets/screenshots](/src/assets/screenshots)
-    - to add an image, just add the image file to this folder
 - [src/assets](/src/assets)
   - contains the image and video files
 - [src/scss](/src/scss)
   - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.0/customize/sass/)
 - [src/js](/src/js)
-  - extra javascript can be added here
+  - any extra (client-side) javascript can be added here
+
+## Content
+
+- [index](/src/json/index.json)
+  - title, icon and contents of each feature card can be edited via the json file
+- [screenshots](/src/json/screenshots.json)
+  - displays all images in [src/assets/screenshots](/src/assets/screenshots)
+  - to add an image, just add the image file to this folder, no changes to the json required
+- [videos](/src/json/videos.json)
+  - videos can be edited and added via the json file
+
+## Adding a new page
+
+To add a page `X`:
+
+- create a text file `src/pug/X.pug` with the contents `extends layouts/base`
+- create a text file `src/json/X.pug` with the contents `{"page_title" : "X"}`
+- add an entry for it to the list of pages in [src/json/navbar.json](src/json/navbar.json)
 
 ## Deployment
 
@@ -52,7 +70,7 @@ On every commit to the master branch:
   - `npm install`
 - start a live in-browser local preview of the website
   - `npm start`
-- make changes to the files in `src/pug/` and the preview will update automatically
+- make changes to the files in `src/` and the preview will update automatically
 
 ## Acknowledgements
 
