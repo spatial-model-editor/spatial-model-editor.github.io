@@ -10,11 +10,8 @@ block header
       )
       .p-4.p-lg-5.rounded-3.text-center
         .m-4.m-lg-2
-          h1.display-5.fw-bold Spatial Model Editor
-          p.fs-4
-            | A user friendly GUI editor to create and edit two-dimensional
-            | spatial SBML models of bio-chemical reactions and simulate them
-            | using the dune-copasi solver for reaction-diffusion systems.
+          h1.display-5.fw-bold #{ content.page_title }
+          p.fs-4 #{ content.page_blurb }
 
 block content
   include mixins/feature_card
