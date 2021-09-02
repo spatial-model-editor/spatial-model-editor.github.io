@@ -1,8 +1,8 @@
 // mixin to construct a carousel from a list of images
-mixin image_carousel(images)
+mixin image_carousel(image_dir, image_files)
   #imgCarousel.carousel.carousel-dark.slide(data-bs-ride="carousel")
     .carousel-indicators
-      each image, index in images
+      each image_file, index in image_files
         button(
           class=index == 0 ? 'active' : null,
           type="button",
@@ -12,9 +12,12 @@ mixin image_carousel(images)
           aria-label=image
         )
     .carousel-inner.img
-      each image, index in images
+      each image_file, index in image_files
         .carousel-item(class=index == 0 ? 'active' : null)
-          img.d-block.mx-auto.w-75(src='assets/' + image, alt=image)
+          img.d-block.mx-auto.w-75(
+            src='assets/' + image_dir + '/' + image_file,
+            alt=image_file
+          )
 
     button.carousel-control-prev(
       type="button",

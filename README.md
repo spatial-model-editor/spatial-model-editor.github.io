@@ -17,6 +17,9 @@
   - it inherits the base layout from [src/pug/layouts/base.pug](/src/pug/layouts/base.pug)
   - it can use functions ('mixins') from [src/pug/mixins](/src/pug/mixins)
   - when adding a new page, it should also be added to the list in [src/pug/mixins/navbar.pug](/src/pug/mixins/navbar.pug)
+  - [src/pug/screenshots.pug](/src/pug/screenshots.pug)
+    - displays all images in [src/assets/screenshots](/src/assets/screenshots)
+    - to add an image, just add the image file to this folder
 - [src/assets](/src/assets)
   - contains the image and video files
 - [src/scss](/src/scss)

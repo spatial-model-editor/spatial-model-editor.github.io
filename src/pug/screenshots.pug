@@ -5,20 +5,10 @@ block vars
   - var page_url = 'screenshots.html';
 
 block content
-  // list of screenshot image files to display
-  -
-    var screenshots = [
-      "geometry0.png",
-      "geometry1.png",
-      "geometry2.png",
-      "species0.png",
-      "species1.png",
-      "species2.png",
-      "reactions.png",
-      "simulation.png"
-    ];
+  - var screenshot_dir = 'screenshots';
+  - var screenshot_files = fs.readdirSync(basedir + '/assets/' + screenshot_dir);
 
   include mixins/image_carousel
   section.pt-4
     .container.px-lg-5
-      +image_carousel(screenshots)
+      +image_carousel(screenshot_dir, screenshot_files)
