@@ -8,16 +8,16 @@
 
 - [master](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master) branch contains the source code
 - [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated html/css/js/image files
-- the contents of each page are stored in [yaml](https://yaml.org/) format in [/src/content](/src/content)
-- there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [/src/pug](/src/pug)
-- CSS and icons are provided by [Bootstrap](https://getbootstrap.com/)
-- [npm](https://www.npmjs.com/) is used to manage the build and depencies
+- the contents of each page are stored in [yaml](https://yaml.org/) format in [src/content](/src/content)
+- there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [src/pug](/src/pug)
+- uses CSS and icons from the [Bootstrap](https://getbootstrap.com/) framework
+- uses [npm](https://www.npmjs.com/) to manage the build and dependencies
 
 ## Structure
 
 - [src/content](/src/content)
   - each page has a yaml file with the content for that page
-  - this data is made available to the pug template of the same name as `content`
+  - this data is made available as `content` to the pug template of the same name
 - [src/pug](/src/pug)
   - each page has a [pug](https://pugjs.org/) template
   - the html page is generated from this template
