@@ -7,7 +7,7 @@
 ## How it works
 
 - [master](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master) branch contains the source code
-- [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated html/css/js/image files
+- [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated website
 - the contents of each page are stored in [yaml](https://yaml.org/) format in [src/content](/src/content)
 - there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [src/pug](/src/pug)
 - uses CSS and icons from the [Bootstrap](https://getbootstrap.com/) framework
@@ -27,7 +27,7 @@
   - contains the image and video files
 - [src/scss](/src/scss)
   - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.1/customize/sass/)
-- [src/index.js]
+- [src/index.js](/src/index.js)
   - webpack entry point: import js and css dependencies
 
 ## Content
