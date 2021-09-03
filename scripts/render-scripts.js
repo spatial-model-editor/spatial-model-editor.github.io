@@ -1,25 +1,38 @@
 "use strict";
-const fs = require("fs");
-const packageJSON = require("../package.json");
+const webpack = require("webpack");
 const upath = require("upath");
-const sh = require("shelljs");
+// const sh = require("shelljs");
+// const minify = require("uglify-js").minify;
 
 module.exports = function renderScripts() {
-  const sourcePath = upath.resolve(upath.dirname(__filename), "../src/js");
-  const destPath = upath.resolve(upath.dirname(__filename), "../dist/.");
+  const destPath = upath.resolve(upath.dirname(__filename), "../dist/js/.");
 
-  sh.cp("-R", sourcePath, destPath);
+  const config = {
+    entry: "./src/js/scripts.js",
+    output: {
+      filename: "bundle.js",
+      path: destPath,
+    },
+    mode: "production",
+  };
 
-  const sourcePathScriptsJS = upath.resolve(
-    upath.dirname(__filename),
-    "../src/js/scripts.js"
-  );
-  const destPathScriptsJS = upath.resolve(
-    upath.dirname(__filename),
-    "../dist/js/scripts.js"
-  );
+  webpack(config, (err, stats) => {
+    if (err || stats.hasErrors()) {
+      console.log(err.message);
+    }
+    console.log(stats.message);
+  });
 
-  const scriptsJS = fs.readFileSync(sourcePathScriptsJS);
+  // const destPathDirname = upath.resolve(upath.dirname(__filename), "../dist/js");
+  // if (!sh.test("-e", destPathDirname)) {
+  //   sh.mkdir("-p", destPathDirname);
+  // }
 
-  fs.writeFileSync(destPathScriptsJS, scriptsJS);
+  // const sourcePath = upath.resolve(upath.dirname(__filename), "../node_modules/bootstrap/js/dist/carousel.js");
+  // const script = fs.readFileSync(sourcePath, 'utf-8');
+  // const mini = minify(script);
+  // console.log(`CODE: ${mini.code}`);
+  // console.log(`ERROR: ${mini.error}`);
+  // const destPath = upath.resolve(upath.dirname(__filename), "../dist/js/carousel.js");
+  // fs.writeFileSync(destPath, mini.code);
 };

@@ -26,7 +26,6 @@
   "devDependencies": {
     "autoprefixer": "10.3.3",
     "browser-sync": "2.27.5",
-    "webpack": "^5.51.2",
     "chokidar": "3.5.2",
     "concurrently": "6.2.1",
     "html-minifier": "4.0.0",
@@ -37,6 +36,7 @@
     "shelljs": "0.8.4",
     "uglify-js": "^3.14.1",
     "upath": "2.0.1",
+    "webpack": "^5.51.2",
     "yaml": "^1.10.2"
   }
 }
