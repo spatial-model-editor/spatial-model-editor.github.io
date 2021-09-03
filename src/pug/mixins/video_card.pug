@@ -1,5 +1,5 @@
 // mixin to construct a card with a video
-mixin video_card(title, video_file, url_code, url_colab)
+mixin video_card(title, description, video_file, url_code, url_colab)
   .row.align-items-center.row-cols-1
     .col-lg-12.col-xxl-12.mb-5
       .card.border-1.shadow-lg
@@ -19,6 +19,8 @@ mixin video_card(title, video_file, url_code, url_colab)
                 i.bi.bi-journal-code
                 |
                 | Interactive Notebook
+          .row
+            p !{ description }
           .row
             .embed-responsive
               video.embed-responsive-item(

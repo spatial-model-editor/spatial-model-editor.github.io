@@ -5,4 +5,4 @@ block content
   section.pt-4
     .container.px-lg-5
       each video in content.videos
-        +video_card(video.title, video.filename, video.code_url, video.colab_url)
+        +video_card(video.title, video.description, video.filename, video.code_url, video.colab_url)

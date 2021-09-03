@@ -2,6 +2,12 @@ page_title: Simulation Videos
 
 videos:
   - title: Gray-Scott
+    description: >
+      The <a href="https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/">Gray-Scott</a> model
+      is a simple spatial model with two species and two parameters,
+      which forms spatial patterns that eventually reach a steady state distribution.
+      It is one of the built in example models in Spatial Model Editor.
+      Here the time evolution of the concentration of a species is shown for three values of the parameter f.
     filename: gray-scott.mp4
     code_url: https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks/visualization.html#Gray-Scott-Model
     colab_url: https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/visualization.ipynb
