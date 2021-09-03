@@ -14,11 +14,11 @@ block header
           p.fs-4 #{ content.page_blurb }
 
 block content
-  include mixins/feature_card
+  include mixins/index_card
   section.pt-4
     .container.px-lg-5
       .row.gx-lg-5
         each card, index in content.cards
           if index == 1
-            +feature_card_downloads
-          +feature_card(card.title, card.icon, card.links)
+            +index_card_downloads
+          +index_card(card.title, card.icon, card.links)

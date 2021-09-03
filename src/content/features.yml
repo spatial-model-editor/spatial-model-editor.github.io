@@ -1,0 +1,23 @@
+page_title: Features
+
+features:
+  - title: User friendly GUI interface
+    description: >
+      Creating, editing and simulating the model is all done using a user friendly Graphical User Interface.
+
+    image: screenshots/simulation.png
+
+  - title: Automatic mesh generation
+    description: >
+      Starting from a segmented image of the compartments in the model,
+      the boundaries are automatically identified and simplified,
+      and from them a triangular mesh approximation to the geometry is constructed.
+      The number of points used in the boundary lines and the triangle size can be adjusted by the user.
+    image: screenshots/geometry2.png
+
+  - title: Python interface
+    description: >
+      The Python interface, <a href="https://pypi.org/project/sme">sme</a>, allows scripted editing and simulation of a model.
+      Simulation results are returned as numpy arrays.
+      Additional plotting and parameter fitting functionality is provided by <a href="https://pypi.org/project/sme-contrib">sme-contrib</a>.
+    image: sme-pypi.png

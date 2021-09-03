@@ -1,0 +1,8 @@
+extends layouts/base
+
+block content
+  include mixins/feature_card
+  section.pt-4
+    .container.px-lg-5
+      each feature in content.features
+        +feature_card(feature.title, feature.description, feature.image)
