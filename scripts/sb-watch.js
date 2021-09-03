@@ -5,8 +5,7 @@ const chokidar = require("chokidar");
 const upath = require("upath");
 const renderAssets = require("./render-assets");
 const renderPug = require("./render-pug");
-const renderScripts = require("./render-scripts");
-const renderSCSS = require("./render-scss");
+const renderScriptsScss = require("./render-scripts-scss");
 
 const watcher = chokidar.watch("src", {
   persistent: true,
@@ -27,7 +26,7 @@ watcher.on("ready", () => {
   console.log(" READY TO ROLL!");
 });
 
-_handleSCSS();
+renderScriptsScss();
 
 function _processFile(filePath, watchEvent) {
   if (!READY) {
@@ -39,51 +38,31 @@ function _processFile(filePath, watchEvent) {
   }
 
   if (filePath.match(/\.pug$/)) {
-    return _handlePug(filePath, watchEvent);
+    if (renderPug.isPage(filePath)) {
+      return renderPug.render(filePath);
+    }
+    if (watchEvent === "change" && !renderPug.isPage(filePath)) {
+      _.each(allPugFiles, (value, filePath) => {
+        renderPug.render(filePath);
+      });
+    }
   }
 
   if (filePath.match(/\.yml/)) {
-    return _handleYaml(filePath, watchEvent);
+    const pugFilePath = filePath
+      .replace(/\/content\//, "/pug/")
+      .replace(/\.yml/, ".pug");
+    return renderPug.render(pugFilePath);
   }
 
-  if (filePath.match(/\.scss$/)) {
+  if (filePath.match(/\.scss$/) || filePath.match(/\.js$/)) {
     if (watchEvent === "change") {
-      return _handleSCSS(filePath, watchEvent);
+      return renderScriptsScss();
     }
     return;
-  }
-
-  if (filePath.match(/src\/js\//)) {
-    return renderScripts();
   }
 
   if (filePath.match(/src\/assets\//)) {
     return renderAssets();
   }
-}
-
-function _handlePug(filePath, watchEvent) {
-  if (renderPug.isPage(filePath)) {
-    return renderPug.render(filePath);
-  }
-  if (watchEvent === "change" && !renderPug.isPage(filePath)) {
-    return _renderAllPug();
-  }
-}
-
-function _handleYaml(filePath, watchEvent) {
-  const pugFilePath = filePath
-    .replace(/\/content\//, "/pug/")
-    .replace(/\.yml/, ".pug");
-  return renderPug.render(pugFilePath);
-}
-
-function _renderAllPug() {
-  _.each(allPugFiles, (value, filePath) => {
-    renderPug.render(filePath);
-  });
-}
-
-function _handleSCSS() {
-  renderSCSS();
 }

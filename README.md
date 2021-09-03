@@ -11,7 +11,7 @@
 - the contents of each page are stored in [yaml](https://yaml.org/) format in [src/content](/src/content)
 - there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [src/pug](/src/pug)
 - uses CSS and icons from the [Bootstrap](https://getbootstrap.com/) framework
-- uses [npm](https://www.npmjs.com/) to manage the build and dependencies
+- uses [npm](https://www.npmjs.com/) and [webpack](https://webpack.js.org/) to manage the build and dependencies
 
 ## Structure
 
@@ -27,8 +27,8 @@
   - contains the image and video files
 - [src/scss](/src/scss)
   - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.1/customize/sass/)
-- [src/js](/src/js)
-  - any extra (client-side) javascript can be added here
+- [src/index.js]
+  - webpack entry point: import js and css dependencies
 
 ## Content
 

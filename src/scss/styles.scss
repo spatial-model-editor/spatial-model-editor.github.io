@@ -1,11 +1,11 @@
 // Import Bootstrap Icons
-@use "bootstrap-icons/font/bootstrap-icons";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 // Override Bootstrap variables
 $enable-negative-margins: true;
 
 // Import Bootstrap
-@import "bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap";
 
 // Custom SCSS for feature component with Bootstrap icon
 .feature {
@@ -17,10 +17,10 @@ $enable-negative-margins: true;
   font-size: 2rem;
 }
 
+// Custom SCSS for sme logo link colours
 a {
   color: #5d00c5;
 }
-
 a:hover {
   color: #c126f8;
 }
