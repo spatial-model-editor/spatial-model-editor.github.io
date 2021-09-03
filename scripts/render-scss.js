@@ -34,6 +34,13 @@ module.exports = function renderSCSS() {
     });
 };
 
+const fontsSourcePath = upath.resolve(
+  upath.dirname(__filename),
+  "../node_modules/bootstrap-icons/font/fonts"
+);
+const fontsDestPath = upath.resolve(upath.dirname(__filename), "../dist/css/.");
+sh.cp("-R", fontsSourcePath, fontsDestPath);
+
 const entryPoint = `
 @import "${stylesPath}"
 `;
