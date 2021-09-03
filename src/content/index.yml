@@ -5,6 +5,8 @@ page_blurb: >
   spatial SBML models of bio-chemical reactions and simulate them
   using the dune-copasi solver for reaction-diffusion systems.
 
+# icon can be any icon name from https://icons.getbootstrap.com/#icons
+
 cards:
   - title: Documentation
     icon: bi-book
