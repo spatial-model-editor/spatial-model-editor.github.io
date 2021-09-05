@@ -1,35 +1,37 @@
 // mixin to construct a carousel from a list of images
-mixin image_carousel(image_dir, image_files)
-  #imgCarousel.carousel.carousel-dark.slide(data-bs-ride="carousel")
-    .carousel-indicators
-      each image_file, index in image_files
-        button(
-          class=index == 0 ? 'active' : null,
-          type="button",
-          data-bs-target="#imgCarousel",
-          data-bs-slide-to=index,
-          aria-current="true",
-          aria-label=image
-        )
+mixin image_carousel(image_dir, image_files, carouselName='imgCarousel', showButtons=false)
+  .carousel.carousel-dark.slide(id=carouselName, data-bs-ride="carousel")
+    if showButtons==true
+      .carousel-indicators
+        each image_file, index in image_files
+          button(
+            class=index == 0 ? 'active' : null,
+            type="button",
+            data-bs-target=carouselName,
+            data-bs-slide-to=index,
+            aria-current="true",
+            aria-label=image
+          )
     .carousel-inner.img
       each image_file, index in image_files
         .carousel-item(class=index == 0 ? 'active' : null)
-          img.d-block.mx-auto.w-75(
+          img(
+            class=showButtons == true ? 'd-block mx-auto w-75' : 'd-block mx-auto w-100',
             src='assets/' + image_dir + '/' + image_file,
             alt=image_file
           )
-
-    button.carousel-control-prev(
-      type="button",
-      data-bs-target="#imgCarousel",
-      data-bs-slide="prev"
-    )
-      span.carousel-control-prev-icon(aria-hidden="true")
-      span.visually-hidden Previous
-    button.carousel-control-next(
-      type="button",
-      data-bs-target="#imgCarousel",
-      data-bs-slide="next"
-    )
-      span.carousel-control-next-icon(aria-hidden="true")
-      span.visually-hidden Next
+    if showButtons==true
+      button.carousel-control-prev(
+        type="button",
+        data-bs-target=`#${carouselName}`,
+        data-bs-slide="prev"
+      )
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.visually-hidden Previous
+      button.carousel-control-next(
+        type="button",
+        data-bs-target=`#${carouselName}`,
+        data-bs-slide="next"
+      )
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.visually-hidden Next
