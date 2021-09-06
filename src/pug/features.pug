@@ -4,5 +4,5 @@ block content
   include mixins/feature_card
   section.pt-4
     .container.px-lg-5
-      each feature, index in content.features
-        +feature_card(feature.title, feature.description, feature.images, index)
+      each feature in content.features
+        +feature_card(feature.title, feature.description, feature.images, feature.id)

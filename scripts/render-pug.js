@@ -27,7 +27,6 @@ function render(filePath) {
     doctype: "html",
     filename: filePath,
     basedir: srcPath,
-    fs: fs,
     content: content,
   });
 

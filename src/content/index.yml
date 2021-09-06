@@ -20,16 +20,17 @@ cards:
       "sme": https://pypi.org/project/sme
       "sme-contrib": https://pypi.org/project/sme-contrib
       "Try it online": https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/master/docs/sme/notebooks/getting_started.ipynb
+  - title: Features
+    icon: bi-cpu
+    links:
+      "FEM PDE solver": features.html#dune
+      "Automatic mesh generation": features.html#mesh
+      "More...": features.html
   - title: Examples
     icon: bi-collection-play
     links:
-      "Screenshots": screenshots.html
-      "Videos": videos.html
-  - title: PDE Solvers
-    icon: bi-cpu
-    links:
-      "dune-copasi": https://dune-copasi.netlify.app
-      "Pixel": https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html
+      "Simulation Video": examples.html#grayscott
+      "More...": examples.html
   - title: Source Code
     icon: bi-github
     links:

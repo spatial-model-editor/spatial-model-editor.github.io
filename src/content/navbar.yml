@@ -1,5 +1,4 @@
 pages:
   Home: index.html
   Features: features.html
-  Screenshots: screenshots.html
-  Videos: videos.html
+  Examples: examples.html

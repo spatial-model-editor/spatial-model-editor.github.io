@@ -1,7 +1,7 @@
-page_title: Simulation Videos
-
-videos:
-  - title: Gray-Scott
+page_title: Examples
+examples:
+  - id: grayscott
+    title: Gray-Scott
     description: >
       The <a href="https://itp.uni-frankfurt.de/~gros/StudentProjects/Projects_2020/projekt_schulz_kaefer/">Gray-Scott</a> model
       is a simple spatial model with two species and two parameters,

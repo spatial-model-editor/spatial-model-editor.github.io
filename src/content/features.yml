@@ -1,7 +1,8 @@
 page_title: Features
 
 features:
-  - title: User friendly GUI interface
+  - id: gui
+    title: User friendly GUI interface
     description: >
       Creating, editing and simulating the model is all done using a user friendly Graphical User Interface.
     images:
@@ -14,7 +15,16 @@ features:
       - screenshots/reactions.png
       - screenshots/simulation.png
 
-  - title: Automatic mesh generation
+  - id: dune
+    title: DuneCopasi FEM Solver
+    description: >
+      The <a href="https://dune-copasi.netlify.app">dune-copasi</a> solver is used to simulate models.
+      This solves the PDE on a triangular mesh using finite element discretization methods.
+    images:
+      - dune-copasi.svg
+
+  - id: mesh
+    title: Automatic mesh generation
     description: >
       Starting from a segmented image of the compartments in the model,
       the boundaries are automatically identified and simplified,
@@ -30,7 +40,8 @@ features:
       - mesh/mesh_triangulate_2.png
       - mesh/mesh_triangulate_3.png
 
-  - title: Python interface
+  - id: sme
+    title: Python interface
     description: >
       The Python interface, <a href="https://pypi.org/project/sme">sme</a>, allows scripted editing and simulation of a model.
       Simulation results are returned as numpy arrays.

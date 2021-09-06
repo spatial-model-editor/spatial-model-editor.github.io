@@ -1,8 +1,8 @@
 // mixin to construct a card with a video
-mixin video_card(title, description, video_file, url_code, url_colab)
+mixin video_card(title, description, video_file, url_code, url_colab, id)
   .row.align-items-center.row-cols-1
     .col-lg-12.col-xxl-12.mb-5
-      .card.border-1.shadow-lg
+      .card.border-1.shadow-lg(id=id)
         .card-body.text-center.p-4.p-lg-2.pt-2.pt-lg-2
           .row.justify-content-center.p-2
             .col.text-start
