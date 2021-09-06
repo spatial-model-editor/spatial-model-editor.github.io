@@ -2,7 +2,7 @@ extends layouts/base
 
 block content
   include mixins/feature_card
-  section.pt-4
-    .container.px-lg-5
+  section.pb-2.pb-lg-4
+    .container.px-lg-3
       each feature in content.features
         +feature_card(feature.title, feature.description, feature.images, feature.id)

@@ -2,7 +2,7 @@ extends layouts/base
 
 block content
   include mixins/video_card
-  section.pt-4
-    .container.px-lg-5
+  section.pb-2.pb-lg-4
+    .container.px-lg-3
       each example in content.examples
         +video_card(example.title, example.description, example.filename, example.code_url, example.colab_url, example.id)
