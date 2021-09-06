@@ -2,7 +2,7 @@ page_title: Features
 
 features:
   - id: gui
-    title: User friendly GUI interface
+    title: User friendly
     description: >
       Creating, editing and simulating a spatial model is all done using a user friendly Graphical User Interface.
       See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html">Getting Started</a> section
@@ -16,6 +16,7 @@ features:
       - screenshots/species2.png
       - screenshots/reactions.png
       - screenshots/simulation.png
+    image_width: 8
 
   - id: dune
     title: DuneCopasi FEM Solver
@@ -28,14 +29,14 @@ features:
       see the <a href="https://dune-copasi.netlify.app">dune-copasi</a> website.
     images:
       - dune/dune-copasi.svg
+    image_width: 5
 
   - id: mesh
-    title: Automatic mesh generation
+    title: Mesh generation
     description: >
       Starting from a segmented image of the compartments in the model,
       the boundaries are automatically identified and simplified,
       and from them a triangular mesh approximation to the geometry is constructed.
-      The number of points used in each boundary line, and the maximum triangle size in each compartment, can then be adjusted by the user.
       For more details see the <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/mesh.html">mesh documentation</a>.
     images:
       - mesh/mesh_original_image.png
@@ -46,21 +47,10 @@ features:
       - mesh/mesh_triangulate_1.png
       - mesh/mesh_triangulate_2.png
       - mesh/mesh_triangulate_3.png
-
-  - id: sme
-    title: Python interface
-    description: >
-      The Python interface, <a href="https://pypi.org/project/sme">sme</a>, allows scripted editing and simulation of a model.
-      Simulation results are returned as numpy arrays to allow for easy further processing or analysis.
-      See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks.html#example-notebooks">Example Notebooks</a>
-      or the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/api.html">API reference</a> for more information.
-      Additional plotting and parameter fitting functionality is provided by <a href="https://pypi.org/project/sme-contrib">sme-contrib</a>,
-      whose <a href="https://sme-contrib.readthedocs.io/en/latest/">documentation</a> also contains example notebooks.
-    images:
-      - sme-pypi.png
+    image_width: 7
 
   - id: pixel
-    title: Pixel FCTS Solver
+    title: Pixel Solver
     description: >
       The <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html">Pixel</a>
       solver is an alternative solver which uses the <a href="https://en.wikipedia.org/wiki/FTCS_scheme">FTCS</a>
@@ -71,3 +61,25 @@ features:
       - pixel/embedded.png
       - pixel/runtime.png
       - pixel/pixel_options.png
+    image_width: 8
+
+  - id: sme
+    title: Python interface
+    description: >
+      The Python interface, <a href="https://pypi.org/project/sme">sme</a>, allows scripted editing and simulation of a model.
+      See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks.html#example-notebooks">Example Notebooks</a>
+      or the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/api.html">API reference</a> for more information.
+    images:
+      - sme-pypi.png
+    image_width: 5
+
+  - id: sme-contrib
+    title: Python extras
+    description: >
+      Additional functionality such as plotting, animations and parameter fitting is provided by
+      <a href="https://pypi.org/project/sme-contrib">sme-contrib</a>.
+      See the <a href="https://sme-contrib.readthedocs.io/en/latest/">documentation</a> for more information
+      and example notebooks.
+    images:
+      - sme-contrib-pypi.png
+    image_width: 5

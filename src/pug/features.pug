@@ -4,5 +4,8 @@ block content
   include mixins/feature_card
   section.pb-2.pb-lg-4
     .container.px-lg-3
-      each feature in content.features
-        +feature_card(feature.title, feature.description, feature.images, feature.id)
+      .row
+        each feature in content.features
+          - var image_width = 6;
+          - if (feature.hasOwnProperty('image_width')) image_width = feature.image_width;
+          +feature_card(feature.title, feature.description, feature.images, feature.id, image_width)
