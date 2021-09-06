@@ -4,7 +4,9 @@ features:
   - id: gui
     title: User friendly GUI interface
     description: >
-      Creating, editing and simulating the model is all done using a user friendly Graphical User Interface.
+      Creating, editing and simulating a spatial model is all done using a user friendly Graphical User Interface.
+      See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html">Getting Started</a> section
+      in the documentation to learn more.
     images:
       - screenshots/geometry0.png
       - screenshots/geometry1.png
@@ -20,8 +22,12 @@ features:
     description: >
       The <a href="https://dune-copasi.netlify.app">dune-copasi</a> solver is used to simulate models.
       This solves the PDE on a triangular mesh using finite element discretization methods.
+      See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/dune.html">simulator documentation</a>
+      for more information on the available options when using it in the GUI.
+      For more technical information about the DuneCopasi solver itself,
+      see the <a href="https://dune-copasi.netlify.app">dune-copasi</a> website.
     images:
-      - dune-copasi.svg
+      - dune/dune-copasi.svg
 
   - id: mesh
     title: Automatic mesh generation
@@ -29,7 +35,8 @@ features:
       Starting from a segmented image of the compartments in the model,
       the boundaries are automatically identified and simplified,
       and from them a triangular mesh approximation to the geometry is constructed.
-      The number of points used in the boundary lines and the triangle size can be adjusted by the user.
+      The number of points used in each boundary line, and the maximum triangle size in each compartment, can then be adjusted by the user.
+      For more details see the <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/mesh.html">mesh documentation</a>.
     images:
       - mesh/mesh_original_image.png
       - mesh/mesh_pixel_contours.png
@@ -44,7 +51,10 @@ features:
     title: Python interface
     description: >
       The Python interface, <a href="https://pypi.org/project/sme">sme</a>, allows scripted editing and simulation of a model.
-      Simulation results are returned as numpy arrays.
-      Additional plotting and parameter fitting functionality is provided by <a href="https://pypi.org/project/sme-contrib">sme-contrib</a>.
+      Simulation results are returned as numpy arrays to allow for easy further processing or analysis.
+      See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks.html#example-notebooks">Example Notebooks</a>
+      or the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/api.html">API reference</a> for more information.
+      Additional plotting and parameter fitting functionality is provided by <a href="https://pypi.org/project/sme-contrib">sme-contrib</a>,
+      whose <a href="https://sme-contrib.readthedocs.io/en/latest/">documentation</a> also contains example notebooks.
     images:
       - sme-pypi.png
