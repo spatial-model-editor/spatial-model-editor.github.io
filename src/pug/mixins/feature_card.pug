@@ -1,13 +1,12 @@
 // mixin to construct a feature card
-mixin feature_card(title, description, images)
+mixin feature_card(title, description, images, index)
   include image_carousel
   .col-lg-12.mb-5
     .card.border-1.h-100.shadow-lg
       .card-body.p-2.p-lg-4
         .row
           .col-lg-4.mb-2
-            +image_carousel(".", images)
-            // img.img-fluid.img-thumbnail(src='assets/' + image, alt=image)
+            +image_carousel(".", images, "featureCarousel_" + index)
           .col-lg-8.mb-2
             h2.fs-4.fw-bold #{ title }
             p !{ description }

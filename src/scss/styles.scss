@@ -17,10 +17,39 @@ $enable-negative-margins: true;
   font-size: 2rem;
 }
 
-// Custom SCSS for sme logo link colours
+// sme logo link colours
 a {
   color: #5d00c5;
 }
 a:hover {
   color: #c126f8;
+}
+
+// only display carousel position indicators on mouseover
+.carousel .carousel-indicators {
+  visibility: hidden;
+}
+.carousel .carousel-control-prev {
+  visibility: hidden;
+}
+.carousel .carousel-control-next {
+  visibility: hidden;
+}
+
+.carousel:hover .carousel-indicators {
+  visibility: visible;
+}
+.carousel:hover .carousel-control-prev {
+  visibility: visible;
+}
+.carousel:hover .carousel-control-next {
+  visibility: visible;
+}
+
+// add partially opaque background to carousel control buttons
+.carousel .carousel-control-prev {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.carousel .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.3);
 }
