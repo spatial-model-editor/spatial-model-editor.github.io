@@ -6,7 +6,7 @@ mixin feature_card(title, description, images, id)
       .card-body.p-2.p-lg-4
         .row
           .col-lg-4.mb-2
-            +image_carousel(".", images, "featureCarousel_" + id)
+            +image_carousel(images, "featureCarousel_" + id)
           .col-lg-8.mb-2
             h2.fs-4.fw-bold #{ title }
             p !{ description }
