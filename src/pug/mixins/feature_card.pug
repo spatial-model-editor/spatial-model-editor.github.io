@@ -4,10 +4,10 @@ mixin feature_card(title, description, images, id, img_width)
   include image_carousel
   .col-lg-6.mb-4
     .card.border-1.h-100.shadow-lg(id=id)
+      h2.card-header.text-center.bg-white.fs-4.fw-bold #{ title }
       .card-body.p-2.p-lg-4
         .row
           div(class='col-lg-' + img_width)
             +image_carousel(images, "featureCarousel_" + id)
           div(class='col-lg-' + txt_width)
-            h2.fs-4.fw-bold #{ title }
             p !{ description }

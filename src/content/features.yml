@@ -2,7 +2,7 @@ page_title: Features
 
 features:
   - id: gui
-    title: User friendly
+    title: Graphical User Interface
     description: >
       Creating, editing and simulating a spatial model is all done using a user friendly Graphical User Interface.
       See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html">Getting Started</a> section
@@ -32,7 +32,7 @@ features:
     image_width: 5
 
   - id: mesh
-    title: Mesh generation
+    title: Automatic mesh generation
     description: >
       Starting from a segmented image of the compartments in the model,
       the boundaries are automatically identified and simplified,
@@ -47,10 +47,10 @@ features:
       - mesh/mesh_triangulate_1.png
       - mesh/mesh_triangulate_2.png
       - mesh/mesh_triangulate_3.png
-    image_width: 7
+    image_width: 6
 
   - id: pixel
-    title: Pixel Solver
+    title: Pixel FTCS Solver
     description: >
       The <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html">Pixel</a>
       solver is an alternative solver which uses the <a href="https://en.wikipedia.org/wiki/FTCS_scheme">FTCS</a>
