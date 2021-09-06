@@ -58,3 +58,16 @@ features:
       whose <a href="https://sme-contrib.readthedocs.io/en/latest/">documentation</a> also contains example notebooks.
     images:
       - sme-pypi.png
+
+  - id: pixel
+    title: Pixel FCTS Solver
+    description: >
+      The <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html">Pixel</a>
+      solver is an alternative solver which uses the <a href="https://en.wikipedia.org/wiki/FTCS_scheme">FTCS</a>
+      method to solve the PDE using the pixels of the geometry image as the grid.
+      It features automatic timestep control and multi-threading support.
+    images:
+      - pixel/convergence.png
+      - pixel/embedded.png
+      - pixel/runtime.png
+      - pixel/pixel_options.png
