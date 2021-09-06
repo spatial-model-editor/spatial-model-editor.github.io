@@ -40,7 +40,7 @@
     "style-loader": "^3.2.1",
     "uglify-js": "^3.14.1",
     "upath": "2.0.1",
-    "webpack": "^5.51.2",
+    "webpack": "^5.52.0",
     "yaml": "^1.10.2"
   }
 }
