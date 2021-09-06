@@ -23,8 +23,8 @@ cards:
   - title: Features
     icon: bi-cpu
     links:
-      "FEM PDE solver": features.html#dune
-      "Automatic mesh generation": features.html#mesh
+      "DuneCopasi solver": features.html#dune
+      "Mesh generation": features.html#mesh
       "More...": features.html
   - title: Examples
     icon: bi-collection-play
