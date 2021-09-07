@@ -18,30 +18,30 @@
   "license": "MIT",
   "author": "Liam Keegan",
   "dependencies": {
-    "@popperjs/core": "^2.10.1",
+    "@popperjs/core": "2.10.1",
     "bootstrap": "5.1.0",
-    "bootstrap-icons": "^1.5.0"
+    "bootstrap-icons": "1.5.0"
   },
   "devDependencies": {
-    "@squoosh/lib": "^0.4.0",
+    "@squoosh/lib": "0.4.0",
     "autoprefixer": "10.3.4",
     "browser-sync": "2.27.5",
     "chokidar": "3.5.2",
     "concurrently": "6.2.1",
     "css-loader": "^6.2.0",
-    "css-minimizer-webpack-plugin": "^3.0.2",
+    "css-minimizer-webpack-plugin": "3.0.2",
     "html-minifier": "4.0.0",
-    "mini-css-extract-plugin": "^2.2.2",
+    "mini-css-extract-plugin": "2.2.2",
     "postcss": "8.3.6",
-    "postcss-loader": "^6.1.1",
+    "postcss-loader": "6.1.1",
     "pug": "3.0.2",
     "sass": "1.39.0",
-    "sass-loader": "^12.1.0",
+    "sass-loader": "12.1.0",
     "shelljs": "0.8.4",
-    "style-loader": "^3.2.1",
-    "uglify-js": "^3.14.1",
+    "style-loader": "3.2.1",
+    "uglify-js": "3.14.1",
     "upath": "2.0.1",
-    "webpack": "^5.52.0",
+    "webpack": "5.52.0",
     "yaml": "^1.10.2"
   }
 }
