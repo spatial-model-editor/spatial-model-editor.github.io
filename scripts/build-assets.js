@@ -2,4 +2,4 @@
 
 const renderAssets = require("./render-assets");
 
-renderAssets();
+renderAssets().then(console.log("done"));

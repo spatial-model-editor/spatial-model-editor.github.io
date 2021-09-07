@@ -18,7 +18,17 @@ mixin image_carousel(image_files, carouselName='imgCarousel')
     .carousel-inner.img
       each image_file, index in image_files
         .carousel-item(class=index == 0 ? 'active' : null)
-          img.d-block.mx-auto.w-100(src='assets/' + image_file, alt=image_file)
+          picture
+            - const split_image_file = image_file.split('.');
+            if split_image_file[1] == "png"
+              source(
+                srcset='assets/' + split_image_file[0] + '.webp',
+                type="image/webp"
+              )
+            img.d-block.mx-auto.w-100(
+              src='assets/' + image_file,
+              alt=image_file
+            )
     button.carousel-control-prev(
       type="button",
       data-bs-target=`#${carouselName}`,
