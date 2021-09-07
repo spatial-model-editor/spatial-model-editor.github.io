@@ -8,4 +8,6 @@ block content
         each feature in content.features
           - var image_width = 6;
           - if (feature.hasOwnProperty('image_width')) image_width = feature.image_width;
-          +feature_card(feature.title, feature.description, feature.images, feature.id, image_width)
+          - var id = null;
+          - if (feature.hasOwnProperty('id')) id = feature.id;
+          +feature_card(feature.title, feature.description, feature.images, id, image_width)
