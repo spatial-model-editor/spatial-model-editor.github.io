@@ -19,7 +19,7 @@
   "author": "Liam Keegan",
   "dependencies": {
     "@popperjs/core": "2.10.1",
-    "bootstrap": "5.1.0",
+    "bootstrap": "5.1.1",
     "bootstrap-icons": "1.5.0"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "browser-sync": "2.27.5",
     "chokidar": "3.5.2",
     "concurrently": "6.2.1",
-    "css-loader": "^6.2.0",
+    "css-loader": "6.2.0",
     "css-minimizer-webpack-plugin": "3.0.2",
     "html-minifier": "4.0.0",
     "mini-css-extract-plugin": "2.2.2",
@@ -39,9 +39,9 @@
     "sass-loader": "12.1.0",
     "shelljs": "0.8.4",
     "style-loader": "3.2.1",
-    "uglify-js": "3.14.1",
+    "uglify-js": "3.14.2",
     "upath": "2.0.1",
     "webpack": "5.52.0",
-    "yaml": "^1.10.2"
+    "yaml": "1.10.2"
   }
 }
