@@ -27,10 +27,11 @@ mixin modal_feature_card(title, description, images, id)
         .modal-body
           .card.border-1.h-100.shadow-lg(id=id)
             h2.card-header.text-center.bg-white.fs-4.fw-bold #{ title }
-          .card-body.p-2.p-lg-4
-          .col-lg-12.mb-4
-            +image_carousel(images, "modalFeatCarousel_" + id)
-          .col-lg-12.mb-4
-            p !{ description }
+            .card-body.p-2.p-lg-4
+              .row
+                .col-lg-12.mb-4
+                  +image_carousel(images, "modalFeatCarousel_" + id)
+                .col-lg-12.mb-4
+                  p !{ description }
         .modal-footer
           button.btn.btn-secondary(type="button", data-bs-dismiss="modal") Close
