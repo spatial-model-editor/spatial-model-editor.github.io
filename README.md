@@ -27,26 +27,10 @@
   - contains the image and video files
 - [src/scss](/src/scss)
   - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.1/customize/sass/)
+- [src/js](/src/js)
+  - additional client-side javascript
 - [src/index.js](/src/index.js)
-  - webpack entry point: import js and css dependencies
-
-## Content
-
-- [index](/src/content/index.yml)
-  - title, icon and contents of each feature card can be edited via the yaml file
-- [screenshots](/src/content/screenshots.yml)
-  - displays all images in [src/assets/screenshots](/src/assets/screenshots)
-  - to add an image, just add the image file to this folder, no changes to the yaml file required
-- [videos](/src/content/videos.yml)
-  - videos can be edited and added via the yaml file
-
-## Adding a new page
-
-To add a page `X`:
-
-- create a text file `src/pug/X.pug` with the contents `extends layouts/base`
-- create a text file `src/content/X.yml` with the contents `page_title: "X"`
-- add an entry for it to the list of pages in [src/content/navbar.yml](src/content/navbar.yml)
+  - webpack entry point: import all js and css dependencies
 
 ## Deployment
 
@@ -74,6 +58,14 @@ On every commit to the master branch:
 - start a live in-browser local preview of the website
   - `npm start`
 - make changes to the files in `src/` and the preview will update automatically
+
+## Adding a new page
+
+To add a page `X`:
+
+- create a text file `src/pug/X.pug` with the contents `extends layouts/base`
+- create a text file `src/content/X.yml` with the contents `page_title: "X"`
+- add an entry for it to the list of pages in [src/content/navbar.yml](src/content/navbar.yml)
 
 ## Acknowledgements
 
