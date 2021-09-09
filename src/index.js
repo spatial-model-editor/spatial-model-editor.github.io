@@ -18,4 +18,6 @@ import "bootstrap/js/dist/modal";
 
 import "./scss/styles.scss";
 
+// import custom js
+
 import "./js/modal_on_pageload";

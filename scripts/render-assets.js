@@ -4,7 +4,7 @@ const upath = require("upath");
 const sh = require("shelljs");
 const libSquoosh = require("@squoosh/lib");
 
-module.exports = async function renderAssets() {
+module.exports = function renderAssets() {
   const sourcePath = upath.resolve(upath.dirname(__filename), "../src/assets");
   const destPath = upath.resolve(upath.dirname(__filename), "../dist/.");
 
@@ -15,14 +15,15 @@ module.exports = async function renderAssets() {
   const imagePool = new libSquoosh.ImagePool(4);
 
   // make webp versions of png images
-  await _convertPngImages(destPath, imagePool);
+  _convertPngImages(destPath, imagePool).then(
+    console.log("Started asynchronous png -> webp conversion...")
+  );
 };
 
 async function _convertPngImages(destPath, imagePool) {
   var images = [];
   for (const filePath of sh.find(destPath)) {
     if (filePath.match(/\.png$/)) {
-      console.log(filePath);
       images.push(imagePool.ingestImage(filePath));
     }
   }
@@ -39,7 +40,6 @@ async function _convertPngImages(destPath, imagePool) {
   var encodes = [];
   for (const image of images) {
     encodes.push(image.encode(encodeOptions));
-    console.log(image.file);
   }
   await Promise.all(encodes);
 
@@ -50,7 +50,9 @@ async function _convertPngImages(destPath, imagePool) {
     outputs.push(
       fs.writeFile(outFile, rawData, (err) => {
         if (err) throw err;
-        console.log(outFile);
+        const relIn = upath.relative(destPath, image.file);
+        const relOut = upath.relative(destPath, outFile);
+        console.log(`- ${relIn} --> ${relOut}`);
       })
     );
   }
