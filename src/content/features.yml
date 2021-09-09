@@ -1,7 +1,8 @@
 page_title: Features
 
 features:
-  - title: Graphical User Interface
+  - id: gui
+    title: Graphical User Interface
     description: >
       Creating, editing and simulating a spatial model is all done using a user friendly Graphical User Interface.
       See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html">Getting Started</a> section
@@ -48,7 +49,8 @@ features:
       - mesh/mesh_triangulate_3.png
     image_width: 6
 
-  - title: Pixel FTCS Solver
+  - id: pixel
+    title: Pixel FTCS Solver
     description: >
       The <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/pixel.html">Pixel</a>
       solver is an alternative solver which uses the <a href="https://en.wikipedia.org/wiki/FTCS_scheme">FTCS</a>
@@ -61,7 +63,8 @@ features:
       - pixel/pixel_options.png
     image_width: 8
 
-  - title: Python interface
+  - id: sme
+    title: Python interface
     description: >
       The Python interface, <a href="https://pypi.org/project/sme">sme</a>, allows scripted editing and simulation of a model.
       See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks.html#example-notebooks">Example Notebooks</a>
@@ -70,7 +73,8 @@ features:
       - sme-pypi.png
     image_width: 5
 
-  - title: Python extras
+  - id: sme-contrib
+    title: Python extras
     description: >
       Additional functionality such as plotting, animations and parameter fitting is provided by
       <a href="https://pypi.org/project/sme-contrib">sme-contrib</a>.
@@ -80,7 +84,8 @@ features:
       - sme-contrib-pypi.png
     image_width: 5
 
-  - title: SBML Spatial
+  - id: sbml
+    title: SBML Spatial
     description: >
       Spatial models are imported and exported in
       <a href="http://sbml.org/Documents/Specifications">SBML Level 3</a> format with the

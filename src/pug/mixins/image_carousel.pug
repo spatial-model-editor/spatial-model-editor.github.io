@@ -1,20 +1,24 @@
 // mixin to construct a carousel from a list of images
-mixin image_carousel(image_files, carouselName='imgCarousel')
+mixin image_carousel(image_files, carouselName='imgCarousel', modalId=null)
   .carousel.carousel-fade.slide(
     id=carouselName,
     data-bs-ride="carousel",
-    data-bs-interval="2500"
+    style=modalId == null ? null : 'cursor:pointer;',
+    data-bs-interval="2500",
+    data-bs-toggle=modalId == null ? null : 'modal',
+    data-bs-target=modalId
   )
-    .carousel-indicators
-      each image_file, index in image_files
-        button(
-          class=index == 0 ? 'active' : null,
-          type="button",
-          data-bs-target=`#${carouselName}`,
-          data-bs-slide-to=index,
-          aria-current="true",
-          aria-label=image
-        )
+    if (modalId == null)
+      .carousel-indicators
+        each image_file, index in image_files
+          button(
+            class=index == 0 ? 'active' : null,
+            type="button",
+            data-bs-target=`#${carouselName}`,
+            data-bs-slide-to=index,
+            aria-current="true",
+            aria-label=image
+          )
     .carousel-inner.img
       each image_file, index in image_files
         .carousel-item(class=index == 0 ? 'active' : null)
@@ -29,17 +33,18 @@ mixin image_carousel(image_files, carouselName='imgCarousel')
               src='assets/' + image_file,
               alt=image_file
             )
-    button.carousel-control-prev(
-      type="button",
-      data-bs-target=`#${carouselName}`,
-      data-bs-slide="prev"
-    )
-      span.carousel-control-prev-icon(aria-hidden="true")
-      span.visually-hidden Previous
-    button.carousel-control-next(
-      type="button",
-      data-bs-target=`#${carouselName}`,
-      data-bs-slide="next"
-    )
-      span.carousel-control-next-icon(aria-hidden="true")
-      span.visually-hidden Next
+    if (modalId == null)
+      button.carousel-control-prev(
+        type="button",
+        data-bs-target=`#${carouselName}`,
+        data-bs-slide="prev"
+      )
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.visually-hidden Previous
+      button.carousel-control-next(
+        type="button",
+        data-bs-target=`#${carouselName}`,
+        data-bs-slide="next"
+      )
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.visually-hidden Next
