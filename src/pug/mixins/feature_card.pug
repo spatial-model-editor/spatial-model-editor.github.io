@@ -3,11 +3,34 @@ mixin feature_card(title, description, images, id, img_width)
   - const txt_width = 12 - img_width;
   include image_carousel
   .col-lg-6.mb-4
-    .card.border-1.h-100.shadow-lg(id=id)
+    .card.border-1.h-100.shadow-lg(id='featCard_' + id)
       h2.card-header.text-center.bg-white.fs-4.fw-bold #{ title }
       .card-body.p-2.p-lg-4
         .row
-          div(class='col-lg-' + img_width)
-            +image_carousel(images, "featureCarousel_" + id)
+          div(class='mouseoverlink col-lg-' + img_width)
+            +image_carousel(images, "featCarousel_" + id, "#" + id)
           div(class='col-lg-' + txt_width)
             p !{ description }
+
+// mixin to construct a modal feature card
+mixin modal_feature_card(title, description, images, id)
+  include image_carousel
+  .modal.fade(
+    id=id,
+    tabindex="-1",
+    aria-labelledby='modalFeatTitle_' + id,
+    role="dialog",
+    aria-hidden="true"
+  )
+    .modal-dialog.modal-dialog-centered.modal-lg
+      .modal-content
+        .modal-body
+          .card.border-1.h-100.shadow-lg(id=id)
+            h2.card-header.text-center.bg-white.fs-4.fw-bold #{ title }
+          .card-body.p-2.p-lg-4
+          .col-lg-12.mb-4
+            +image_carousel(images, "modalFeatCarousel_" + id)
+          .col-lg-12.mb-4
+            p !{ description }
+        .modal-footer
+          button.btn.btn-secondary(type="button", data-bs-dismiss="modal") Close
