@@ -96,3 +96,20 @@ features:
     images:
       - libsbml.svg
     image_width: 3
+
+  - id: ode-import
+    title: Automatic reaction rescaling
+    description: >
+      Guided
+      <a href="https://spatial-model-editor.readthedocs.io/en/master/quickstart/rescale-reactions.html">workflow</a>
+      to import a non-spatial model from
+      <a href="http://sbml.org/Basic_Introduction_to_SBML">SBML xml</a>
+      or
+      <a href="http://copasi.org/Support/Technical_Documentation/File_Format/">Copasi cps</a>
+      format, which automatically rescales the reaction rates to construct a valid spatial PDE model
+      that initially reproduces the behaviour of the non-spatial ODE model.
+    images:
+      - ode/ode1.png
+      - ode/ode2.png
+      - ode/ode3.png
+    image_width: 6
