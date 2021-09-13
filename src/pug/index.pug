@@ -2,13 +2,13 @@ extends layouts/base
 
 block header
   // custom header block overwrites base layout header
-  header.py-5
+  header.py-lg-5
     .container.px-lg-5
       img.float-start.w-25(
         src="assets/sme.svg",
         alt="Spatial Model Editor logo"
       )
-      .p-4.p-lg-5.rounded-3.text-center
+      .p-1.p-lg-5.rounded-3.text-center
         .m-4.m-lg-2
           h1.display-5.fw-bold #{ content.page_title }
           p.fs-4 #{ content.page_blurb }
