@@ -70,8 +70,11 @@ features:
       See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/notebooks.html#example-notebooks">Example Notebooks</a>
       or the <a href="https://spatial-model-editor.readthedocs.io/en/stable/sme/api.html">API reference</a> for more information.
     images:
-      - sme-pypi.png
-    image_width: 5
+      - sme/sme1.png
+      - sme/sme2.png
+      - sme/sme3.png
+      - sme/sme4.png
+    image_width: 6
 
   - id: sme-contrib
     title: Python extras
@@ -81,8 +84,9 @@ features:
       See the <a href="https://sme-contrib.readthedocs.io/en/latest/">documentation</a> for more information
       and example notebooks.
     images:
-      - sme-contrib-pypi.png
-    image_width: 5
+      - sme-contrib/sme-contrib1.png
+      - sme-contrib/sme-contrib2.png
+    image_width: 7
 
   - id: sbml
     title: SBML Spatial
