@@ -101,7 +101,7 @@ features:
     title: Automatic reaction rescaling
     description: >
       Guided
-      <a href="https://spatial-model-editor.readthedocs.io/en/master/quickstart/rescale-reactions.html">workflow</a>
+      <a href="https://spatial-model-editor.readthedocs.io/en/stable/quickstart/rescale-reactions.html">workflow</a>
       to import a non-spatial model from
       <a href="http://sbml.org/Basic_Introduction_to_SBML">SBML xml</a>
       or
