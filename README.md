@@ -1,4 +1,4 @@
-<img align="left" width="64" height="64" src="https://raw.githubusercontent.com/spatial-model-editor/spatial-model-editor/master/src/core/resources/icon.iconset/icon_32x32@2x.png" alt="icon">
+<img align="left" width="64" height="64" src="https://raw.githubusercontent.com/spatial-model-editor/spatial-model-editor/main/src/core/resources/icon.iconset/icon_32x32@2x.png" alt="icon">
 
 # [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
 
@@ -6,7 +6,7 @@
 
 ## How it works
 
-- [master](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/master) branch contains the source code
+- [main](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/main) branch contains the source code
 - [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated website
 - the contents of each page are stored in [yaml](https://yaml.org/) format in [src/content](/src/content)
 - there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [src/pug](/src/pug)
@@ -34,7 +34,7 @@
 
 ## Deployment
 
-On every commit to the master branch:
+On every commit to the main branch:
 
 - [deploy.yml](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml) action builds website & deploys to [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages)
 - github pages hosts these files at [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
