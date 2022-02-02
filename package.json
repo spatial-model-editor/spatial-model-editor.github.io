@@ -26,7 +26,7 @@
     "@squoosh/lib": "0.4.0",
     "autoprefixer": "10.4.1",
     "browser-sync": "2.27.7",
-    "chokidar": "3.5.2",
+    "chokidar": "3.5.3",
     "concurrently": "7.0.0",
     "css-loader": "6.5.1",
     "css-minimizer-webpack-plugin": "3.3.1",
