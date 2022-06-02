@@ -6,7 +6,7 @@ mixin index_card_base(title, icon, url)
         .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4.mt-n4.iconlink
           a(href=url)
             i.bi(class=icon)
-        h2.fs-4.fw-bold
+        h2.fs-4.fw-bold.simplelink
           a(href=url) #{ title }
         block
 
@@ -20,7 +20,7 @@ mixin index_card(title, icon, url, links)
 // mixin to construct downloads feature card
 mixin index_card_downloads
   +index_card_base("GUI Download", "bi-cloud-download")
-    .row.align-items-center.row-cols-3.pt-3
+    .row.align-items-center.row-cols-3.pt-3.simplelink
       .col
         a(
           href="https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor"

@@ -56,19 +56,27 @@ $enable-negative-margins: true;
 
 // sme logo link colours
 a {
-  color: #000000;
-  text-decoration: none;
-}
-a:hover {
   color: #5d00c5;
   text-decoration: none;
 }
-
+a:hover {
+  color: #c126f8;
+  text-decoration: none;
+}
+// white for icons
 .iconlink a {
   color: #ffffff;
   text-decoration: none;
 }
 .iconlink a:hover {
+  color: #5d00c5;
+  text-decoration: none;
+}
+.simplelink a {
+  color: #000000;
+  text-decoration: none;
+}
+.simplelink a:hover {
   color: #5d00c5;
   text-decoration: none;
 }
