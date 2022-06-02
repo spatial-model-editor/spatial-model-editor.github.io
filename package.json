@@ -27,7 +27,7 @@
     "autoprefixer": "10.4.6",
     "browser-sync": "2.27.9",
     "chokidar": "3.5.3",
-    "concurrently": "7.1.0",
+    "concurrently": "7.2.1",
     "css-loader": "6.7.1",
     "css-minimizer-webpack-plugin": "3.4.1",
     "html-minifier": "4.0.0",
@@ -36,12 +36,12 @@
     "postcss-loader": "6.2.1",
     "pug": "3.0.2",
     "sass": "1.51.0",
-    "sass-loader": "12.6.0",
+    "sass-loader": "13.0.0",
     "shelljs": "0.8.5",
     "style-loader": "3.3.1",
     "uglify-js": "3.15.4",
     "upath": "2.0.1",
-    "webpack": "5.72.0",
+    "webpack": "5.72.1",
     "yaml": "2.0.1"
   }
 }
