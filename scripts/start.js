@@ -6,7 +6,7 @@ const browserSyncPath = upath.resolve(
   "../node_modules/.bin/browser-sync"
 );
 
-concurrently(
+const { result } = concurrently(
   [
     {
       command: "node scripts/sb-watch.js",
@@ -23,7 +23,9 @@ concurrently(
     prefix: "name",
     killOthers: ["failure", "success"],
   }
-).then(success, failure);
+);
+
+result.then(success, failure);
 
 function success() {
   console.log("Success");

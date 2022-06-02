@@ -56,10 +56,21 @@ $enable-negative-margins: true;
 
 // sme logo link colours
 a {
-  color: #5d00c5;
+  color: #000000;
+  text-decoration: none;
 }
 a:hover {
-  color: #c126f8;
+  color: #5d00c5;
+  text-decoration: none;
+}
+
+.iconlink a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.iconlink a:hover {
+  color: #5d00c5;
+  text-decoration: none;
 }
 
 // only display carousel position indicators on mouseover
