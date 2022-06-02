@@ -14,5 +14,10 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: mixed-line-ending
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.15.1
+    hooks:
+      - id: check-github-workflows
 ci:
   autoupdate_schedule: quarterly
