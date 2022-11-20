@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14, 16]
+        node-version: [14, 16, 18]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -18,7 +18,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - uses: JamesIves/github-pages-deploy-action@v4.4.1
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && matrix.node-version == 16
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && matrix.node-version == 18
         name: Deploy to gh-pages
         with:
           branch: gh-pages
