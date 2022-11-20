@@ -48,7 +48,7 @@ On every commit to the main branch:
 - (optional) install pre-commit to auto-format code
   - `pip install pre-commit`
   - `pre-commit install`
-- install node (ideally v16 to match deploy job)
+- install node (ideally v18 to match deploy job)
   - macOS: `brew install node`
   - windows: https://nodejs.org/en/
   - ubuntu: `sudo apt install nodejs npm`
