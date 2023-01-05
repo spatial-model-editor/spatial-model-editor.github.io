@@ -3,7 +3,7 @@
 # [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
 
 [![Build and deploy to gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml)
-[![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fspatial-model-editor.github.io%2F)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fspatial-model-editor.github.io%2F)
+[![W3C Validation](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fspatial-model-editor.github.io)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fspatial-model-editor.github.io%2F)
 
 ## How it works
 
