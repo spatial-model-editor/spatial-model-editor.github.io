@@ -27,7 +27,7 @@
     "browser-sync": "2.27.11",
     "chokidar": "3.5.3",
     "concurrently": "7.6.0",
-    "css-loader": "6.7.2",
+    "css-loader": "6.7.3",
     "css-minimizer-webpack-plugin": "4.2.2",
     "html-minifier": "4.0.0",
     "mini-css-extract-plugin": "2.7.2",
