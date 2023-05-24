@@ -1,0 +1,25 @@
+// mixin to construct a news card
+mixin news_card(title, date, url, description,)
+  .row.align-items-center.row-cols-1
+    .col-lg-12.col-xxl-12.mb-5
+      .card.border-1.shadow-lg(id=id)
+        .card-header.text-center.bg-white.fs-4.fw-bold
+          .row.align-items-center
+            .col.text-start
+              .btn.disabled.btn-outline-primary
+                |
+                i.bi.bi-calendar
+                |
+                | #{ date }
+            .col
+              h2.mb-0.fs-4.fw-bold #{ title }
+            .col.text-end
+              a.btn.btn-outline-primary(href=url, role="button")
+                |
+                i.bi.bi-box-arrow-up-right
+                |
+                | More information
+        .card-body.p-2.p-lg-3
+          .row
+            .col.my-auto
+              .div !{ description }
