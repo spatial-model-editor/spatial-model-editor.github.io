@@ -38,7 +38,7 @@
     "sass-loader": "13.3.2",
     "sharp": "0.32.1",
     "shelljs": "0.8.5",
-    "style-loader": "3.3.2",
+    "style-loader": "3.3.3",
     "uglify-js": "3.17.4",
     "upath": "2.0.1",
     "webpack": "5.88.1",
