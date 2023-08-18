@@ -1,8 +1,8 @@
 page_title: Spatial Model Editor
 
 page_blurb: >
-  A user friendly GUI editor to create and edit two-dimensional
-  spatial SBML models of bio-chemical reactions and simulate them
+  A user friendly GUI editor to create and edit spatial
+  SBML models of bio-chemical reactions and simulate them
   using the dune-copasi solver for reaction-diffusion systems.
 
 # icon can be any icon name from https://icons.getbootstrap.com/#icons
