@@ -19,7 +19,7 @@ let allPugFiles = {};
 
 watcher.on("add", (filePath) => _processFile(upath.resolve(filePath), "add"));
 watcher.on("change", (filePath) =>
-  _processFile(upath.resolve(filePath), "change")
+  _processFile(upath.resolve(filePath), "change"),
 );
 watcher.on("ready", () => {
   READY = true;

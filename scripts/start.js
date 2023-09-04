@@ -3,7 +3,7 @@ const upath = require("upath");
 
 const browserSyncPath = upath.resolve(
   upath.dirname(__filename),
-  "../node_modules/.bin/browser-sync"
+  "../node_modules/.bin/browser-sync",
 );
 
 const { result } = concurrently(
@@ -22,7 +22,7 @@ const { result } = concurrently(
   {
     prefix: "name",
     killOthers: ["failure", "success"],
-  }
+  },
 );
 
 result.then(success, failure);

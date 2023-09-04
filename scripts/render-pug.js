@@ -18,7 +18,7 @@ function render(filePath) {
   console.log(`yaml <-- ${contentPath}`);
   var content = YAML.parse(fs.readFileSync(contentPath, "utf8"));
   content.navbar = YAML.parse(
-    fs.readFileSync(upath.join(srcPath, "content/navbar.yml"), "utf8")
+    fs.readFileSync(upath.join(srcPath, "content/navbar.yml"), "utf8"),
   );
   content.navbar.current = upath.basename(destPath);
 
