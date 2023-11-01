@@ -41,7 +41,7 @@
     "style-loader": "3.3.3",
     "uglify-js": "3.17.4",
     "upath": "2.0.1",
-    "webpack": "5.88.2",
+    "webpack": "5.89.0",
     "yaml": "2.3.2"
   }
 }
