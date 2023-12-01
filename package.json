@@ -26,7 +26,7 @@
     "autoprefixer": "10.4.16",
     "browser-sync": "2.29.3",
     "chokidar": "3.5.3",
-    "concurrently": "8.2.1",
+    "concurrently": "8.2.2",
     "css-loader": "6.8.1",
     "css-minimizer-webpack-plugin": "5.0.1",
     "html-minifier": "4.0.0",
