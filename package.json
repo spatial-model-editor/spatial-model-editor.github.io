@@ -34,7 +34,7 @@
     "postcss": "8.4.31",
     "postcss-loader": "7.3.3",
     "pug": "3.0.2",
-    "sass": "1.69.5",
+    "sass": "1.69.6",
     "sass-loader": "13.3.2",
     "sharp": "0.33.1",
     "shelljs": "0.8.5",
