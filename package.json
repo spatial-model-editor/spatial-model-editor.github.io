@@ -31,7 +31,7 @@
     "css-minimizer-webpack-plugin": "5.0.1",
     "html-minifier": "4.0.0",
     "mini-css-extract-plugin": "2.7.6",
-    "postcss": "8.4.31",
+    "postcss": "8.4.33",
     "postcss-loader": "7.3.4",
     "pug": "3.0.2",
     "sass": "1.69.6",
