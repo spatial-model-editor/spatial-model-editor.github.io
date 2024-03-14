@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   autoprefixer:
-    specifier: 10.4.16
-    version: 10.4.16(postcss@8.4.33)
+    specifier: 10.4.18
+    version: 10.4.18(postcss@8.4.33)
   browser-sync:
     specifier: 3.0.2
     version: 3.0.2
@@ -1039,10 +1039,10 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /autoprefixer@10.4.16(postcss@8.4.33):
+  /autoprefixer@10.4.18(postcss@8.4.33):
     resolution:
       {
-        integrity: sha512-7vd3UC6xKp0HLfua5IjZlcXvGAGy7cBAXTg2lyQ/8WpNhd6SiZ8Be+xm3FyBSYJx5GKcpRCzBh7RH4/0dnY+uQ==,
+        integrity: sha512-1DKbDfsr6KUElM6wg+0zRNkB/Q7WcKYAaK+pzXn+Xqmszm/5Xa9coeNdtP88Vi+dPzZnMjhge8GIV49ZQkDa+g==,
       }
     engines: { node: ^10 || ^12 || >=14 }
     hasBin: true
