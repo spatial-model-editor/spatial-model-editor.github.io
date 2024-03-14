@@ -8,8 +8,7 @@
     "build:pug": "node scripts/build-pug.js",
     "build:scripts-scss": "node scripts/build-scripts-scss.js",
     "clean": "node scripts/clean.js",
-    "start": "npm run build && node scripts/start.js",
-    "start:debug": "npm run build && node scripts/start-debug.js"
+    "start": "npm run build && node scripts/start.js"
   },
   "repository": {
     "type": "git",
