@@ -7,12 +7,10 @@
 
 ## How it works
 
-- [main](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/main) branch contains the source code
-- [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages) branch contains the generated website
 - the contents of each page are stored in [yaml](https://yaml.org/) format in [src/content](/src/content)
 - there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [src/pug](/src/pug)
 - uses CSS and icons from the [Bootstrap](https://getbootstrap.com/) framework
-- uses [npm](https://www.npmjs.com/) and [webpack](https://webpack.js.org/) to manage the build and dependencies
+- uses [pnpm](https://pnpm.io/) and [webpack](https://webpack.js.org/) to manage the build and dependencies
 
 ## Structure
 
@@ -27,7 +25,7 @@
 - [src/assets](/src/assets)
   - contains the image and video files
 - [src/scss](/src/scss)
-  - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.1/customize/sass/)
+  - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.3/customize/sass/)
 - [src/js](/src/js)
   - additional client-side javascript
 - [src/index.js](/src/index.js)
@@ -37,8 +35,7 @@
 
 On every commit to the main branch:
 
-- [deploy.yml](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml) action builds website & deploys to [gh-pages](https://github.com/spatial-model-editor/spatial-model-editor.github.io/tree/gh-pages)
-- github pages hosts these files at [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
+- [deploy.yml](https://github.com/spatial-model-editor/spatial-model-editor.github.io/actions/workflows/deploy.yml) action builds website & deploys to github-pages at [spatial-model-editor.github.io](https://spatial-model-editor.github.io/)
 
 ## How to edit locally
 
@@ -48,16 +45,13 @@ On every commit to the main branch:
 - (optional) install pre-commit to auto-format code
   - `pip install pre-commit`
   - `pre-commit install`
-- install node (ideally v20 to match versions used for deployment)
-  - macOS: `brew install node`
-  - windows: https://nodejs.org/en/
-  - ubuntu: `sudo apt install nodejs npm`
-  - linux/macOS tool to manage multiple node versions: https://github.com/nodenv/nodenv
-  - (many) more options: https://nodejs.org/en/download/package-manager
-- install website node dependencies
-  - `npm install`
+- install [pnpm](https://pnpm.io/installation)
+  - windows: `iwr https://get.pnpm.io/install.ps1 -useb | iex`
+  - linux/macOS: `curl -fsSL https://get.pnpm.io/install.sh | sh -`
+- install website dependencies
+  - `pnpm install`
 - start a live in-browser local preview of the website
-  - `npm start`
+  - `pnpm start`
 - make changes to the files in `src/` and the preview will update automatically
 
 ## Adding a new page
