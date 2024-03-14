@@ -23,8 +23,8 @@ devDependencies:
     specifier: 3.0.2
     version: 3.0.2
   chokidar:
-    specifier: 3.5.3
-    version: 3.5.3
+    specifier: 3.6.0
+    version: 3.6.0
   concurrently:
     specifier: 8.2.2
     version: 8.2.2
@@ -1186,7 +1186,7 @@ packages:
       browser-sync-ui: 3.0.2
       bs-recipes: 1.3.4
       chalk: 4.1.2
-      chokidar: 3.5.3
+      chokidar: 3.6.0
       connect: 3.6.6
       connect-history-api-fallback: 1.6.0
       dev-ip: 1.0.1
@@ -1336,10 +1336,10 @@ packages:
       is-regex: 1.1.4
     dev: true
 
-  /chokidar@3.5.3:
+  /chokidar@3.6.0:
     resolution:
       {
-        integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==,
+        integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==,
       }
     engines: { node: ">= 8.10.0" }
     dependencies:
@@ -3915,7 +3915,7 @@ packages:
     engines: { node: ">=14.0.0" }
     hasBin: true
     dependencies:
-      chokidar: 3.5.3
+      chokidar: 3.6.0
       immutable: 4.3.5
       source-map-js: 1.0.2
     dev: true
