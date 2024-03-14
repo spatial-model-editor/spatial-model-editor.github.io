@@ -1,13 +1,9 @@
 name: "Deploy"
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  deploy:
-    name: Deploy
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -22,9 +18,20 @@ jobs:
           cache: "pnpm"
       - run: pnpm install
       - run: pnpm run build
-      - uses: JamesIves/github-pages-deploy-action@v4
-        name: Deploy to gh-pages
+      - uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: dist
-          single-commit: true
+          path: "dist/"
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
