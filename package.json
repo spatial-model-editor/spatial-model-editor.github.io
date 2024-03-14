@@ -1,0 +1,47 @@
+{
+  "title": "Spatial Model Editor website",
+  "name": "sme-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run clean && npm run build:pug && npm run build:scripts-scss && npm run build:assets",
+    "build:assets": "node scripts/build-assets.js",
+    "build:pug": "node scripts/build-pug.js",
+    "build:scripts-scss": "node scripts/build-scripts-scss.js",
+    "clean": "node scripts/clean.js",
+    "start": "npm run build && node scripts/start.js",
+    "start:debug": "npm run build && node scripts/start-debug.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spatial-model-editor/spatial-model-editor.github.io.git"
+  },
+  "license": "MIT",
+  "author": "Liam Keegan",
+  "dependencies": {
+    "@popperjs/core": "2.11.8",
+    "bootstrap": "5.3.2",
+    "bootstrap-icons": "1.11.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.16",
+    "browser-sync": "3.0.2",
+    "chokidar": "3.5.3",
+    "concurrently": "8.2.2",
+    "css-loader": "6.10.0",
+    "css-minimizer-webpack-plugin": "6.0.0",
+    "html-minifier": "4.0.0",
+    "mini-css-extract-plugin": "2.7.6",
+    "postcss": "8.4.33",
+    "postcss-loader": "8.1.0",
+    "pug": "3.0.2",
+    "sass": "1.71.1",
+    "sass-loader": "14.1.1",
+    "sharp": "0.33.1",
+    "shelljs": "0.8.5",
+    "style-loader": "3.3.3",
+    "uglify-js": "3.17.4",
+    "upath": "2.0.1",
+    "webpack": "5.89.0",
+    "yaml": "2.3.4"
+  }
+}
