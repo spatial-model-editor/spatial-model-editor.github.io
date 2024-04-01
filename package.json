@@ -35,7 +35,7 @@
     "pug": "3.0.2",
     "sass": "1.72.0",
     "sass-loader": "14.1.1",
-    "sharp": "0.33.1",
+    "sharp": "0.33.3",
     "shelljs": "0.8.5",
     "style-loader": "3.3.3",
     "uglify-js": "3.17.4",
