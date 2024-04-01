@@ -22,7 +22,7 @@
     "bootstrap-icons": "1.11.3"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.18",
+    "autoprefixer": "10.4.19",
     "browser-sync": "3.0.2",
     "chokidar": "3.6.0",
     "concurrently": "8.2.2",
