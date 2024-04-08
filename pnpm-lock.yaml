@@ -30,22 +30,22 @@ devDependencies:
     version: 8.2.2
   css-loader:
     specifier: 6.10.0
-    version: 6.10.0(webpack@5.90.3)
+    version: 6.10.0(webpack@5.91.0)
   css-minimizer-webpack-plugin:
     specifier: 6.0.0
-    version: 6.0.0(webpack@5.90.3)
+    version: 6.0.0(webpack@5.91.0)
   html-minifier:
     specifier: 4.0.0
     version: 4.0.0
   mini-css-extract-plugin:
     specifier: 2.8.1
-    version: 2.8.1(webpack@5.90.3)
+    version: 2.8.1(webpack@5.91.0)
   postcss:
     specifier: 8.4.35
     version: 8.4.35
   postcss-loader:
     specifier: 8.1.1
-    version: 8.1.1(postcss@8.4.35)(webpack@5.90.3)
+    version: 8.1.1(postcss@8.4.35)(webpack@5.91.0)
   pug:
     specifier: 3.0.2
     version: 3.0.2
@@ -54,7 +54,7 @@ devDependencies:
     version: 1.72.0
   sass-loader:
     specifier: 14.1.1
-    version: 14.1.1(sass@1.72.0)(webpack@5.90.3)
+    version: 14.1.1(sass@1.72.0)(webpack@5.91.0)
   sharp:
     specifier: 0.33.1
     version: 0.33.1
@@ -63,7 +63,7 @@ devDependencies:
     version: 0.8.5
   style-loader:
     specifier: 3.3.3
-    version: 3.3.3(webpack@5.90.3)
+    version: 3.3.3(webpack@5.91.0)
   uglify-js:
     specifier: 3.17.4
     version: 3.17.4
@@ -71,8 +71,8 @@ devDependencies:
     specifier: 2.0.1
     version: 2.0.1
   webpack:
-    specifier: 5.90.3
-    version: 5.90.3(uglify-js@3.17.4)
+    specifier: 5.91.0
+    version: 5.91.0(uglify-js@3.17.4)
   yaml:
     specifier: 2.4.1
     version: 2.4.1
@@ -696,10 +696,10 @@ packages:
       "@types/yargs-parser": 21.0.3
     dev: true
 
-  /@webassemblyjs/ast@1.11.6:
+  /@webassemblyjs/ast@1.12.1:
     resolution:
       {
-        integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==,
+        integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==,
       }
     dependencies:
       "@webassemblyjs/helper-numbers": 1.11.6
@@ -720,10 +720,10 @@ packages:
       }
     dev: true
 
-  /@webassemblyjs/helper-buffer@1.11.6:
+  /@webassemblyjs/helper-buffer@1.12.1:
     resolution:
       {
-        integrity: sha512-z3nFzdcp1mb8nEOFFk8DrYLpHvhKC3grJD2ardfKOzmbmJvEf/tPIqCY+sNcwZIY8ZD7IkB2l7/pqhUhqm7hLA==,
+        integrity: sha512-nzJwQw99DNDKr9BVCOZcLuJJUlqkJh+kVzVl6Fmq/tI5ZtEyWT1KZMyOXltXLZJmDtvLCDgwsyrkohEtopTXCw==,
       }
     dev: true
 
@@ -745,16 +745,16 @@ packages:
       }
     dev: true
 
-  /@webassemblyjs/helper-wasm-section@1.11.6:
+  /@webassemblyjs/helper-wasm-section@1.12.1:
     resolution:
       {
-        integrity: sha512-LPpZbSOwTpEC2cgn4hTydySy1Ke+XEu+ETXuoyvuyezHO3Kjdu90KK95Sh9xTbmjrCsUwvWwCOQQNta37VrS9g==,
+        integrity: sha512-Jif4vfB6FJlUlSbgEMHUyk1j234GTNG9dBJ4XJdOySoj518Xj0oGsNi59cUQF4RRMS9ouBUxDDdyBVfPTypa5g==,
       }
     dependencies:
-      "@webassemblyjs/ast": 1.11.6
-      "@webassemblyjs/helper-buffer": 1.11.6
+      "@webassemblyjs/ast": 1.12.1
+      "@webassemblyjs/helper-buffer": 1.12.1
       "@webassemblyjs/helper-wasm-bytecode": 1.11.6
-      "@webassemblyjs/wasm-gen": 1.11.6
+      "@webassemblyjs/wasm-gen": 1.12.1
     dev: true
 
   /@webassemblyjs/ieee754@1.11.6:
@@ -782,54 +782,54 @@ packages:
       }
     dev: true
 
-  /@webassemblyjs/wasm-edit@1.11.6:
+  /@webassemblyjs/wasm-edit@1.12.1:
     resolution:
       {
-        integrity: sha512-Ybn2I6fnfIGuCR+Faaz7YcvtBKxvoLV3Lebn1tM4o/IAJzmi9AWYIPWpyBfU8cC+JxAO57bk4+zdsTjJR+VTOw==,
+        integrity: sha512-1DuwbVvADvS5mGnXbE+c9NfA8QRcZ6iKquqjjmR10k6o+zzsRVesil54DKexiowcFCPdr/Q0qaMgB01+SQ1u6g==,
       }
     dependencies:
-      "@webassemblyjs/ast": 1.11.6
-      "@webassemblyjs/helper-buffer": 1.11.6
+      "@webassemblyjs/ast": 1.12.1
+      "@webassemblyjs/helper-buffer": 1.12.1
       "@webassemblyjs/helper-wasm-bytecode": 1.11.6
-      "@webassemblyjs/helper-wasm-section": 1.11.6
-      "@webassemblyjs/wasm-gen": 1.11.6
-      "@webassemblyjs/wasm-opt": 1.11.6
-      "@webassemblyjs/wasm-parser": 1.11.6
-      "@webassemblyjs/wast-printer": 1.11.6
+      "@webassemblyjs/helper-wasm-section": 1.12.1
+      "@webassemblyjs/wasm-gen": 1.12.1
+      "@webassemblyjs/wasm-opt": 1.12.1
+      "@webassemblyjs/wasm-parser": 1.12.1
+      "@webassemblyjs/wast-printer": 1.12.1
     dev: true
 
-  /@webassemblyjs/wasm-gen@1.11.6:
+  /@webassemblyjs/wasm-gen@1.12.1:
     resolution:
       {
-        integrity: sha512-3XOqkZP/y6B4F0PBAXvI1/bky7GryoogUtfwExeP/v7Nzwo1QLcq5oQmpKlftZLbT+ERUOAZVQjuNVak6UXjPA==,
+        integrity: sha512-TDq4Ojh9fcohAw6OIMXqiIcTq5KUXTGRkVxbSo1hQnSy6lAM5GSdfwWeSxpAo0YzgsgF182E/U0mDNhuA0tW7w==,
       }
     dependencies:
-      "@webassemblyjs/ast": 1.11.6
+      "@webassemblyjs/ast": 1.12.1
       "@webassemblyjs/helper-wasm-bytecode": 1.11.6
       "@webassemblyjs/ieee754": 1.11.6
       "@webassemblyjs/leb128": 1.11.6
       "@webassemblyjs/utf8": 1.11.6
     dev: true
 
-  /@webassemblyjs/wasm-opt@1.11.6:
+  /@webassemblyjs/wasm-opt@1.12.1:
     resolution:
       {
-        integrity: sha512-cOrKuLRE7PCe6AsOVl7WasYf3wbSo4CeOk6PkrjS7g57MFfVUF9u6ysQBBODX0LdgSvQqRiGz3CXvIDKcPNy4g==,
+        integrity: sha512-Jg99j/2gG2iaz3hijw857AVYekZe2SAskcqlWIZXjji5WStnOpVoat3gQfT/Q5tb2djnCjBtMocY/Su1GfxPBg==,
       }
     dependencies:
-      "@webassemblyjs/ast": 1.11.6
-      "@webassemblyjs/helper-buffer": 1.11.6
-      "@webassemblyjs/wasm-gen": 1.11.6
-      "@webassemblyjs/wasm-parser": 1.11.6
+      "@webassemblyjs/ast": 1.12.1
+      "@webassemblyjs/helper-buffer": 1.12.1
+      "@webassemblyjs/wasm-gen": 1.12.1
+      "@webassemblyjs/wasm-parser": 1.12.1
     dev: true
 
-  /@webassemblyjs/wasm-parser@1.11.6:
+  /@webassemblyjs/wasm-parser@1.12.1:
     resolution:
       {
-        integrity: sha512-6ZwPeGzMJM3Dqp3hCsLgESxBGtT/OeCvCZ4TA1JUPYgmhAx38tTPR9JaKy0S5H3evQpO/h2uWs2j6Yc/fjkpTQ==,
+        integrity: sha512-xikIi7c2FHXysxXe3COrVUPSheuBtpcfhbpFj4gmu7KRLYOzANztwUU0IbsqvMqzuNK2+glRGWCEqZo1WCLyAQ==,
       }
     dependencies:
-      "@webassemblyjs/ast": 1.11.6
+      "@webassemblyjs/ast": 1.12.1
       "@webassemblyjs/helper-api-error": 1.11.6
       "@webassemblyjs/helper-wasm-bytecode": 1.11.6
       "@webassemblyjs/ieee754": 1.11.6
@@ -837,13 +837,13 @@ packages:
       "@webassemblyjs/utf8": 1.11.6
     dev: true
 
-  /@webassemblyjs/wast-printer@1.11.6:
+  /@webassemblyjs/wast-printer@1.12.1:
     resolution:
       {
-        integrity: sha512-JM7AhRcE+yW2GWYaKeHL5vt4xqee5N2WcezptmgyhNS+ScggqcT1OtXykhAb13Sn5Yas0j2uv9tHgrjwvzAP4A==,
+        integrity: sha512-+X4WAlOisVWQMikjbcvY2e0rwPsKQ9F688lksZhBcPycBBuii3O7m8FACbDMWDojpAqvjIncrG8J0XHKyQfVeA==,
       }
     dependencies:
-      "@webassemblyjs/ast": 1.11.6
+      "@webassemblyjs/ast": 1.12.1
       "@xtuc/long": 4.2.2
     dev: true
 
@@ -1576,7 +1576,7 @@ packages:
       postcss: 8.4.35
     dev: true
 
-  /css-loader@6.10.0(webpack@5.90.3):
+  /css-loader@6.10.0(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-LTSA/jWbwdMlk+rhmElbDR2vbtQoTBPr7fkJE+mxrHj+7ru0hUmHafDRzWIjIHTwpitWVaqY2/UWGRca3yUgRw==,
@@ -1599,10 +1599,10 @@ packages:
       postcss-modules-values: 4.0.0(postcss@8.4.35)
       postcss-value-parser: 4.2.0
       semver: 7.6.0
-      webpack: 5.90.3(uglify-js@3.17.4)
+      webpack: 5.91.0(uglify-js@3.17.4)
     dev: true
 
-  /css-minimizer-webpack-plugin@6.0.0(webpack@5.90.3):
+  /css-minimizer-webpack-plugin@6.0.0(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-BLpR9CCDkKvhO3i0oZQgad6v9pCxUuhSc5RT6iUEy9M8hBXi4TJb5vqF2GQ2deqYHmRi3O6IR9hgAZQWg0EBwA==,
@@ -1636,7 +1636,7 @@ packages:
       postcss: 8.4.35
       schema-utils: 4.2.0
       serialize-javascript: 6.0.2
-      webpack: 5.90.3(uglify-js@3.17.4)
+      webpack: 5.91.0(uglify-js@3.17.4)
     dev: true
 
   /css-select@5.1.0:
@@ -2002,10 +2002,10 @@ packages:
       - utf-8-validate
     dev: true
 
-  /enhanced-resolve@5.15.1:
+  /enhanced-resolve@5.16.0:
     resolution:
       {
-        integrity: sha512-3d3JRbwsCLJsYgvb6NuWEG44jjPSOMuS73L/6+7BZuoKm3W+qXnSoIYVHi8dG7Qcg4inAY4jbzkZ7MnskePeDg==,
+        integrity: sha512-O+QWCviPNSSLAD9Ucn8Awv+poAkqn3T1XY5/N7kR7rQO9yfSGWkYZDwpJ+iKF7B8rxaQKWngSqACpgzeapSyoA==,
       }
     engines: { node: ">=10.13.0" }
     dependencies:
@@ -2885,7 +2885,7 @@ packages:
     hasBin: true
     dev: true
 
-  /mini-css-extract-plugin@2.8.1(webpack@5.90.3):
+  /mini-css-extract-plugin@2.8.1(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-/1HDlyFRxWIZPI1ZpgqlZ8jMw/1Dp/dl3P0L1jtZ+zVcHqwPhGwaJwKL00WVgfnBy6PWCde9W65or7IIETImuA==,
@@ -2896,7 +2896,7 @@ packages:
     dependencies:
       schema-utils: 4.2.0
       tapable: 2.2.1
-      webpack: 5.90.3(uglify-js@3.17.4)
+      webpack: 5.91.0(uglify-js@3.17.4)
     dev: true
 
   /minimatch@3.1.2:
@@ -3204,7 +3204,7 @@ packages:
       postcss: 8.4.35
     dev: true
 
-  /postcss-loader@8.1.1(postcss@8.4.35)(webpack@5.90.3):
+  /postcss-loader@8.1.1(postcss@8.4.35)(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-0IeqyAsG6tYiDRCYKQJLAmgQr47DX6N7sFSWvQxt6AcupX8DIdmykuk/o/tx0Lze3ErGHJEp5OSRxrelC6+NdQ==,
@@ -3224,7 +3224,7 @@ packages:
       jiti: 1.21.0
       postcss: 8.4.35
       semver: 7.6.0
-      webpack: 5.90.3(uglify-js@3.17.4)
+      webpack: 5.91.0(uglify-js@3.17.4)
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -3878,7 +3878,7 @@ packages:
       }
     dev: true
 
-  /sass-loader@14.1.1(sass@1.72.0)(webpack@5.90.3):
+  /sass-loader@14.1.1(sass@1.72.0)(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-QX8AasDg75monlybel38BZ49JP5Z+uSKfKwF2rO7S74BywaRmGQMUBw9dtkS+ekyM/QnP+NOrRYq8ABMZ9G8jw==,
@@ -3904,7 +3904,7 @@ packages:
     dependencies:
       neo-async: 2.6.2
       sass: 1.72.0
-      webpack: 5.90.3(uglify-js@3.17.4)
+      webpack: 5.91.0(uglify-js@3.17.4)
     dev: true
 
   /sass@1.72.0:
@@ -4275,7 +4275,7 @@ packages:
       ansi-regex: 5.0.1
     dev: true
 
-  /style-loader@3.3.3(webpack@5.90.3):
+  /style-loader@3.3.3(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-53BiGLXAcll9maCYtZi2RCQZKa8NQQai5C4horqKyRmHj9H7QmcUyucrH+4KW/gBQbXM2AsB0axoEcFZPlfPcw==,
@@ -4284,7 +4284,7 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
     dependencies:
-      webpack: 5.90.3(uglify-js@3.17.4)
+      webpack: 5.91.0(uglify-js@3.17.4)
     dev: true
 
   /stylehacks@6.0.3(postcss@8.4.35):
@@ -4364,7 +4364,7 @@ packages:
     engines: { node: ">=6" }
     dev: true
 
-  /terser-webpack-plugin@5.3.10(uglify-js@3.17.4)(webpack@5.90.3):
+  /terser-webpack-plugin@5.3.10(uglify-js@3.17.4)(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==,
@@ -4389,7 +4389,7 @@ packages:
       serialize-javascript: 6.0.2
       terser: 5.28.1
       uglify-js: 3.17.4
-      webpack: 5.90.3(uglify-js@3.17.4)
+      webpack: 5.91.0(uglify-js@3.17.4)
     dev: true
 
   /terser@5.28.1:
@@ -4562,10 +4562,10 @@ packages:
     engines: { node: ">=0.10.0" }
     dev: true
 
-  /watchpack@2.4.0:
+  /watchpack@2.4.1:
     resolution:
       {
-        integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==,
+        integrity: sha512-8wrBCMtVhqcXP2Sup1ctSkga6uc2Bx0IIvKyT7yTFier5AXHooSI+QyQQAtTb7+E0IUCCKyTFmXqdqgum2XWGg==,
       }
     engines: { node: ">=10.13.0" }
     dependencies:
@@ -4581,10 +4581,10 @@ packages:
     engines: { node: ">=10.13.0" }
     dev: true
 
-  /webpack@5.90.3(uglify-js@3.17.4):
+  /webpack@5.91.0(uglify-js@3.17.4):
     resolution:
       {
-        integrity: sha512-h6uDYlWCctQRuXBs1oYpVe6sFcWedl0dpcVaTf/YF67J9bKvwJajFulMVSYKHrksMB3I/pIagRzDxwxkebuzKA==,
+        integrity: sha512-rzVwlLeBWHJbmgTC/8TvAcu5vpJNII+MelQpylD4jNERPwpBJOE2lEcko1zJX3QJeLjTTAnQxn/OJ8bjDzVQaw==,
       }
     engines: { node: ">=10.13.0" }
     hasBin: true
@@ -4596,14 +4596,14 @@ packages:
     dependencies:
       "@types/eslint-scope": 3.7.7
       "@types/estree": 1.0.5
-      "@webassemblyjs/ast": 1.11.6
-      "@webassemblyjs/wasm-edit": 1.11.6
-      "@webassemblyjs/wasm-parser": 1.11.6
+      "@webassemblyjs/ast": 1.12.1
+      "@webassemblyjs/wasm-edit": 1.12.1
+      "@webassemblyjs/wasm-parser": 1.12.1
       acorn: 8.11.3
       acorn-import-assertions: 1.9.0(acorn@8.11.3)
       browserslist: 4.23.0
       chrome-trace-event: 1.0.3
-      enhanced-resolve: 5.15.1
+      enhanced-resolve: 5.16.0
       es-module-lexer: 1.4.1
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -4615,8 +4615,8 @@ packages:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(uglify-js@3.17.4)(webpack@5.90.3)
-      watchpack: 2.4.0
+      terser-webpack-plugin: 5.3.10(uglify-js@3.17.4)(webpack@5.91.0)
+      watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - "@swc/core"
