@@ -1,5 +1,16 @@
 page_title: News
 news:
+  - date: 2024-04-09
+    title: Version 1.6.0 released
+    url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.6.0
+    description: >
+      <h6 id="added">Added</h6>
+      <ul>
+      <li>support for using the DuneCopasi simulator with 3d models <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/937">#937</a>
+      <li>3d volume rendering for voxel visualization <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/926">#926</a>
+      <li>visualization of 3d model geometry meshes <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/882">#882</a>
+      <li>import of geometry image files by drag and drop onto the GUI <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/933">#933</a>
+      </ul>
   - date: 2023-12-01
     title: Version 1.5.0 released
     url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.5.0
