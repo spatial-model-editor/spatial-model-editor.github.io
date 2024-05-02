@@ -74,8 +74,8 @@ devDependencies:
     specifier: 5.91.0
     version: 5.91.0(uglify-js@3.17.4)
   yaml:
-    specifier: 2.4.1
-    version: 2.4.1
+    specifier: 2.4.2
+    version: 2.4.2
 
 packages:
   /@babel/code-frame@7.23.5:
@@ -4710,10 +4710,10 @@ packages:
       }
     dev: true
 
-  /yaml@2.4.1:
+  /yaml@2.4.2:
     resolution:
       {
-        integrity: sha512-pIXzoImaqmfOrL7teGUBt/T7ZDnyeGBWyXQBvOVhLkWLN37GXv8NMLK406UY6dS51JfcQHsmcW5cJ441bHg6Lg==,
+        integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==,
       }
     engines: { node: ">= 14" }
     hasBin: true
