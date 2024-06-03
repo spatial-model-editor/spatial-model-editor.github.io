@@ -27,7 +27,7 @@
     "chokidar": "3.6.0",
     "concurrently": "8.2.2",
     "css-loader": "7.1.1",
-    "css-minimizer-webpack-plugin": "6.0.0",
+    "css-minimizer-webpack-plugin": "7.0.0",
     "html-minifier": "4.0.0",
     "mini-css-extract-plugin": "2.9.0",
     "postcss": "8.4.38",
