@@ -50,11 +50,11 @@ devDependencies:
     specifier: 3.0.2
     version: 3.0.2
   sass:
-    specifier: 1.72.0
-    version: 1.72.0
+    specifier: 1.77.4
+    version: 1.77.4
   sass-loader:
     specifier: 14.2.1
-    version: 14.2.1(sass@1.72.0)(webpack@5.91.0)
+    version: 14.2.1(sass@1.77.4)(webpack@5.91.0)
   sharp:
     specifier: 0.33.3
     version: 0.33.3
@@ -1667,7 +1667,7 @@ packages:
     engines: { node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: ">=7.0.0" }
     dependencies:
       mdn-data: 2.0.28
-      source-map-js: 1.0.2
+      source-map-js: 1.2.0
     dev: true
 
   /css-tree@2.3.1:
@@ -1678,7 +1678,7 @@ packages:
     engines: { node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0 }
     dependencies:
       mdn-data: 2.0.30
-      source-map-js: 1.0.2
+      source-map-js: 1.2.0
     dev: true
 
   /css-what@6.1.0:
@@ -3885,7 +3885,7 @@ packages:
       }
     dev: true
 
-  /sass-loader@14.2.1(sass@1.72.0)(webpack@5.91.0):
+  /sass-loader@14.2.1(sass@1.77.4)(webpack@5.91.0):
     resolution:
       {
         integrity: sha512-G0VcnMYU18a4N7VoNDegg2OuMjYtxnqzQWARVWCIVSZwJeiL9kg8QMsuIZOplsJgTzZLF6jGxI3AClj8I9nRdQ==,
@@ -3910,21 +3910,21 @@ packages:
         optional: true
     dependencies:
       neo-async: 2.6.2
-      sass: 1.72.0
+      sass: 1.77.4
       webpack: 5.91.0(uglify-js@3.17.4)
     dev: true
 
-  /sass@1.72.0:
+  /sass@1.77.4:
     resolution:
       {
-        integrity: sha512-Gpczt3WA56Ly0Mn8Sl21Vj94s1axi9hDIzDFn9Ph9x3C3p4nNyvsqJoQyVXKou6cBlfFWEgRW4rT8Tb4i3XnVA==,
+        integrity: sha512-vcF3Ckow6g939GMA4PeU7b2K/9FALXk2KF9J87txdHzXbUF9XRQRwSxcAs/fGaTnJeBFd7UoV22j3lzMLdM0Pw==,
       }
     engines: { node: ">=14.0.0" }
     hasBin: true
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.5
-      source-map-js: 1.0.2
+      source-map-js: 1.2.0
     dev: true
 
   /schema-utils@3.3.0:
@@ -4189,14 +4189,6 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
-
-  /source-map-js@1.0.2:
-    resolution:
-      {
-        integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==,
-      }
-    engines: { node: ">=0.10.0" }
     dev: true
 
   /source-map-js@1.2.0:
