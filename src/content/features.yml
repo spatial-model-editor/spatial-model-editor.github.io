@@ -22,7 +22,7 @@ features:
     title: DuneCopasi FEM Solver
     description: >
       The <a href="https://dune-copasi.netlify.app">dune-copasi</a> solver is used to simulate models.
-      This solves the PDE on a triangular mesh using finite element discretization methods.
+      This solves the PDE on a tetrahedral mesh using finite element discretization methods.
       See the <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/dune.html">simulator documentation</a>
       for more information on the available options when using it in the GUI.
       For more technical information about the DuneCopasi solver itself,

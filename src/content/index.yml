@@ -13,8 +13,8 @@ cards:
     url: "https://spatial-model-editor.readthedocs.io"
     links:
       "Spatial Model Editor": https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html
-      "Python interface: sme": https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html
-      "Python extras: sme-contrib": https://sme-contrib.readthedocs.io
+      "sme (Python interface)": https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html
+      "sme-contrib (Python extras)": https://sme-contrib.readthedocs.io
   - title: Python interface
     icon: bi-braces
     url: "https://pypi.org/project/sme"
