@@ -1,5 +1,19 @@
 page_title: News
 news:
+  - date: 2024-10-30
+    title: Version 1.7.0 released
+    url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.7.0
+    description: >
+      <h6 id="added">Added</h6>
+      <ul>
+      <li>Python 3.13 wheels <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1002">#1002</a>
+      <li>colours in the geometry image can now be changed <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/960">#960</a>
+      <li>voxels can be selected in the 3d rendering of the geometry image <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/979">#979</a>
+      </ul>
+      <h6 id="added">Fixed</h6>
+      <ul>
+      <li>parameter optimization error with 3d models <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1007">#1007</a>
+      </ul>
   - date: 2024-04-09
     title: Version 1.6.0 released
     url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.6.0
