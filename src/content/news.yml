@@ -1,5 +1,15 @@
 page_title: News
 news:
+  - date: 2025-01-29
+    title: Version 1.8.0 released
+    url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.8.0
+    description: >
+      <h6 id="added">Added</h6>
+      <ul>
+      <li>improved mesh visualizations <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1021">#1021</a>
+      <li>more 3d example models <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1015">#1015</a>
+      <li>more documentation <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1020">#1020</a>
+      </ul>
   - date: 2024-10-30
     title: Version 1.7.0 released
     url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.7.0
