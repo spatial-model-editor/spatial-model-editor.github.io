@@ -22,25 +22,25 @@
     "bootstrap-icons": "1.11.3"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.20",
+    "autoprefixer": "10.4.21",
     "browser-sync": "3.0.3",
-    "chokidar": "4.0.1",
-    "concurrently": "9.0.1",
+    "chokidar": "4.0.3",
+    "concurrently": "9.1.2",
     "css-loader": "7.1.2",
-    "css-minimizer-webpack-plugin": "7.0.0",
+    "css-minimizer-webpack-plugin": "7.0.2",
     "html-minifier": "4.0.0",
-    "mini-css-extract-plugin": "2.9.1",
-    "postcss": "8.4.47",
+    "mini-css-extract-plugin": "2.9.2",
+    "postcss": "8.5.3",
     "postcss-loader": "8.1.1",
     "pug": "3.0.3",
-    "sass": "1.79.4",
-    "sass-loader": "16.0.2",
+    "sass": "1.86.1",
+    "sass-loader": "16.0.5",
     "sharp": "0.33.5",
-    "shelljs": "0.8.5",
+    "shelljs": "0.9.2",
     "style-loader": "4.0.0",
     "uglify-js": "3.19.3",
     "upath": "2.0.1",
-    "webpack": "5.95.0",
-    "yaml": "2.5.1"
+    "webpack": "5.98.0",
+    "yaml": "2.7.1"
   }
 }
