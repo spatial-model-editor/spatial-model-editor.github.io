@@ -1,5 +1,20 @@
 page_title: News
 news:
+  - date: 2025-11-20
+    title: Version 1.10.0 released
+    url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.10.0
+    description: >
+      <h6 id="added">Added</h6>
+      <ul>
+      <li>option to set the maximum number of CPU threads the DuneCopasi simulator can use <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1082">#1082</a>
+      <li>parameter fitting to CLI <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1073">#1073</a>
+      <li>clipping planes to 3d rendering of compartment geometry and concentrations in the GUI <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/972">#972</a>
+      <li>steady state solver in the GUI <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1061">#1061</a>
+      </ul>
+      <h6 id="added">Fixed</h6>
+      <ul>
+      <li>file dialogs not opening on macOS 15.4+ <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1085">#1085</a>
+      </ul>
   - date: 2025-03-31
     title: Version 1.9.0 released
     url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.9.0
