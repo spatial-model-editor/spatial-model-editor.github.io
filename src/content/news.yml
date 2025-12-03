@@ -1,5 +1,13 @@
 page_title: News
 news:
+  - date: 2025-12-03
+    title: Version 1.10.1 released
+    url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.10.1
+    description: >
+      <h6 id="added">Fixed</h6>
+      <ul>
+      <li>crash for some models with empty compartments when using DuneCopasi simulator <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1089">#1089</a>
+      </ul>
   - date: 2025-11-20
     title: Version 1.10.0 released
     url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.10.0
