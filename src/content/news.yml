@@ -1,5 +1,25 @@
 page_title: News
 news:
+  - date: 2026-02-04
+    title: Version 1.11.0 released
+    url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.11.0
+    description: >
+      <h6 id="added">Added</h6>
+      <ul>
+      <li>species diffusion constants to the parameters that can be fitted in parameter optimization <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1092">#1092</a>
+      <li>support for spatially varying diffusion constants <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1093">#1093</a>
+      <li>gridlines now align with pixels when zoomed in to geometry image <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/847">#847</a>
+      </ul>
+      <h6 id="added">Fixed</h6>
+      <ul>
+      <li>crash for some models with empty compartments when using DuneCopasi simulator <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1089">#1089</a>
+      <li>delay in UI responsiveness after simulation completion <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1101">#1101</a>
+      </ul>
+      <h6 id="removed">Removed</h6>
+      <ul>
+      <li>macOS x86_64 (Intel) architecture binaries <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1096">#1096</a>
+      <li>Python 3.8 wheels <a href="https://github.com/spatial-model-editor/spatial-model-editor/issues/1093">#1093</a>
+      </ul>
   - date: 2025-12-03
     title: Version 1.10.1 released
     url: https://github.com/spatial-model-editor/spatial-model-editor/releases/tag/1.10.1
