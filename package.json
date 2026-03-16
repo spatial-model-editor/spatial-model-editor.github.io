@@ -5,7 +5,8 @@
   "scripts": {
     "build:webpack": "webpack --config webpack.config.js",
     "build:11ty": "eleventy",
-    "build": "pnpm run build:webpack && pnpm run build:11ty",
+    "build:news": "node scripts/generate-news.mjs",
+    "build": "pnpm run build:news && pnpm run build:webpack && pnpm run build:11ty",
     "start": "concurrently \"webpack --watch\" \"eleventy --serve\""
   },
   "repository": {
