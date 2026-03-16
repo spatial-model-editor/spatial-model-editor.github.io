@@ -1,14 +1,12 @@
 {
   "title": "Spatial Model Editor website",
   "name": "sme-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
-    "build": "npm run clean && npm run build:pug && npm run build:scripts-scss && npm run build:assets",
-    "build:assets": "node scripts/build-assets.js",
-    "build:pug": "node scripts/build-pug.js",
-    "build:scripts-scss": "node scripts/build-scripts-scss.js",
-    "clean": "node scripts/clean.js",
-    "start": "npm run build && node scripts/start.js"
+    "build:webpack": "webpack --config webpack.config.js",
+    "build:11ty": "npx @11ty/eleventy",
+    "build": "npm run build:webpack && npm run build:11ty",
+    "start": "concurrently \"webpack --watch\" \"npx @11ty/eleventy --serve\""
   },
   "repository": {
     "type": "git",
@@ -22,9 +20,9 @@
     "bootstrap-icons": "1.13.1"
   },
   "devDependencies": {
+    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy-plugin-pug": "^1.0.0",
     "autoprefixer": "10.4.27",
-    "browser-sync": "3.0.4",
-    "chokidar": "5.0.0",
     "concurrently": "9.2.1",
     "css-loader": "7.1.4",
     "css-minimizer-webpack-plugin": "7.0.4",
@@ -36,11 +34,9 @@
     "sass": "1.97.3",
     "sass-loader": "16.0.7",
     "sharp": "0.34.5",
-    "shelljs": "0.10.0",
     "style-loader": "4.0.0",
-    "uglify-js": "3.19.3",
-    "upath": "2.0.1",
     "webpack": "5.105.3",
+    "webpack-cli": "6.0.1",
     "yaml": "2.8.2"
   }
 }
