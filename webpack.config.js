@@ -18,23 +18,15 @@ module.exports = {
   optimization: {
     minimizer: [`...`, new CssMinimizerPlugin()],
   },
+  performance: {
+    maxAssetSize: 400000,
+    maxEntrypointSize: 500000,
+  },
   module: {
     rules: [
       {
-        test: /\.(scss)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: ["autoprefixer"],
-              },
-            },
-          },
-          "sass-loader",
-        ],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },

@@ -1,13 +1,9 @@
-// Import Bootstrap Icons
-@import "~bootstrap-icons/font/bootstrap-icons.css";
+/* Bootstrap's mt-n4 utility (not included in pre-built CSS) */
+.mt-n4 {
+  margin-top: -1.5rem !important;
+}
 
-// Override Bootstrap variables
-$enable-negative-margins: true;
-
-// Import Bootstrap SCSS
-@import "~bootstrap/scss/bootstrap";
-
-// Custom SCSS for feature component with Bootstrap icon
+/* Custom styles for feature component with Bootstrap icon */
 .feature {
   display: inline-flex;
   align-items: center;
@@ -17,7 +13,7 @@ $enable-negative-margins: true;
   font-size: 2rem;
 }
 
-// sme logo link colours
+/* sme logo link colours */
 a {
   color: #5d00c5;
   text-decoration: none;
@@ -26,7 +22,7 @@ a:hover {
   color: #c126f8;
   text-decoration: none;
 }
-// white for icons
+/* white for icons */
 .iconlink a {
   color: #ffffff;
   text-decoration: none;
@@ -44,7 +40,7 @@ a:hover {
   text-decoration: none;
 }
 
-// only display carousel position indicators on mouseover
+/* only display carousel position indicators on mouseover */
 .carousel .carousel-indicators {
   visibility: hidden;
 }
@@ -65,7 +61,7 @@ a:hover {
   visibility: visible;
 }
 
-// add partially opaque background to carousel control buttons
+/* add partially opaque background to carousel control buttons */
 .carousel .carousel-control-prev {
   background-color: rgba(0, 0, 0, 0.3);
 }
