@@ -1,8 +1,0 @@
-extends layouts/base
-
-block content
-  include mixins/news_card
-  section.pb-2.pb-lg-4
-    .container.px-lg-3
-      each item in content.news
-        +news_card(item.title, item.date, item.url, item.description)

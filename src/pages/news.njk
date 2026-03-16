@@ -1,0 +1,12 @@
+{% extends "layouts/base.njk" %}
+{% from "macros/news_card.njk" import news_card %}
+
+{% block content %}
+<section class="pb-2 pb-lg-4">
+  <div class="container px-lg-3">
+    {% for item in news %}
+      {{ news_card(item.title, item.date, item.url, item.description) }}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

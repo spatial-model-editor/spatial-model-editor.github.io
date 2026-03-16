@@ -1,0 +1,12 @@
+{% extends "layouts/base.njk" %}
+{% from "macros/video_card.njk" import video_card %}
+
+{% block content %}
+<section class="pb-2 pb-lg-4">
+  <div class="container px-lg-3">
+    {% for example in examples %}
+      {{ video_card(example.title, example.description, example.filename, example.code_url, example.colab_url, example.id) }}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

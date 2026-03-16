@@ -1,0 +1,34 @@
+{% extends "layouts/base.njk" %}
+{% from "macros/index_card.njk" import index_card, index_card_downloads %}
+
+{% block header %}
+<header class="py-lg-5">
+  <div class="container px-lg-5">
+    <img class="float-start w-25" src="assets/sme.svg" alt="Spatial Model Editor logo">
+    <div class="p-1 p-lg-5 rounded-3 text-center">
+      <div class="m-4 m-lg-2">
+        <h1 class="display-5 fw-bold">{{ page_title }}</h1>
+        <p class="fs-4">{{ page_blurb }}</p>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<section class="pt-4">
+  <div class="container px-lg-5">
+    <div class="row gx-lg-5">
+      {% for card in cards %}
+        {% if loop.index0 == 1 %}
+          {{ index_card_downloads() }}
+        {% endif %}
+        {{ index_card(card.title, card.icon, card.url, card.links) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<div class="container text-center">
+  <img class="w-25" src="assets/BMBF_logo_en.jpeg" alt="BMBF logo">
+</div>
+{% endblock %}

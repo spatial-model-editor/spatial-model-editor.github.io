@@ -1,0 +1,20 @@
+{% extends "layouts/base.njk" %}
+{% from "macros/feature_card.njk" import feature_card, modal_feature_card %}
+
+{% block modals %}
+{% for feature in features %}
+  {{ modal_feature_card(feature.title, feature.description, feature.images, feature.id) }}
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+<section class="pb-2 pb-lg-4">
+  <div class="container px-lg-3">
+    <div class="row">
+      {% for feature in features %}
+        {{ feature_card(feature.title, feature.description, feature.images, feature.id, feature.image_width or 6) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

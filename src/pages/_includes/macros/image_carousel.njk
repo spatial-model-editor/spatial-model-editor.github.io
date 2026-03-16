@@ -1,0 +1,33 @@
+{% macro image_carousel(image_files, carouselName='imgCarousel', modalId=null) %}
+<div class="carousel carousel-fade slide" id="{{ carouselName }}" data-bs-ride="carousel" data-bs-interval="2500"{% if modalId %} style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="{{ modalId }}"{% endif %}>
+  {% if not modalId %}
+  <div class="carousel-indicators">
+    {% for image_file in image_files %}
+    <button{% if loop.index0 == 0 %} class="active"{% endif %} type="button" data-bs-target="#{{ carouselName }}" data-bs-slide-to="{{ loop.index0 }}" aria-current="true" aria-label="{{ image_file }}"></button>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="carousel-inner img">
+    {% for image_file in image_files %}
+    <div class="carousel-item{% if loop.index0 == 0 %} active{% endif %}">
+      <picture>
+        {% if '.png' in image_file %}
+        <source srcset="assets/{{ image_file | replace('.png', '.webp') }}" type="image/webp">
+        {% endif %}
+        <img class="d-block mx-auto w-100" src="assets/{{ image_file }}" alt="{{ image_file }}">
+      </picture>
+    </div>
+    {% endfor %}
+  </div>
+  {% if not modalId %}
+  <button class="carousel-control-prev" type="button" data-bs-target="#{{ carouselName }}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#{{ carouselName }}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  {% endif %}
+</div>
+{% endmacro %}
