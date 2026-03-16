@@ -8,24 +8,25 @@
 ## How it works
 
 - the contents of each page are stored in [yaml](https://yaml.org/) format in [src/content](/src/content)
-- there is a corresponding [pug](https://pugjs.org/) HTML template for each page in [src/pug](/src/pug)
+- there is a corresponding [Nunjucks](https://mozilla.github.io/nunjucks/) HTML template for each page in [src/pages](/src/pages)
 - uses CSS and icons from the [Bootstrap](https://getbootstrap.com/) framework
 - uses [pnpm](https://pnpm.io/) and [webpack](https://webpack.js.org/) to manage the build and dependencies
+- uses [Eleventy](https://www.11ty.dev/) as the static site generator
 
 ## Structure
 
 - [src/content](/src/content)
   - each page has a yaml file with the content for that page
-  - this data is made available as `content` to the pug template of the same name
-- [src/pug](/src/pug)
-  - each page has a [pug](https://pugjs.org/) template
+  - this data is made available to the Nunjucks template of the same name
+- [src/pages](/src/pages)
+  - each page has a [Nunjucks](https://mozilla.github.io/nunjucks/) template (`.njk`)
   - the html page is generated from this template
-  - it inherits the base layout from [src/pug/layouts/base.pug](/src/pug/layouts/base.pug)
-  - it can use functions ('mixins') from [src/pug/mixins](/src/pug/mixins)
+  - it inherits the base layout from [src/pages/\_includes/layouts/base.njk](/src/pages/_includes/layouts/base.njk)
+  - it can use functions ('macros') from [src/pages/\_includes/macros](/src/pages/_includes/macros)
 - [src/assets](/src/assets)
   - contains the image and video files
-- [src/scss](/src/scss)
-  - import and customize [Bootstrap css](https://getbootstrap.com/docs/5.3/customize/sass/)
+- [src/css](/src/css)
+  - custom CSS styles
 - [src/js](/src/js)
   - additional client-side javascript
 - [src/index.js](/src/index.js)
@@ -58,8 +59,9 @@ On every commit to the main branch:
 
 To add a page `X`:
 
-- create a text file `src/pug/X.pug` with the contents `extends layouts/base`
 - create a text file `src/content/X.yml` with the contents `page_title: "X"`
+- create a text file `src/pages/X.njk` that extends the base layout
+- create a text file `src/pages/X.11tydata.js` with the contents `module.exports = require("./_helpers/loadContent")("X.yml");`
 - add an entry for it to the list of pages in [src/content/navbar.yml](src/content/navbar.yml)
 
 ## Acknowledgements

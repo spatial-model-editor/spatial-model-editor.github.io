@@ -14,7 +14,7 @@
         {% if '.png' in image_file %}
         <source srcset="assets/{{ image_file | replace('.png', '.webp') }}" type="image/webp">
         {% endif %}
-        <img class="d-block mx-auto w-100" src="assets/{{ image_file }}" alt="{{ image_file }}">
+        <img class="d-block mx-auto w-100" src="assets/{{ image_file }}" alt="{{ image_file }}" loading="lazy">
       </picture>
     </div>
     {% endfor %}
