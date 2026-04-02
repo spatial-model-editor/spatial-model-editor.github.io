@@ -26,15 +26,15 @@
     "bootstrap-icons": "1.13.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0",
+    "@11ty/eleventy": "3.1.5",
     "concurrently": "9.2.1",
     "css-loader": "7.1.4",
-    "css-minimizer-webpack-plugin": "7.0.4",
+    "css-minimizer-webpack-plugin": "8.0.0",
     "html-minifier": "4.0.0",
-    "mini-css-extract-plugin": "2.10.0",
+    "mini-css-extract-plugin": "2.10.2",
     "sharp": "0.34.5",
-    "webpack": "5.105.3",
-    "webpack-cli": "6.0.1",
-    "yaml": "2.8.2"
+    "webpack": "5.105.4",
+    "webpack-cli": "7.0.2",
+    "yaml": "2.8.3"
   }
 }
