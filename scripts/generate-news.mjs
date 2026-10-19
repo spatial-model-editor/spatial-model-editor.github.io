@@ -29,13 +29,14 @@ let currentSection = null;
 for (const line of changelog.split("\n")) {
   // Match release header: ## [1.11.0] - 2026-02-04
   const releaseMatch = line.match(
-    /^## \[(\d+\.\d+\.\d+)\] - (\d{4}-\d{1,2}-\d{1,2})/,
+    /^## \[(\d+\.\d+\.\d+)\] - (\d{4})-(\d{1,2})-(\d{1,2})/,
   );
   if (releaseMatch) {
     if (current) releases.push(current);
+    const [, version, year, month, day] = releaseMatch;
     current = {
-      version: releaseMatch[1],
-      date: releaseMatch[2],
+      version,
+      date: `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`,
       sections: {},
     };
     currentSection = null;
@@ -105,7 +106,7 @@ function buildDescription(sections) {
 
   let html = "";
   for (const [section, items] of Object.entries(sections)) {
-    html += `<h6>${section}</h6>\n`;
+    html += `<h3 class="h6">${section}</h3>\n`;
     html += "<ul>\n";
     for (const item of items) {
       html += `<li>${inlineCodeToHtml(itemToHtml(item))}</li>\n`;

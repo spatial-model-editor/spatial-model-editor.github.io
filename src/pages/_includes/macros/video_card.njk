@@ -5,16 +5,16 @@
       <div class="card-body text-center p-4 p-lg-2 pt-2 pt-lg-2">
         <div class="row justify-content-center p-2">
           <div class="col text-start">
-            <a class="btn btn-outline-primary" href="{{ url_code }}" role="button">
-              <i class="bi bi-file-earmark-code"></i> Source Code
+            <a class="btn btn-outline-primary" href="{{ url_code }}">
+              <i class="bi bi-file-earmark-code" aria-hidden="true"></i> Source Code
             </a>
           </div>
           <div class="col">
             <h2 class="fs-4 fw-bold">{{ title }}</h2>
           </div>
           <div class="col text-end">
-            <a class="btn btn-outline-primary" href="{{ url_colab }}" role="button">
-              <i class="bi bi-journal-code"></i> Interactive Notebook
+            <a class="btn btn-outline-primary" href="{{ url_colab }}">
+              <i class="bi bi-journal-code" aria-hidden="true"></i> Interactive Notebook
             </a>
           </div>
         </div>
@@ -22,11 +22,9 @@
           <p>{{ description | safe }}</p>
         </div>
         <div class="row">
-          <div class="embed-responsive">
-            <video class="embed-responsive-item" controls autoplay loop muted width="100%" max-height="100%">
-              <source src="assets/{{ video_file }}" type="video/mp4">
-            </video>
-          </div>
+          <video class="w-100" controls autoplay loop muted playsinline>
+            <source src="assets/{{ video_file }}" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>

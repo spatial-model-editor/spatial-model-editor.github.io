@@ -6,15 +6,15 @@
         <div class="row align-items-center">
           <div class="col text-start">
             <div class="btn disabled btn-outline-primary">
-              <i class="bi bi-calendar"></i> {{ date }}
+              <i class="bi bi-calendar" aria-hidden="true"></i> <time datetime="{{ date }}">{{ date }}</time>
             </div>
           </div>
           <div class="col">
             <h2 class="mb-0 fs-4 fw-bold">{{ title }}</h2>
           </div>
           <div class="col text-end">
-            <a class="btn btn-outline-primary" href="{{ url }}" role="button">
-              <i class="bi bi-box-arrow-up-right"></i> More information
+            <a class="btn btn-outline-primary" href="{{ url }}">
+              <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> More information
             </a>
           </div>
         </div>
