@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 
 // Fetches CHANGELOG.md from the spatial-model-editor repo on GitHub
-// and generates src/content/news.yml from it.
+// and generates src/pages/news.11tydata.yml from it.
 
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const outputPath = path.resolve(__dirname, "../src/content/news.yml");
+const outputPath = path.resolve(
+  import.meta.dirname,
+  "../src/pages/news.11tydata.yml",
+);
 
 const changelogUrl =
   "https://raw.githubusercontent.com/spatial-model-editor/spatial-model-editor/main/CHANGELOG.md";

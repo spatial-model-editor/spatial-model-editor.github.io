@@ -7,30 +7,29 @@
 
 ## How it works
 
-- the contents of each page are stored in [yaml](https://yaml.org/) format in [src/content](/src/content)
-- there is a corresponding [Nunjucks](https://mozilla.github.io/nunjucks/) HTML template for each page in [src/pages](/src/pages)
-- uses CSS and icons from the [Bootstrap](https://getbootstrap.com/) framework
-- uses [pnpm](https://pnpm.io/) and [webpack](https://webpack.js.org/) to manage the build and dependencies
+- each page is a [Nunjucks](https://mozilla.github.io/nunjucks/) HTML template in [src/pages](/src/pages)
+- the contents of each page are stored in a corresponding [yaml](https://yaml.org/) file next to the template
+- uses CSS, JS and icons from the [Bootstrap](https://getbootstrap.com/) framework
+- uses [pnpm](https://pnpm.io/) to manage dependencies
 - uses [Eleventy](https://www.11ty.dev/) as the static site generator
 
 ## Structure
 
-- [src/content](/src/content)
-  - each page has a yaml file with the content for that page
-  - this data is made available to the Nunjucks template of the same name
 - [src/pages](/src/pages)
-  - each page has a [Nunjucks](https://mozilla.github.io/nunjucks/) template (`.njk`)
-  - the html page is generated from this template
+  - each page `X` has a [Nunjucks](https://mozilla.github.io/nunjucks/) template `X.njk`
+  - and a yaml file `X.11tydata.yml` with the content for that page, which is made available to the template
+  - the html page `X.html` is generated from this template
   - it inherits the base layout from [src/pages/\_includes/layouts/base.njk](/src/pages/_includes/layouts/base.njk)
   - it can use functions ('macros') from [src/pages/\_includes/macros](/src/pages/_includes/macros)
+  - the news page content is generated from the [CHANGELOG](https://github.com/spatial-model-editor/spatial-model-editor/blob/main/CHANGELOG.md) by [scripts/generate-news.mjs](/scripts/generate-news.mjs)
+- [src/pages/\_data](/src/pages/_data)
+  - global data available to all pages, e.g. the list of pages in the navbar
 - [src/assets](/src/assets)
   - contains the image and video files
 - [src/css](/src/css)
   - custom CSS styles
 - [src/js](/src/js)
   - additional client-side javascript
-- [src/index.js](/src/index.js)
-  - webpack entry point: import all js and css dependencies
 
 ## Deployment
 
@@ -59,10 +58,9 @@ On every commit to the main branch:
 
 To add a page `X`:
 
-- create a text file `src/content/X.yml` with the contents `page_title: "X"`
+- create a text file `src/pages/X.11tydata.yml` with the contents `page_title: "X"`
 - create a text file `src/pages/X.njk` that extends the base layout
-- create a text file `src/pages/X.11tydata.js` with the contents `module.exports = require("./_helpers/loadContent")("X.yml");`
-- add an entry for it to the list of pages in [src/content/navbar.yml](src/content/navbar.yml)
+- add an entry for it to the list of pages in [src/pages/\_data/navbar.yml](src/pages/_data/navbar.yml)
 
 ## Acknowledgements
 

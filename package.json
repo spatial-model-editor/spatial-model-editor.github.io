@@ -2,39 +2,26 @@
   "title": "Spatial Model Editor website",
   "name": "sme-website",
   "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "build:webpack": "webpack --config webpack.config.js",
-    "build:11ty": "eleventy",
     "build:news": "node scripts/generate-news.mjs",
-    "build": "pnpm run build:news && pnpm run build:webpack && pnpm run build:11ty",
-    "start": "concurrently \"webpack --watch\" \"eleventy --serve\""
+    "build": "pnpm run build:news && eleventy",
+    "start": "pnpm run build:news && eleventy --serve"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/spatial-model-editor/spatial-model-editor.github.io.git"
   },
   "license": "MIT",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp"
-    ]
-  },
   "author": "Liam Keegan",
   "dependencies": {
-    "@popperjs/core": "2.11.8",
     "bootstrap": "5.3.8",
     "bootstrap-icons": "1.13.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.1.6",
-    "concurrently": "10.0.5",
-    "css-loader": "7.1.5",
-    "css-minimizer-webpack-plugin": "8.0.0",
+    "@11ty/eleventy": "3.1.7",
     "html-minifier": "4.0.0",
-    "mini-css-extract-plugin": "2.10.2",
-    "sharp": "0.35.5",
-    "webpack": "5.111.1",
-    "webpack-cli": "7.2.3",
     "yaml": "2.9.1"
   }
 }

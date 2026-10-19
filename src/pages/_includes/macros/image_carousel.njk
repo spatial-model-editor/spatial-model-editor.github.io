@@ -10,12 +10,7 @@
   <div class="carousel-inner img">
     {% for image_file in image_files %}
     <div class="carousel-item{% if loop.index0 == 0 %} active{% endif %}">
-      <picture>
-        {% if '.png' in image_file %}
-        <source srcset="assets/{{ image_file | replace('.png', '.webp') }}" type="image/webp">
-        {% endif %}
-        <img class="d-block mx-auto w-100" src="assets/{{ image_file }}" alt="{{ image_file }}" loading="lazy">
-      </picture>
+      <img class="d-block mx-auto w-100" src="assets/{{ image_file }}" alt="{{ image_file }}" loading="lazy">
     </div>
     {% endfor %}
   </div>
