@@ -1,5 +1,5 @@
 {% extends "layouts/base.njk" %}
-{% from "macros/index_card.njk" import index_card, index_card_downloads %}
+{% from "macros/index_card.njk" import index_card %}
 
 {% block header %}
 <header class="py-lg-5">
@@ -20,10 +20,7 @@
   <div class="container px-lg-5">
     <div class="row gx-lg-5">
       {% for card in cards %}
-        {% if loop.index0 == 1 %}
-          {{ index_card_downloads() }}
-        {% endif %}
-        {{ index_card(card.title, card.icon, card.url, card.links) }}
+        {{ index_card(card) }}
       {% endfor %}
     </div>
   </div>

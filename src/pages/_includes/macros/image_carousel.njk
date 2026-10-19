@@ -1,6 +1,6 @@
-{% macro image_carousel(image_files, title, carouselName='imgCarousel', modalId=null) %}
-<div class="carousel carousel-fade slide" id="{{ carouselName }}" data-bs-ride="carousel" data-bs-interval="2500"{% if modalId %} style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="{{ modalId }}"{% endif %}>
-  {% if not modalId %}
+{% macro image_carousel(image_files, title, carouselName='imgCarousel', controls=true) %}
+<div class="carousel carousel-fade slide" id="{{ carouselName }}" data-bs-ride="carousel" data-bs-interval="2500">
+  {% if controls %}
   <div class="carousel-indicators">
     {% for image_file in image_files %}
     <button{% if loop.index0 == 0 %} class="active" aria-current="true"{% endif %} type="button" data-bs-target="#{{ carouselName }}" data-bs-slide-to="{{ loop.index0 }}" aria-label="Slide {{ loop.index }}"></button>
@@ -14,7 +14,7 @@
     </div>
     {% endfor %}
   </div>
-  {% if not modalId %}
+  {% if controls %}
   <button class="carousel-control-prev" type="button" data-bs-target="#{{ carouselName }}" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>

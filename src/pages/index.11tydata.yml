@@ -5,37 +5,53 @@ page_blurb: >
   SBML models of bio-chemical reactions and simulate them
   using the dune-copasi solver for reaction-diffusion systems.
 
-# icon can be any icon name from https://icons.getbootstrap.com/#icons
+# icon can be any icon name from https://icons.getbootstrap.com/#icons, or from src/icons
+# a card has either a list of links, or a list of downloads
 
 cards:
   - title: Documentation
-    icon: bi-book
+    icon: book
     url: "https://spatial-model-editor.readthedocs.io"
     links:
       "Spatial Model Editor": https://spatial-model-editor.readthedocs.io/en/stable/quickstart/get-started.html
       "sme (Python interface)": https://spatial-model-editor.readthedocs.io/en/stable/sme/sme.html
       "sme-contrib (Python extras)": https://sme-contrib.readthedocs.io
+  - title: GUI Download
+    icon: cloud-download
+    downloads:
+      - name: Linux
+        icon: linux
+        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-X64
+      - name: Windows
+        icon: windows
+        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.exe
+      - name: MacOS Arm64
+        icon: apple
+        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-ARM64.dmg
+      - name: MacOS Intel
+        icon: apple
+        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-X64.dmg
   - title: Python interface
-    icon: bi-braces
+    icon: braces
     url: "https://pypi.org/project/sme"
     links:
       "sme": https://pypi.org/project/sme
       "sme-contrib": https://pypi.org/project/sme-contrib
       "Try it online": https://colab.research.google.com/github/spatial-model-editor/spatial-model-editor/blob/main/docs/sme/notebooks/getting_started.ipynb
   - title: Features
-    icon: bi-cpu
+    icon: cpu
     url: "features.html"
     links:
       "DuneCopasi solver": features.html#dune
       "Mesh generation": features.html#mesh
       "Parameter fitting": features.html#opt
   - title: Examples
-    icon: bi-collection-play
+    icon: collection-play
     url: "examples.html"
     links:
       "Simulation Video": examples.html#grayscott
   - title: Source Code
-    icon: bi-github
+    icon: github
     url: "https://github.com/spatial-model-editor"
     links:
       "Spatial Model Editor": https://github.com/spatial-model-editor/spatial-model-editor

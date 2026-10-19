@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import { minify } from "html-minifier-terser";
 import YAML from "yaml";
 
@@ -12,9 +13,21 @@ export default function (eleventyConfig) {
     "src/js": "js",
     "node_modules/bootstrap/dist/css/bootstrap.min.css*": "css",
     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js*": "js",
-    "node_modules/bootstrap-icons/font/bootstrap-icons.min.css":
-      "css/bootstrap-icons.min.css",
-    "node_modules/bootstrap-icons/font/fonts": "css/fonts",
+  });
+
+  // Inline an svg icon, e.g. {% icon "github" %}
+  // from src/icons if it exists there, otherwise from https://icons.getbootstrap.com
+  eleventyConfig.addShortcode("icon", (name) => {
+    const localFile = `src/icons/${name}.svg`;
+    const file = fs.existsSync(localFile)
+      ? localFile
+      : `node_modules/bootstrap-icons/icons/${name}.svg`;
+    const svg = fs.readFileSync(file, "utf8");
+    const viewBox = svg.match(/viewBox="([^"]*)"/)[1];
+    return svg.replace(
+      /<svg[^>]*>/,
+      `<svg class="bi" viewBox="${viewBox}" fill="currentColor" aria-hidden="true">`,
+    );
   });
 
   // Minify HTML output

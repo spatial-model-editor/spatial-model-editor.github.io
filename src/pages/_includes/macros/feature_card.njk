@@ -8,7 +8,9 @@
     <div class="card-body p-2 p-lg-4">
       <div class="row">
         <div class="col-lg-{{ img_width }}">
-          {{ image_carousel(images, title, "featCarousel_" + id, "#" + id) }}
+          <a class="d-block" href="#{{ id }}" data-bs-toggle="modal" aria-label="Enlarge {{ title }}">
+            {{ image_carousel(images, title, "featCarousel_" + id, controls=false) }}
+          </a>
         </div>
         <div class="col-lg-{{ txt_width }}">
           <p>{{ description | safe }}</p>

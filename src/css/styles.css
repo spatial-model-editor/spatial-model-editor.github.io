@@ -1,9 +1,42 @@
+/* sme logo purple as Bootstrap's primary colour & link colour */
+:root {
+  --bs-primary: #5d00c5;
+  --bs-primary-rgb: 93, 0, 197;
+  --bs-link-color: #5d00c5;
+  --bs-link-color-rgb: 93, 0, 197;
+  --bs-link-hover-color: #c126f8;
+  --bs-link-hover-color-rgb: 193, 38, 248;
+  --bs-focus-ring-color: rgba(93, 0, 197, 0.25);
+}
+/* (pre-built Bootstrap CSS hard-codes the primary colour for buttons) */
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+  --bs-btn-disabled-color: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
+}
+a {
+  text-decoration: none;
+}
+
+/* inline svg icons from the icon shortcode */
+.bi {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
 /* Bootstrap's mt-n4 utility (not included in pre-built CSS) */
 .mt-n4 {
   margin-top: -1.5rem !important;
 }
 
-/* Custom styles for feature component with Bootstrap icon */
+/* square icon tile at the top of the index page cards */
 .feature {
   display: inline-flex;
   align-items: center;
@@ -12,32 +45,19 @@
   width: 4rem;
   font-size: 2rem;
 }
+.feature a {
+  color: inherit;
+}
+.feature a:hover {
+  opacity: 0.75;
+}
 
-/* sme logo link colours */
-a {
-  color: #5d00c5;
-  text-decoration: none;
-}
-a:hover {
-  color: #c126f8;
-  text-decoration: none;
-}
-/* white for icons */
-.iconlink a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.iconlink a:hover {
-  color: #5d00c5;
-  text-decoration: none;
-}
+/* black links that are purple on hover */
 .simplelink a {
-  color: #000000;
-  text-decoration: none;
+  color: var(--bs-emphasis-color);
 }
 .simplelink a:hover {
-  color: #5d00c5;
-  text-decoration: none;
+  color: var(--bs-primary);
 }
 
 /* only display carousel controls on mouseover or keyboard focus */

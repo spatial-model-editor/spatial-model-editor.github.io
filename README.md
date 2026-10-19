@@ -26,6 +26,8 @@
   - the news page content is generated from the [CHANGELOG](https://github.com/spatial-model-editor/spatial-model-editor/blob/main/CHANGELOG.md) by [releases.js](/src/pages/_data/releases.js)
 - [src/assets](/src/assets)
   - contains the image and video files
+- [src/icons](/src/icons)
+  - svg icons that are not in [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [src/css](/src/css)
   - custom CSS styles
 - [src/js](/src/js)
