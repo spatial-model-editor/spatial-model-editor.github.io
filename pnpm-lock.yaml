@@ -217,9 +217,15 @@ importers:
       "@11ty/eleventy":
         specifier: 3.1.7
         version: 3.1.7(supports-color@10.2.2)
+      "@11ty/eleventy-fetch":
+        specifier: 5.1.3
+        version: 5.1.3(supports-color@10.2.2)
       html-minifier-terser:
         specifier: 7.2.0
         version: 7.2.0
+      markdown-it:
+        specifier: 15.0.3
+        version: 15.0.3
       yaml:
         specifier: 2.9.1
         version: 2.9.1
@@ -251,6 +257,13 @@ packages:
       }
     engines: { node: ">=18" }
     hasBin: true
+
+  "@11ty/eleventy-fetch@5.1.3":
+    resolution:
+      {
+        integrity: sha512-4HS6QB/mVWTVlE6kjCKPkjkC1Z0YOqizJaHR05zK+E7a2b4EUC3T+wLktIy7wEl76ZoarkY45EKLmTw1XuR8fQ==,
+      }
+    engines: { node: ">=18" }
 
   "@11ty/eleventy-plugin-bundle@3.0.7":
     resolution:
@@ -351,6 +364,13 @@ packages:
         integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==,
       }
 
+  "@rgrove/parse-xml@4.2.3":
+    resolution:
+      {
+        integrity: sha512-Jhlb+0zYez1T1yXUQs3F1qAtFuJljBVNdy9TKmLDauAXkxsOXopKYOyQ5Wm6SvP3fycav0GviX4Y15WWhGetMw==,
+      }
+    engines: { node: ">=14.0.0" }
+
   "@sindresorhus/slugify@2.2.1":
     resolution:
       {
@@ -390,6 +410,12 @@ packages:
     resolution:
       {
         integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==,
+      }
+
+  argparse@3.0.3:
+    resolution:
+      {
+        integrity: sha512-Sn98ftV3KfsO8xfLPHG6oT8y+b0yvbrLgZjgPDXsharNY15tTAjqIsIju4S32nl6/iEUNNE4v+yL2Zhm8ooP3w==,
       }
 
   asap@2.0.6:
@@ -602,6 +628,13 @@ packages:
       }
     engines: { node: ">=0.12" }
 
+  entities@8.1.0:
+    resolution:
+      {
+        integrity: sha512-kxL7msIffSuh9aaFAMD7rxAIuTRMAHMeBtgHW2yUdWw732ZNh4MehkF2gdjvtdmikkaIP9bFDDJOPlsvm7avrA==,
+      }
+    engines: { node: ">=20.19.0" }
+
   errno@1.0.0:
     resolution:
       {
@@ -642,6 +675,12 @@ packages:
       }
     engines: { node: ">= 8" }
 
+  eventemitter3@4.0.7:
+    resolution:
+      {
+        integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==,
+      }
+
   extend-shallow@2.0.1:
     resolution:
       {
@@ -674,6 +713,12 @@ packages:
         integrity: sha512-aA4RyPcd3badbdABGDuTXCMTtOneUCAYH/gxoYRTZlIJdF0YPWuGqiAsIrhNnnqdXGswYk6dGujem4w80UJFhg==,
       }
     engines: { node: ">= 0.8" }
+
+  flatted@3.4.4:
+    resolution:
+      {
+        integrity: sha512-5+ybhBZANEJxaH3X5evAFatUxLfEHSr7n6kYJ+1Qd0mUqr4eu9gIf6GDbWHf8RJijHrjjO8G+la14SlL2SeS1Q==,
+      }
 
   fresh@2.0.0:
     resolution:
@@ -788,6 +833,12 @@ packages:
         integrity: sha512-ONTm2jCMAVZjgQa/Fy1kScXsuOoF5NPTsoFBdE1KVIZ2vAh/r9+Bqo+0jINCBYnavTPQZz38QzFTme79ENoN3Q==,
       }
 
+  linkify-it@6.1.0:
+    resolution:
+      {
+        integrity: sha512-wJ/TwpSDTLepCrQoYWYIExIKg5Zchex2Nn5yk2mFnB+6PtdkHtyLx742md9csRjjOnGkKIS/RrbY7l8D6gT9Vw==,
+      }
+
   liquidjs@10.30.0:
     resolution:
       {
@@ -822,10 +873,23 @@ packages:
       }
     hasBin: true
 
+  markdown-it@15.0.3:
+    resolution:
+      {
+        integrity: sha512-+Az7Ojz3iRGu8KYMvJ6xVhvrxP3eE+vEtJX75Ow88XBpcQNV/0lGX5ZynIIBftREo4DC2jsveAMDaeltmm8QvQ==,
+      }
+    hasBin: true
+
   mdurl@2.0.0:
     resolution:
       {
         integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==,
+      }
+
+  mdurl@2.1.0:
+    resolution:
+      {
+        integrity: sha512-1+HBaOx0zi/dQWht8rNv9MYf9qqpqL/kxI0hXImU6Y547zM6Sni8BQibt7ifgMcYtQg41ao3Ivd6cnSM86inpg==,
       }
 
   mime-db@1.54.0:
@@ -918,6 +982,27 @@ packages:
         integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==,
       }
     engines: { node: ">= 0.8" }
+
+  p-finally@1.0.0:
+    resolution:
+      {
+        integrity: sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==,
+      }
+    engines: { node: ">=4" }
+
+  p-queue@6.6.2:
+    resolution:
+      {
+        integrity: sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==,
+      }
+    engines: { node: ">=8" }
+
+  p-timeout@3.2.0:
+    resolution:
+      {
+        integrity: sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==,
+      }
+    engines: { node: ">=8" }
 
   param-case@3.0.4:
     resolution:
@@ -1151,6 +1236,12 @@ packages:
         integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==,
       }
 
+  uc.micro@3.0.0:
+    resolution:
+      {
+        integrity: sha512-U3PppEkleoTnIfi8BozMx3yju3qc/L6SwqWo2Sw+54PX+PX0q9I+r1Um5HCmqD7n9VDX5/v3vQH/AjA6deDdtw==,
+      }
+
   unpipe@1.0.0:
     resolution:
       {
@@ -1222,6 +1313,16 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  "@11ty/eleventy-fetch@5.1.3(supports-color@10.2.2)":
+    dependencies:
+      "@11ty/eleventy-utils": 2.0.7
+      "@rgrove/parse-xml": 4.2.3
+      debug: 4.4.3(supports-color@10.2.2)
+      flatted: 3.4.4
+      p-queue: 6.6.2
+    transitivePeerDependencies:
+      - supports-color
 
   "@11ty/eleventy-plugin-bundle@3.0.7(posthtml@0.16.7)(supports-color@10.2.2)":
     dependencies:
@@ -1326,6 +1427,8 @@ snapshots:
 
   "@popperjs/core@2.11.8": {}
 
+  "@rgrove/parse-xml@4.2.3": {}
+
   "@sindresorhus/slugify@2.2.1":
     dependencies:
       "@sindresorhus/transliterate": 1.6.0
@@ -1344,6 +1447,8 @@ snapshots:
   acorn@8.17.0: {}
 
   argparse@2.0.1: {}
+
+  argparse@3.0.3: {}
 
   asap@2.0.6: {}
 
@@ -1447,6 +1552,8 @@ snapshots:
 
   entities@6.0.1: {}
 
+  entities@8.1.0: {}
+
   errno@1.0.0:
     dependencies:
       prr: 1.0.1
@@ -1462,6 +1569,8 @@ snapshots:
   etag@1.8.1: {}
 
   evaluate-value@2.0.0: {}
+
+  eventemitter3@4.0.7: {}
 
   extend-shallow@2.0.1:
     dependencies:
@@ -1484,6 +1593,8 @@ snapshots:
       unpipe: 1.0.0
     transitivePeerDependencies:
       - supports-color
+
+  flatted@3.4.4: {}
 
   fresh@2.0.0: {}
 
@@ -1545,6 +1656,10 @@ snapshots:
     dependencies:
       uc.micro: 2.1.0
 
+  linkify-it@6.1.0:
+    dependencies:
+      uc.micro: 3.0.0
+
   liquidjs@10.30.0:
     dependencies:
       commander: 10.0.1
@@ -1566,7 +1681,18 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
+  markdown-it@15.0.3:
+    dependencies:
+      argparse: 3.0.3
+      entities: 8.1.0
+      linkify-it: 6.1.0
+      mdurl: 2.1.0
+      punycode.js: 2.3.1
+      uc.micro: 3.0.0
+
   mdurl@2.0.0: {}
+
+  mdurl@2.1.0: {}
 
   mime-db@1.54.0: {}
 
@@ -1608,6 +1734,17 @@ snapshots:
   on-finished@2.4.1:
     dependencies:
       ee-first: 1.1.1
+
+  p-finally@1.0.0: {}
+
+  p-queue@6.6.2:
+    dependencies:
+      eventemitter3: 4.0.7
+      p-timeout: 3.2.0
+
+  p-timeout@3.2.0:
+    dependencies:
+      p-finally: 1.0.0
 
   param-case@3.0.4:
     dependencies:
@@ -1724,6 +1861,8 @@ snapshots:
   tslib@2.8.1: {}
 
   uc.micro@2.1.0: {}
+
+  uc.micro@3.0.0: {}
 
   unpipe@1.0.0: {}
 

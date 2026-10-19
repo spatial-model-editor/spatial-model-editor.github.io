@@ -50,3 +50,8 @@ a:hover {
 .carousel :is(.carousel-control-prev, .carousel-control-next) {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* changelog section headings in news, e.g. "Added", "Fixed" */
+.release-notes h3 {
+  font-size: 1rem;
+}

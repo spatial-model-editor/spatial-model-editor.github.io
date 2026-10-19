@@ -4,8 +4,8 @@
 {% block content %}
 <section class="pb-2 pb-lg-4">
   <div class="container px-lg-3">
-    {% for item in news %}
-      {{ news_card(item.title, item.date, item.url, item.description) }}
+    {% for release in releases %}
+      {{ news_card("Version " + release.version + " released", release.date, release.url, release.notes) }}
     {% endfor %}
   </div>
 </section>

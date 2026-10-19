@@ -21,9 +21,9 @@
   - the html page `X.html` is generated from this template
   - it inherits the base layout from [src/pages/\_includes/layouts/base.njk](/src/pages/_includes/layouts/base.njk)
   - it can use functions ('macros') from [src/pages/\_includes/macros](/src/pages/_includes/macros)
-  - the news page content is generated from the [CHANGELOG](https://github.com/spatial-model-editor/spatial-model-editor/blob/main/CHANGELOG.md) by [scripts/generate-news.mjs](/scripts/generate-news.mjs)
 - [src/pages/\_data](/src/pages/_data)
   - global data available to all pages, e.g. the list of pages in the navbar
+  - the news page content is generated from the [CHANGELOG](https://github.com/spatial-model-editor/spatial-model-editor/blob/main/CHANGELOG.md) by [releases.js](/src/pages/_data/releases.js)
 - [src/assets](/src/assets)
   - contains the image and video files
 - [src/css](/src/css)
