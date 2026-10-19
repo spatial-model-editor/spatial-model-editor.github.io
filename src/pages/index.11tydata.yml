@@ -19,18 +19,24 @@ cards:
   - title: GUI Download
     icon: cloud-download
     downloads:
-      - name: Linux
+      - name: Linux x64
         icon: linux
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-X64
-      - name: Windows
+      - name: Linux Arm64
+        icon: linux
+        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-ARM64
+      - name: Windows x64
         icon: windows
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.exe
-      - name: MacOS Arm64
+      - name: Windows Arm64
+        icon: windows
+        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-ARM64.exe
+      - name: macOS
         icon: apple
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-ARM64.dmg
-      - name: MacOS Intel
-        icon: apple
-        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-X64.dmg
+      - name: All downloads
+        icon: github
+        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest
   - title: Python interface
     icon: braces
     url: "https://pypi.org/project/sme"
