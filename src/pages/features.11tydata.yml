@@ -32,9 +32,9 @@ features:
     image_width: 5
 
   - id: mesh
-    title: Automatic mesh generation
+    title: Automatic 2D mesh generation
     description: >
-      Starting from a segmented image of the compartments in the model,
+      Starting from a segmented 2D image of the compartments in the model,
       the boundaries are automatically identified and simplified,
       and from them a triangular mesh approximation to the geometry is constructed.
       For more details see the <a href="https://spatial-model-editor.readthedocs.io/en/stable/reference/mesh.html">mesh documentation</a>.
@@ -48,6 +48,23 @@ features:
       - mesh/mesh_triangulate_2.webp
       - mesh/mesh_triangulate_3.webp
     image_width: 6
+
+  - id: mesh3d
+    title: Automatic 3D mesh generation
+    description: >
+      3D models are meshed directly from a segmented 3D image of the compartments
+      using the <a href="https://doc.cgal.org/latest/Mesh_3/index.html">3D Mesh Generation</a>
+      package from <a href="https://www.cgal.org/">CGAL</a>.
+      This generates a tetrahedral mesh of every compartment,
+      where neighbouring compartments share the triangulated surface of the membrane between them.
+      The maximum tetrahedron volume can be adjusted to refine or coarsen the mesh.
+      Alternatively, an existing tetrahedral mesh can be imported from <a href="https://gmsh.info">Gmsh</a>
+      and used as is.
+      For more details see the <a href="https://spatial-model-editor.readthedocs.io/en/stable/quickstart/mesh.html">mesh documentation</a>.
+    images:
+      - mesh3d/mesh3d_clipped.webp
+      - mesh3d/mesh3d_compartments.webp
+    image_width: 5
 
   - id: pixel
     title: Pixel FTCS Solver
