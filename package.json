@@ -14,6 +14,7 @@
     "url": "https://github.com/spatial-model-editor/spatial-model-editor.github.io.git"
   },
   "license": "MIT",
+  "packageManager": "pnpm@12.8.1",
   "author": "Liam Keegan",
   "dependencies": {
     "bootstrap": "5.3.8",
@@ -21,7 +22,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
-    "html-minifier": "4.0.0",
+    "html-minifier-terser": "7.2.0",
     "yaml": "2.9.1"
   }
 }

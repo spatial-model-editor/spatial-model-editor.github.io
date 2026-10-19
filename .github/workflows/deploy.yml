@@ -1,6 +1,11 @@
 name: "Build and deploy to gh-pages"
 
-on: push
+on:
+  push:
+  # rebuild daily to pick up new releases from the spatial-model-editor CHANGELOG
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -10,11 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/action-setup@v6
-        with:
-          version: 10
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
           cache: "pnpm"
       - run: pnpm install
       - run: pnpm run build
@@ -25,6 +28,9 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: build
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     permissions:
       pages: write
       id-token: write

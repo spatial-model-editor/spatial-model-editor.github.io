@@ -1,4 +1,4 @@
-import { minify } from "html-minifier";
+import { minify } from "html-minifier-terser";
 import YAML from "yaml";
 
 export default function (eleventyConfig) {
@@ -18,7 +18,7 @@ export default function (eleventyConfig) {
   });
 
   // Minify HTML output
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  eleventyConfig.addTransform("htmlmin", async function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
       return minify(content, {
         removeComments: true,
