@@ -23,7 +23,7 @@
       <div class="downloads pt-3 simplelink">
         {% for download in card.downloads %}
         <a class="download{% if download.default %} download-main{% endif %}" href="{{ download.url }}" data-platform="{{ (download.os + '-' + download.arch) | lower }}">
-          <div class="card bg-light h-100 p-2 align-items-center">
+          <div class="card h-100 p-2 align-items-center">
             <div class="download-icon lh-1">{% icon download.icon %}</div>
             <div class="download-name">{{ download.os }} <span class="text-nowrap">{{ download.arch }}</span></div>
           </div>

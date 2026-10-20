@@ -66,6 +66,16 @@ a {
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
 }
+.download .card {
+  background-color: var(--bs-tertiary-bg);
+  transition:
+    background-color 0.15s,
+    border-color 0.15s;
+}
+.download:is(:hover, :focus-visible) .card {
+  background-color: var(--bs-secondary-bg);
+  border-color: var(--bs-primary);
+}
 .download-icon {
   font-size: 1.5rem;
 }
