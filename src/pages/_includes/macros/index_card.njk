@@ -20,16 +20,14 @@
       </div>
       {% endif %}
       {% if card.downloads %}
-      <div class="row align-items-center row-cols-2 pt-3 simplelink">
+      <div class="downloads pt-3 simplelink">
         {% for download in card.downloads %}
-        <div class="col p-0">
-          <a href="{{ download.url }}">
-            <div class="card border-1 bg-light text-nowrap p-2 m-1 align-items-center">
-              <div class="fs-1 lh-1">{% icon download.icon %}</div>
-              <p class="mt-0 mb-0">{{ download.name }}</p>
-            </div>
-          </a>
-        </div>
+        <a class="download{% if download.default %} download-main{% endif %}" href="{{ download.url }}" data-platform="{{ (download.os + '-' + download.arch) | lower }}">
+          <div class="card bg-light h-100 p-2 align-items-center">
+            <div class="download-icon lh-1">{% icon download.icon %}</div>
+            <div class="download-name">{{ download.os }} <span class="text-nowrap">{{ download.arch }}</span></div>
+          </div>
+        </a>
         {% endfor %}
       </div>
       {% endif %}

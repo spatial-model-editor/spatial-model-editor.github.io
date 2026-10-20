@@ -60,6 +60,29 @@ a {
   color: var(--bs-primary);
 }
 
+/* download buttons: the main one (for the visitor's platform) on top, the others in a row below */
+.downloads {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+.download-icon {
+  font-size: 1.5rem;
+}
+.download-name {
+  font-size: 0.8rem;
+}
+.download-main {
+  grid-column: 1 / -1;
+  order: -1;
+}
+.download-main .download-icon {
+  font-size: 3rem;
+}
+.download-main .download-name {
+  font-size: 1.25rem;
+}
+
 /* only display carousel controls on mouseover or keyboard focus */
 .carousel:not(:hover, :focus-within)
   :is(.carousel-indicators, .carousel-control-prev, .carousel-control-next) {

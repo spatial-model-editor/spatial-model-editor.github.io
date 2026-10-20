@@ -18,25 +18,30 @@ cards:
       "sme-contrib (Python extras)": https://sme-contrib.readthedocs.io
   - title: GUI Download
     icon: cloud-download
+    # the download for the visitor's OS & architecture is shown large (see js/downloads.js),
+    # or the default one if it can't be detected
     downloads:
-      - name: Linux x64
+      - os: Linux
+        arch: x64
         icon: linux
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-X64
-      - name: Linux Arm64
+      - os: Linux
+        arch: Arm64
         icon: linux
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-ARM64
-      - name: Windows x64
+      - os: Windows
+        arch: x64
         icon: windows
+        default: true
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor.exe
-      - name: Windows Arm64
+      - os: Windows
+        arch: Arm64
         icon: windows
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-ARM64.exe
-      - name: macOS
+      - os: macOS
+        arch: Arm64
         icon: apple
         url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest/download/spatial-model-editor-ARM64.dmg
-      - name: All downloads
-        icon: github
-        url: https://github.com/spatial-model-editor/spatial-model-editor/releases/latest
   - title: Python interface
     icon: braces
     url: "https://pypi.org/project/sme"
