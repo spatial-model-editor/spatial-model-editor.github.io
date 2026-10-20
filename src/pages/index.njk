@@ -4,7 +4,10 @@
 {% block header %}
 <header class="py-lg-5">
   <div class="container px-lg-5">
-    <img class="float-start w-25" src="assets/sme.svg" alt="Spatial Model Editor logo">
+    <picture class="float-start w-25">
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/sme.svg">
+      <img class="w-100 h-auto" src="assets/sme-animated.svg" width="256" height="256" alt="Spatial Model Editor logo">
+    </picture>
     <div class="p-1 p-lg-5 rounded-3 text-center">
       <div class="m-4 m-lg-2">
         <h1 class="display-5 fw-bold">{{ page_title }}</h1>
