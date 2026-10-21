@@ -64,6 +64,36 @@ To add a page `X`:
 - create a text file `src/pages/X.njk` that extends the base layout
 - add an entry for it to the list of pages in [src/pages/\_data/navbar.yml](src/pages/_data/navbar.yml)
 
+## Live Gray–Scott logo
+
+The front-page logo uses inline SVG/Canvas markup from
+[src/pages/_includes/sme-logo.njk](src/pages/_includes/sme-logo.njk), with the
+simulation in [src/js/sme-gray-scott.js](src/js/sme-gray-scott.js) loaded using
+`defer`. Its styles in [src/css/styles.css](src/css/styles.css) are scoped to
+the logo. It needs no libraries, iframe, or standalone preview page.
+
+The cytoplasm uses the
+[SME Gray–Scott equations](https://spatial-model-editor.readthedocs.io/en/stable/examples/grayscott.html)
+with `Du = 0.2097`, `Dv = 0.105`, and `k = 0.06`. Its feed rate `f` is chosen
+uniformly from `0.03–0.05` on load. Initially the cytoplasm has `U = 1, V = 0`
+and the nucleus has `U = 0, V = 1`. Diffusion out of this nuclear V reservoir
+initiates the outer patterns; there is no additional seeded ring or noise.
+The nucleus has diffusion only, with no internal reactions, feed, or
+removal. Both species diffuse in either direction
+across its membrane, driven by the concentration difference, with 25% of the
+bulk face conductance. Equal and opposite exchange fluxes conserve each species.
+The outer cell boundary has zero flux. Both compartments use a 384 × 384 grid,
+and both use one purple-to-pink colour map with a fixed V concentration scale
+from 0 to 1: equal concentrations have identical colours in either compartment.
+U is simulated but not displayed. The geometry and initial conditions differ
+from the built-in SME example.
+
+After 30 seconds of visible simulation time, the concentration fields fade out,
+a new random feed rate is chosen, and both compartments restart with a fade in.
+Simulation and transitions pause while hidden or outside the viewport. Rendering
+is limited to 30 fps. Reduced-motion preferences or disabled JavaScript show
+the static logo. Run `npm start` and open the homepage to preview it.
+
 ## Acknowledgements
 
 - based on https://github.com/StartBootstrap/startbootstrap-heroic-features

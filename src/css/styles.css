@@ -31,6 +31,29 @@ a {
   vertical-align: -0.125em;
 }
 
+/* Live logo styles stay scoped to its inline SVG. */
+#sme-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#sme-logo canvas {
+  display: block;
+  width: 256px;
+  height: 256px;
+}
+#sme-logo.simulation-ready #sme-nucleus-base {
+  fill: #5d00c5;
+}
+@media (prefers-reduced-motion: reduce) {
+  #sme-logo #sme-fields {
+    display: none;
+  }
+  #sme-logo.simulation-ready #sme-nucleus-base {
+    fill: #c126f8;
+  }
+}
+
 /* Bootstrap's mt-n4 utility (not included in pre-built CSS) */
 .mt-n4 {
   margin-top: -1.5rem !important;
